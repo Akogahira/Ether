@@ -123,14 +123,19 @@ export const Boton = styled.button`
 //Estilos específicos:
 //PÁGINA 01. HOME
 
+export const CardContainer = styled.div`
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap; 
+`;
+
 export const CardHome = styled.div`
   border: 0.2px solid darkslategray;
   border-radius: 10px;
-  height: 180px;
-  width: calc(70%);
-  margin: 10%;
-  display: flex;
-  flex-direction: column;
+  height: 185px;
+  min-width: 120px;
+  max-width: 120px;
+  margin: 10px;
 `;
 
 export const CardHomeInfo = styled.div`
