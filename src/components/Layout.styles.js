@@ -10,7 +10,7 @@ export const Divider2 = styled.hr`
 `;
 
 export const Footer2 = styled.footer`
-  color: darkslategray;
+  color: #4d4c4d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,10 +21,14 @@ export const Nav2 = styled.nav`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+  }
 
   a {
     text-decoration: none;
-    color: darkslategray;
+    color: #beb1dc;
     border-radius: 0.5rem;
     padding: 0.5rem;
     transition: background-color 0.3s;
@@ -43,7 +47,7 @@ export const Nav2 = styled.nav`
 `;
 
 export const Footer = styled.footer`
-  color: darkslategray;
+  color: #4d4c4d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,14 +65,14 @@ export const Nav = styled.nav`
     gap: 1.5rem;
     a {
       text-decoration: none;
-      color: darkslategray;
+      color: #beb1dc;
       border-radius: 0.5rem;
       padding: 0.5rem;
       transition: background-color 0.3s;
       display: flex;
       align-items: center;
       &:hover {
-        color: pink;
+        color: paleturquoise;
       }
       svg {
         width: 2rem;
@@ -84,20 +88,31 @@ export const Nav = styled.nav`
 export const ContainerMain = styled.div`
   margin: 0 auto;
   max-width: 360px;
+  min-height: 560px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    h2 {
+      font-weight: normal;
+      font-size: 21px;
+    }
+
+    :root {
+      --main-black: #373737;
+    }
 `;
 
 export const Main = styled.div`
   padding: 10px;
   margin: 0 auto;
   max-width: 360px;
-  color: darkslategray;
+  color: #4d4c4d;
 `;
 
 export const Container = styled.div`
   padding: 10px;
   margin: 0 auto;
   width: 360px;
-   background-color: beige;
+  background-color: #fffeef;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
 
 export const Divider = styled.hr`
@@ -116,7 +131,7 @@ export const Boton = styled.button`
   border-radius: 25px;
   font-weight: normal;
   font-size: 15px;
-  color: darkslategray;
+  color: #4d4c4d;
 `;
 
 
@@ -127,47 +142,76 @@ export const CardContainer = styled.div`
   overflow-x: auto;
   display: flex;
   flex-wrap: nowrap; 
+  width: 105.6%;
 `;
 
 export const CardHome = styled.div`
-  border: 0.2px solid darkslategray;
-  border-radius: 10px;
-  height: 185px;
+  border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  background-color: #dad1ef;
+  min-height: 170px;
+  max-height: 220px;
   min-width: 120px;
   max-width: 120px;
-  margin: 10px;
+  margin: 0 10px 30px 0;
 `;
 
 export const CardHomeInfo = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  margin: 10px;
+
+`;
+
+export const CardHomeImg = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   margin: 10px;
 
   img {
     max-width: 90%;
   }
+    p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.1;
+  }
+`;
+
+export const InfoHome = styled.span`
+  font-size: 10px;
+  text-align: right;
+  border-radius: 5px;
 `;
 
 export const AutorHome = styled.span`
   margin: 0;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
+    color: #737273;
 `;
 
 export const TituloConvHome = styled.h4`
   padding: 0px;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 12px;
-  font-weight: normal;
+  font-size: 15px;
+  font-weight: 540;
+  line-height: 1.3;
 `;
 
 export const TagHome = styled.span`
-  padding: 4px 2px;
-  margin: 5px 0;
+  padding: 2px 5px;
+  margin: 2px 0 2px 0;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 15px;
+  width: 40px;
+  text-align: center;
+  color: #737273;
 `;
 
 export const InfoConvHome = styled.span`
@@ -175,6 +219,28 @@ export const InfoConvHome = styled.span`
   align-items: right;
   border-radius: 5px;
   min-width: 150px;
+`;
+
+export const TituloHerrHome = styled.h4`
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 540;
+  line-height: 1.1;
+`;
+export const BotonHome = styled.button`
+justify-content: right;
+text-align: right;
+  padding: 5px 10px;
+  margin: 5px 2px;
+  background-color: inherit;
+  border: 1px solid darkslategray;
+  border-radius: 25px;
+  font-weight: normal;
+  font-size: 15px;
+  color: darkslategray;
+  text-decoration: none;
 `;
 
 
@@ -198,9 +264,8 @@ export const TituloConv = styled.h4`
 
 export const InfoConv = styled.span`
   font-size: 10px;
-  align-items: right;
+  text-align: right;
   border-radius: 5px;
-  min-width: 150px;
 `;
 
 export const Tag = styled.span`

@@ -1,4 +1,5 @@
-import { ContainerMain, CardHome, CardHomeInfo, TagHome, TituloConvHome, AutorHome, CardContainer } from '../components/Layout.styles';
+import { ContainerMain, CardHome, CardHomeImg, TagHome, TituloConvHome, AutorHome, CardContainer, CardHomeInfo, InfoHome, TituloHerrHome, BotonHome } from '../components/Layout.styles';
+import { Link } from 'react-router-dom';
 import { Conver } from "../data/Conversaciones";
 
 const Home = () => {
@@ -6,40 +7,59 @@ const Home = () => {
   return (
     <div>
       <ContainerMain>
-        <h2>Conversaciones recomendadas</h2>
+        <h2>Únete a estas conversaciones</h2>
         <CardContainer>
           {Conver.map(conv => (
             <CardHome key={conv}>
               <CardHomeInfo>
                 <AutorHome>{conv.autor}</AutorHome>
-                <TituloConvHome>{conv.title}</TituloConvHome>
+                <TituloConvHome>{conv.shortitle}</TituloConvHome>
                 <TagHome>{conv.tag}</TagHome>
+                <InfoHome>{conv.comments}</InfoHome>
               </CardHomeInfo>
             </CardHome>
           ))}
         </CardContainer>
 
-        <h2>Herramientas recomendadas</h2>
+        <BotonHome><Link to="/Conversaciones" style={{ textDecoration: 'none', color: 'inherit' }}>Ver más</Link ></BotonHome>
+
+
+        <h2>¿Conoces estas herramientas?</h2>
+
         <CardContainer>
           <CardHome>
-            <CardHomeInfo>
+            <CardHomeImg>
               <img src="src/assets/images/Herramienta1.png" alt="Herramienta 1" />
-              <p>Técnicas de respiración</p>
-            </CardHomeInfo>
+              <TituloHerrHome>Técnicas de respiración</TituloHerrHome>
+            </CardHomeImg>
           </CardHome>
           <CardHome>
-            <CardHomeInfo>
+            <CardHomeImg>
               <img src="src/assets/images/Herramienta1.png" alt="Herramienta 2" />
-              <p>Mindfulness</p>
-            </CardHomeInfo>
+              <TituloHerrHome>Mindfulness</TituloHerrHome>
+            </CardHomeImg>
           </CardHome>
           <CardHome>
-            <CardHomeInfo>
+            <CardHomeImg>
               <img src="src/assets/images/Herramienta1.png" alt="Herramienta 3" />
-              <p>Gestión del estrés</p>
-            </CardHomeInfo>
+              <TituloHerrHome>Gestión del estrés</TituloHerrHome>
+            </CardHomeImg>
+          </CardHome>
+          <CardHome>
+            <CardHomeImg>
+              <img src="src/assets/images/Herramienta1.png" alt="Herramienta 3" />
+              <TituloHerrHome>Cafeína consciente</TituloHerrHome>
+            </CardHomeImg>
+          </CardHome>
+          <CardHome>
+            <CardHomeImg>
+              <img src="src/assets/images/Herramienta1.png" alt="Herramienta 3" />
+              <TituloHerrHome>Journaling</TituloHerrHome>
+            </CardHomeImg>
           </CardHome>
         </CardContainer>
+
+        <BotonHome><Link to="/Herramientas" style={{ textDecoration: 'none', color: 'inherit' }}>Ver más</Link ></BotonHome>
       </ContainerMain>
     </div >
   );

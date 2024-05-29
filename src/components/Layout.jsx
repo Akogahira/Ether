@@ -12,7 +12,6 @@ const Layout = ({ children }) => (
         <Link to="/Perfil"><FaHome /></Link>
       </Nav2>
     </Footer2>
-    <Divider2 />
 
     <Main>{children}</Main>
 
