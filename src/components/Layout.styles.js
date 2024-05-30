@@ -371,3 +371,48 @@ export const CardHerrInfo = styled.div`
     line-height: 1.1;
   }
 `;
+
+
+// PÁGINA 04. CHATS
+
+///Container general
+export const ContainerChats = styled.div`
+display: flex;
+flex-direction: row;
+ justify-content: space-between; 
+width: 100%;
+margin: 0px;
+`;
+
+///Container 1: Datos izquierda (avatar, nombre y mensaje)
+export const ChatsIzq = styled.div`
+display: flex;
+ align-items: center;
+
+`;
+
+///Container 1.1: Avatar
+export const DatosIzq1 = styled.div`
+  img {
+    width: 40px; // Ajusta el tamaño según sea necesario
+    border-radius: 50%;
+    margin-right: 20px; // Añade espacio entre el avatar y los otros elementos
+  }
+`;
+
+///Container 1.2: Nombre y mensaje
+export const DatosIzq2 = styled.div`
+display: flex;
+  flex-direction: column;
+`;
+
+///Container 2: Datos derecha (fecha y hora)
+export const ChatsDer = styled.div`
+text-align: right;
+margin-left: auto;
+`;
+
+export const ContainerDivider = styled.div`
+display: flex;
+flex-direction: column;
+`;
