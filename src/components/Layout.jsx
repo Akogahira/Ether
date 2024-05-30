@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FaHome } from 'react-icons/fa';
 import { IoBookSharp, IoBookOutline, IoHomeOutline, IoHome } from "react-icons/io5";
+import { GoSearch } from "react-icons/go";
+import { RxAvatar } from "react-icons/rx";
 import { PiChatCircle, PiChatCircleFill } from "react-icons/pi";
 import { MdForum, MdOutlineForum } from "react-icons/md";
 import { Container, Nav, Footer2, Footer, Main, Nav2, Divider } from './Layout.styles';
@@ -12,14 +13,32 @@ const Layout = ({ children }) => {
   const isConvPage = location.pathname === '/Conversaciones';
   const isHerrPage = location.pathname === '/Herramientas';
   const isChatPage = location.pathname === '/Chat';
+  const isPerfilPage = location.pathname === '/Perfil';
+
+  const getPageName = () => {
+    switch (true) {
+      case isHomePage:
+        return "Inicio";
+      case isConvPage:
+        return "Conversaciones";
+      case isHerrPage:
+        return "Herramientas";
+      case isChatPage:
+        return "Chat";
+      case isPerfilPage:
+        return "Perfil";
+      default:
+        return "Página";
+    }
+  };
 
   return (
     <Container>
       <Footer2>
         <Nav2>
-          <Link to="/Perfil"><FaHome /></Link>
-          <h2>Página</h2>
-          <Link to="/Perfil"><FaHome /></Link>
+          <Link to="/Perfil"><RxAvatar /></Link>
+          <h2>{getPageName()}</h2>
+          <Link to="/"><GoSearch /></Link>
         </Nav2>
       </Footer2>
 
@@ -44,7 +63,7 @@ const Layout = ({ children }) => {
           </div>
         </Nav>
       </Footer>
-    </Container>
+    </Container >
   );
 };
 

@@ -12,7 +12,6 @@ import styled from 'styled-components';
 export const ContainerMain = styled.div`
   margin: 0 auto;
   max-width: 360px;
-  min-height: 560px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     h2 {
       font-weight: normal;
@@ -24,13 +23,15 @@ export const Main = styled.div`
   padding: 10px;
   margin: 0 auto;
   max-width: 360px;
+  min-height: 660px;
   color: #4d4c4d;
+  padding-bottom: 50px;
 `;
 
 export const Container = styled.div`
   padding: 10px;
   margin: 0 auto;
-  width: 360px;
+  max-width: 360px;
   background-color: #fffeef;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
@@ -85,11 +86,18 @@ export const Nav2 = styled.nav`
 
 /// Abajo 
 export const Footer = styled.footer`
-  color: #4d4c4d;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  max-width: 360px;
+  height: 70px;
+  background-color: white;
+  padding: 0 10px;
+  border-top: 1px solid grey;
 `;
 
 export const Nav = styled.nav`
@@ -109,9 +117,6 @@ export const Nav = styled.nav`
       transition: background-color 0.3s;
       display: flex;
       align-items: center;
-      &:hover {
-        color: paleturquoise;
-      }
       svg {
         width: 2rem;
         height: 2rem;
@@ -258,8 +263,7 @@ export const ContainerConver = styled.div`
 ///Titulo conversaciones
 export const TituloConv = styled.h4`
   padding: 5px 0px 0px 0px;
-  margin-top: 6px;
-  margin-bottom: 5px;
+  margin: 10px 0;
   font-size: 16px;
   font-weight: 540;
   line-height: 1.2;
@@ -270,12 +274,13 @@ export const ContainerCollapseConv = styled.div`
 display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 3px;
 `;
 
 export const Collapse = styled.span`
 display: inline-block;
 font-size: 13px;
+color: #737273;
 `;
 
 ///Indicador N Comentarios
@@ -283,17 +288,14 @@ export const InfoConv = styled.span`
   font-size: 13px;
   text-align: right;
   border-radius: 5px;
-  margin-top: 10px;
   justify-content: right;
 `;
-
-
 
 ///Indicador Filtros
 export const Tag = styled.span`
   padding: 5px 8px;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   background-color: #ab9cce;
   border-radius: 15px;
   text-align: center;
@@ -394,7 +396,7 @@ display: flex;
 ///Container 1.1: Avatar
 export const DatosIzq1 = styled.div`
   img {
-    width: 40px; // Ajusta el tamaño según sea necesario
+    width: 42px; // Ajusta el tamaño según sea necesario
     border-radius: 50%;
     margin-right: 20px; // Añade espacio entre el avatar y los otros elementos
   }
@@ -406,11 +408,40 @@ display: flex;
   flex-direction: column;
 `;
 
+export const ChatUser = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+    color: #373737;
+`;
+
+export const ChatMsg = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+    color: #373737;
+    line-height: 1.1;
+    margin-top: 6px;
+`;
+
 ///Container 2: Datos derecha (fecha y hora)
 export const ChatsDer = styled.div`
 text-align: right;
 margin-left: auto;
 `;
+
+export const ChatFecha = styled.div`
+  font-size: 13px;
+    color: #737273;
+`;
+
+export const ChatHora = styled.div`
+  font-size: 13px;
+    color: #737273;
+`;
+
+
+
 
 export const ContainerDivider = styled.div`
 display: flex;

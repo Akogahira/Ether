@@ -11,7 +11,7 @@ const Conversaciones = () => (
       <ContainerConver>
         {Conver.map(conv => (
           <div key={conv}>
-            <Divider style={{ margin: '16px 0' }} />
+            <Divider style={{ margin: '10px 0' }} />
             <Tag>{conv.tag}</Tag>
             <TituloConv>{conv.title}</TituloConv>
             <ContainerCollapseConv>
@@ -21,7 +21,7 @@ const Conversaciones = () => (
 
               <InfoConv>
                 <span style={{ padding: '10px' }}>{conv.time}</span>
-                <span style={{ margin: '4px 1px 0px 2px' }}>
+                <span style={{ margin: '10px 1px 0px 2px' }}>
                   <PiChatCircle size={11} />
                 </span>{conv.comments}</InfoConv>
             </ContainerCollapseConv>
