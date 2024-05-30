@@ -30,31 +30,31 @@ const Home = () => {
           <CardHome>
             <CardHomeImg>
               <img src="src/assets/images/Herramienta1.png" alt="Herramienta 1" />
+              <TituloHerrHome>Neurohacking</TituloHerrHome>
+            </CardHomeImg>
+          </CardHome>
+          <CardHome>
+            <CardHomeImg>
+              <img src="src/assets/images/Herramienta2.png" alt="Herramienta 2" />
               <TituloHerrHome>Técnicas de respiración</TituloHerrHome>
             </CardHomeImg>
           </CardHome>
           <CardHome>
             <CardHomeImg>
-              <img src="src/assets/images/Herramienta1.png" alt="Herramienta 2" />
-              <TituloHerrHome>Mindfulness</TituloHerrHome>
+              <img src="src/assets/images/Herramienta3.png" alt="Herramienta 3" />
+              <TituloHerrHome>Música</TituloHerrHome>
             </CardHomeImg>
           </CardHome>
           <CardHome>
             <CardHomeImg>
-              <img src="src/assets/images/Herramienta1.png" alt="Herramienta 3" />
-              <TituloHerrHome>Gestión del estrés</TituloHerrHome>
-            </CardHomeImg>
-          </CardHome>
-          <CardHome>
-            <CardHomeImg>
-              <img src="src/assets/images/Herramienta1.png" alt="Herramienta 3" />
-              <TituloHerrHome>Cafeína consciente</TituloHerrHome>
-            </CardHomeImg>
-          </CardHome>
-          <CardHome>
-            <CardHomeImg>
-              <img src="src/assets/images/Herramienta1.png" alt="Herramienta 3" />
+              <img src="src/assets/images/Herramienta4.png" alt="Herramienta 4" />
               <TituloHerrHome>Journaling</TituloHerrHome>
+            </CardHomeImg>
+          </CardHome>
+          <CardHome>
+            <CardHomeImg>
+              <img src="src/assets/images/Herramienta6.png" alt="Herramienta 5" />
+              <TituloHerrHome>Terapia Cognitivo Conductual</TituloHerrHome>
             </CardHomeImg>
           </CardHome>
         </CardContainer>
