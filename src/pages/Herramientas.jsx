@@ -1,17 +1,16 @@
-import { ContainerMain, Boton, Divider, ContainerHerrFiltro, ContainerHerr, CardHerr, CardHerrInfo } from '../components/Layout.styles';
+import { ContainerMain, BotonConv, Divider, ContainerHerrFiltro, ContainerHerr, CardHerr, CardHerrInfo, IntroPageHerr } from '../components/Layout.styles';
 
 const Herramientas = () => (
   <div>
     <ContainerMain>
-      <Boton>Filtros</Boton>
-      <Boton>Publica una herramienta</Boton>
-
+      <IntroPageHerr>¿Conoces alguna herramienta que no encuetras aquí? ¡Compártela!</IntroPageHerr>
+      <BotonConv>Publica una herramienta</BotonConv>
       <Divider />
 
       <ContainerHerrFiltro>
-        <Boton>Todas</Boton>
-        <Boton>Oficiales</Boton>
-        <Boton>Comunidad</Boton>
+        <BotonConv>Todas</BotonConv>
+        <BotonConv>Oficiales</BotonConv>
+        <BotonConv>Comunidad</BotonConv>
       </ContainerHerrFiltro>
       <ContainerHerr>
         <CardHerr>

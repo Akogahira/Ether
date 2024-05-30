@@ -42,19 +42,6 @@ export const Divider = styled.hr`
   margin: 10px 0;
 `;
 
-export const Boton = styled.button`
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px 2px;
-  background-color: white;
-  border: 1px solid darkslategray;
-  border-radius: 25px;
-  font-weight: normal;
-  font-size: 15px;
-  color: #4d4c4d;
-`;
-
-
 //01. ESTILOS BARRA NAVEGACIÓN
 export const Divider2 = styled.hr`
   border: 0;
@@ -86,13 +73,8 @@ export const Nav2 = styled.nav`
     color: #beb1dc;
     border-radius: 0.5rem;
     padding: 0.5rem;
-    transition: background-color 0.3s;
     display: flex;
     align-items: center;
-
-    &:hover {
-      color: pink;
-    }
 
     svg {
       width: 2rem;
@@ -172,7 +154,7 @@ export const CardHomeInfo = styled.div`
 
 ///CONVERSACIONES - Indicador de N comentarios
 export const InfoHome = styled.span`
-  font-size: 10px;
+  font-size: 11px;
   text-align: right;
   border-radius: 5px;
 `;
@@ -255,12 +237,22 @@ text-align: right;
 //Estilos específicos:
 //PÁGINA 02. CONVERSACIONES
 
+export const BotonConv = styled.button`
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px 2px;
+  background-color: #9689b3;
+  border-radius: 25px;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+`;
+
+
 ///Container hijo de cada conversación (el padre es ContainerMain)
 export const ContainerConver = styled.div`
-  padding: 2px;
   display: flex;
   flex-direction: column;
-  align-items: left;
 `;
 
 ///Titulo conversaciones
@@ -268,17 +260,34 @@ export const TituloConv = styled.h4`
   padding: 5px 0px 0px 0px;
   margin-top: 6px;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 540;
   line-height: 1.2;
+  color: #4d4c4d;
+`;
+
+export const ContainerCollapseConv = styled.div`
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+`;
+
+export const Collapse = styled.span`
+display: inline-block;
+font-size: 13px;
 `;
 
 ///Indicador N Comentarios
 export const InfoConv = styled.span`
-  font-size: 10px;
+  font-size: 13px;
   text-align: right;
   border-radius: 5px;
+  margin-top: 10px;
+  justify-content: right;
 `;
+
+
 
 ///Indicador Filtros
 export const Tag = styled.span`
@@ -305,6 +314,15 @@ export const Autor = styled.h2`
 ///Fin estilos Conversaciones
 
 // PÁGINA 03. HERRAMIENTAS
+
+///Intro
+export const IntroPageHerr = styled.h4`
+text-align: left;
+font-size: 17px;
+font-weight: 540;
+line-height: 1.1;
+margin: 10px 0px 10px 0px;
+`;
 
 ///Container filtros (Todas - Oficiales - Comunidad)
 export const ContainerHerrFiltro = styled.div`

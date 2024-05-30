@@ -1,6 +1,7 @@
 import { ContainerMain, CardHome, CardHomeImg, TagHome, TituloConvHome, AutorHome, CardContainer, CardHomeInfo, InfoHome, TituloHerrHome, BotonHome } from '../components/Layout.styles';
 import { Link } from 'react-router-dom';
 import { Conver } from "../data/Conversaciones";
+import { PiChatCircle } from 'react-icons/pi';
 
 const Home = () => {
 
@@ -15,7 +16,9 @@ const Home = () => {
                 <AutorHome>{conv.autor}</AutorHome>
                 <TituloConvHome>{conv.shortitle}</TituloConvHome>
                 <TagHome>{conv.tag}</TagHome>
-                <InfoHome>{conv.comments}</InfoHome>
+                <InfoHome><span style={{ padding: '2px' }}>
+                  <PiChatCircle size={10} />
+                </span>{conv.comments}</InfoHome>
               </CardHomeInfo>
             </CardHome>
           ))}

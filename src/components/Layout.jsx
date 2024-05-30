@@ -3,7 +3,7 @@ import { FaHome } from 'react-icons/fa';
 import { IoBookSharp, IoBookOutline, IoHomeOutline, IoHome } from "react-icons/io5";
 import { PiChatCircle, PiChatCircleFill } from "react-icons/pi";
 import { MdForum, MdOutlineForum } from "react-icons/md";
-import { Container, Nav, Footer2, Footer, Main, Nav2, Divider2 } from './Layout.styles';
+import { Container, Nav, Footer2, Footer, Main, Nav2, Divider } from './Layout.styles';
 
 // eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
       <Main>{children}</Main>
 
-      <Divider2 />
+      <Divider />
       <Footer>
         <Nav>
           <div>
