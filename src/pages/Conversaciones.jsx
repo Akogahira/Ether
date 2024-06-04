@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ContainerMain, ContainerConver, Tag, TituloConv, Divider, BotonConv, InfoConv, ContainerCollapseConv, Collapse } from "../components/Layout.styles";
 import { Conver } from "../data/Conversaciones";
 import { PiChatCircle } from 'react-icons/pi';
@@ -13,7 +14,9 @@ const Conversaciones = () => (
           <div key={conv}>
             <Divider style={{ margin: '10px 0' }} />
             <Tag>{conv.tag}</Tag>
-            <TituloConv>{conv.title}</TituloConv>
+            <Link to="/ConversacionEsp" style={{ textDecoration: 'none' }}>
+              <TituloConv>{conv.title}</TituloConv>
+            </Link>
             <ContainerCollapseConv>
               <Collapse>
                 Ver más

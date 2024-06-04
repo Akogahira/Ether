@@ -11,7 +11,7 @@ import styled from 'styled-components';
 
 export const ContainerMain = styled.div`
   margin: 0 auto;
-  max-width: 360px;
+  width: 95%;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     h2 {
       font-weight: normal;
@@ -20,9 +20,8 @@ export const ContainerMain = styled.div`
 `;
 
 export const Main = styled.div`
-  padding: 10px;
   margin: 0 auto;
-  max-width: 360px;
+  width: 360px;
   min-height: 660px;
   color: #4d4c4d;
   padding-bottom: 50px;
@@ -31,7 +30,7 @@ export const Main = styled.div`
 export const Container = styled.div`
   padding: 10px;
   margin: 0 auto;
-  max-width: 360px;
+  width: 360px;
   background-color: #fffeef;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
@@ -132,8 +131,10 @@ export const Nav = styled.nav`
 export const CardContainer = styled.div`
   overflow-x: auto;
   display: flex;
-  flex-wrap: nowrap; 
-  width: 105.6%;
+  flex-wrap: nowrap;
+  width: 105%;
+  position: relative;
+  box-sizing: border-box;
 `;
 
 ///Cards hijo
@@ -258,6 +259,7 @@ export const BotonConv = styled.button`
 export const ContainerConver = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 `;
 
 ///Titulo conversaciones
@@ -440,10 +442,34 @@ export const ChatHora = styled.div`
     color: #737273;
 `;
 
-
-
-
 export const ContainerDivider = styled.div`
 display: flex;
 flex-direction: column;
+`;
+
+
+// PÁGINA 05. PERFIL
+
+export const Avatar = styled.div`
+img {
+    width: 60%;
+    border-radius: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 20px;
+}
+`;
+
+export const BotonPerfil = styled.button`
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #9689b3;
+  border-radius: 25px;
+  font-weight: normal;
+  font-size: 17px;
+  color: white;
+   display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 `;
