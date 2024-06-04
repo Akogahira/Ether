@@ -456,7 +456,8 @@ img {
     border-radius: 90%;
     margin: 0 auto;
     display: flex;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: 1px solid darkslategray;
 }
 `;
 
@@ -472,4 +473,29 @@ export const BotonPerfil = styled.button`
   margin: 0 auto;
   align-items: center;
   justify-content: center;
+`;
+
+export const TextFieldPerfil = styled.textarea`
+ padding: 5px 12px;
+  border-radius: 100px;
+  background-color: white;
+  color: #4d4c4d;
+  font-weight: normal;
+  font-size: 16px;
+  height: 20px;
+  width: 120px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  
+`;
+
+export const AjustesPerfil = styled.div`
+h2 {
+  margin: 20px 0 10px 0;
+}
+h4 {
+  font-size: 16px;
+  font-weight:normal;
+  margin: 5px 0;
+  color: #4d4c4d;
+}
 `;
