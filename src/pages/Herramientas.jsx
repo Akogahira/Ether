@@ -5,7 +5,9 @@ const Herramientas = () => (
   <div>
     <ContainerMain>
       <IntroPageHerr>¿Conoces alguna herramienta que no encuetras aquí? ¡Compártela!</IntroPageHerr>
-      <BotonConv>Publica una herramienta</BotonConv>
+      <Link to="/SubirHerr" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <BotonConv>Publica una herramienta</BotonConv>
+      </Link>
       <Divider />
 
       <ContainerHerrFiltro>

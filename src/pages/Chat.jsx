@@ -1,5 +1,6 @@
 import { ChatsIzq, ContainerChats, ContainerMain, DatosIzq2, DatosIzq1, Divider, ChatsDer, ContainerDivider, ChatUser, ChatMsg, ChatFecha, ChatHora } from '../components/Layout.styles';
 import { ChatsPriv } from '../data/Chats';
+import { Link } from 'react-router-dom';
 
 const MAX_LENGTH = 50;
 
@@ -15,29 +16,31 @@ const Chat = () => (
     <ContainerMain>
       {ChatsPriv.map((xat, index) => (
         <ContainerDivider key={`${xat.user}-${xat.fecha}-${index}`}>
-          <ContainerChats>
-            <ChatsIzq>
-              <DatosIzq1>
-                <img src={xat.img} alt="Icon" />
-              </DatosIzq1>
-              <DatosIzq2>
-                <ChatUser>
-                  {xat.user}
-                </ChatUser>
-                <ChatMsg>
-                  {truncateMessage(xat.msg)}
-                </ChatMsg>
-              </DatosIzq2>
-            </ChatsIzq>
-            <ChatsDer>
-              <ChatFecha>
-                {xat.fecha}
-              </ChatFecha>
-              <ChatHora>
-                {xat.hora}
-              </ChatHora>
-            </ChatsDer>
-          </ContainerChats>
+          <Link to="/ChatEsp" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <ContainerChats>
+              <ChatsIzq>
+                <DatosIzq1>
+                  <img src={xat.img} alt="Icon" />
+                </DatosIzq1>
+                <DatosIzq2>
+                  <ChatUser>
+                    {xat.user}
+                  </ChatUser>
+                  <ChatMsg>
+                    {truncateMessage(xat.msg)}
+                  </ChatMsg>
+                </DatosIzq2>
+              </ChatsIzq>
+              <ChatsDer>
+                <ChatFecha>
+                  {xat.fecha}
+                </ChatFecha>
+                <ChatHora>
+                  {xat.hora}
+                </ChatHora>
+              </ChatsDer>
+            </ContainerChats>
+          </Link>
           <Divider />
         </ContainerDivider>
       ))}

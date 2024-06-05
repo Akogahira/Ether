@@ -8,6 +8,9 @@ import Home from './pages/Home';
 import Inicio from './pages/Inicio';
 import HerramientaEsp from './pages/HerramientaEsp';
 import ConversacionEsp from './pages/ConversacionEsp';
+import SubirConv from './pages/SubirConv';
+import SubirHerr from './pages/SubirHerr';
+import ChatEsp from './pages/ChatEsp';
 
 const App = () => (
   <Router>
@@ -21,6 +24,10 @@ const App = () => (
         <Route path="/Perfil" element={<Perfil />} />
         <Route path="/ConversacionEsp" element={<ConversacionEsp />} />
         <Route path="/HerramientaEsp" element={<HerramientaEsp />} />
+        <Route path="/SubirConv" element={<SubirConv />} />
+        <Route path="/SubirHerr" element={<SubirHerr />} />
+        <Route path="/ChatEsp" element={<ChatEsp />} />
+
       </Routes>
     </Layout>
 

@@ -357,6 +357,7 @@ export const DatoUserTime = styled.div`
     margin-top: 6px;
 `;
 
+//Filtros
 export const TagConver = styled.span`
   padding: 3px 8px;
   font-weight: normal;
@@ -380,11 +381,11 @@ export const TituloConvEsp = styled.div`
 
 export const DescripcionConvEsp = styled.div`
   padding: 5px 0px 0px 0px;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   font-size: 15px;
   font-weight: 540;
-  line-height: 1.2;
-  color: #737273;
+  line-height: 1.1;
+  color: #373737;
 `;
 
 ///--------------
@@ -546,7 +547,7 @@ export const CardHerramientaEsp = styled.div`
   background-color: #dad1ef;
   border-radius:18px;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   height: 150px;
 `;
 
@@ -563,6 +564,8 @@ export const TextoSecciones = styled.div`
 margin: 20px 5px 0 0;
 text-align: justify;
 `;
+
+//Sección de comentarios cogida de ConversacionEsp
 
 
 // PÁGINA 04. CHATS

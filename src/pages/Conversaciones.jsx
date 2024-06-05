@@ -7,8 +7,9 @@ const Conversaciones = () => (
   <div>
     <ContainerMain>
       <BotonConv>Filtros</BotonConv>
-      <BotonConv>Empieza una conversación</BotonConv>
-
+      <Link to="/SubirConv" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <BotonConv>Empieza una conversación</BotonConv>
+      </Link>
       <ContainerConver>
         {Conver.map(conv => (
           <div key={conv}>
