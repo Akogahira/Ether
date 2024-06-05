@@ -450,6 +450,7 @@ flex-direction: column;
 
 // PÁGINA 05. PERFIL
 
+///Container de avatar
 export const Avatar = styled.div`
 img {
     width: 60%;
@@ -461,6 +462,7 @@ img {
 }
 `;
 
+///Container de botón de Editar avatar
 export const BotonPerfil = styled.button`
   display: inline-block;
   padding: 5px 10px;
@@ -475,6 +477,7 @@ export const BotonPerfil = styled.button`
   justify-content: center;
 `;
 
+///TextField o TextArea del nombre de usuario
 export const TextFieldPerfil = styled.textarea`
  padding: 5px 12px;
   border-radius: 100px;
@@ -488,6 +491,7 @@ export const TextFieldPerfil = styled.textarea`
   
 `;
 
+///Titulos H2 y H4 de los ajustes de perfil
 export const AjustesPerfil = styled.div`
 h2 {
   margin: 20px 0 10px 0;
@@ -498,4 +502,11 @@ h4 {
   margin: 5px 0;
   color: #4d4c4d;
 }
+`;
+
+///Container de los H4 + Switches
+export const ContainerSwitches = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
 `;

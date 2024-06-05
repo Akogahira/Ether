@@ -7,6 +7,6 @@ const ConversacionEsp = () => (
       <p>joder</p>
     </ContainerMain>
   </div>
-)
+);
 
 export default ConversacionEsp;

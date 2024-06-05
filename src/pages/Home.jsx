@@ -10,15 +10,15 @@ const Home = () => {
       <ContainerMain>
         <h2>Únete a estas conversaciones</h2>
         <CardContainer>
-          {Conver.map(conv => (
-            <CardHome key={conv}>
+          {Conver.map(convh => (
+            <CardHome key={convh}>
               <CardHomeInfo>
-                <AutorHome>{conv.autor}</AutorHome>
-                <TituloConvHome>{conv.shortitle}</TituloConvHome>
-                <TagHome>{conv.tag}</TagHome>
+                <AutorHome>{convh.autor}</AutorHome>
+                <TituloConvHome>{convh.shortitle}</TituloConvHome>
+                <TagHome>{convh.tag}</TagHome>
                 <InfoHome><span style={{ padding: '2px' }}>
                   <PiChatCircle size={10} />
-                </span>{conv.comments}</InfoHome>
+                </span>{convh.comments}</InfoHome>
               </CardHomeInfo>
             </CardHome>
           ))}

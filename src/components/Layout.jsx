@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
-import { IoBookSharp, IoBookOutline, IoHomeOutline, IoHome } from "react-icons/io5";
-import { GoSearch } from "react-icons/go";
 import { RxAvatar } from "react-icons/rx";
-import { PiChatCircle, PiChatCircleFill } from "react-icons/pi";
+import { GoSearch } from "react-icons/go";
+import { IoHome, IoHomeOutline } from "react-icons/io5";
 import { MdForum, MdOutlineForum } from "react-icons/md";
+import { IoBookSharp, IoBookOutline } from "react-icons/io5";
+import { PiChatCircle, PiChatCircleFill } from "react-icons/pi";
 import { Container, Nav, Footer2, Footer, Main, Nav2, Divider } from './Layout.styles';
 
 // eslint-disable-next-line react/prop-types
@@ -63,8 +64,7 @@ const Layout = ({ children }) => {
           </div>
         </Nav>
       </Footer>
-    </Container >
+    </Container>
   );
 };
-
 export default Layout;

@@ -13,8 +13,8 @@ const truncateMessage = (msg) => {
 const Chat = () => (
   <div>
     <ContainerMain>
-      {ChatsPriv.map(xat => (
-        <ContainerDivider key={xat}>
+      {ChatsPriv.map((xat, index) => (
+        <ContainerDivider key={`${xat.user}-${xat.fecha}-${index}`}>
           <ContainerChats>
             <ChatsIzq>
               <DatosIzq1>
@@ -37,18 +37,12 @@ const Chat = () => (
                 {xat.hora}
               </ChatHora>
             </ChatsDer>
-
           </ContainerChats>
           <Divider />
         </ContainerDivider>
       ))}
-
-
     </ContainerMain>
-
   </div>
-
-
-)
+);
 
 export default Chat;
