@@ -1,25 +1,32 @@
 import { ImUpload } from "react-icons/im";
-import { BotonConv, ContainerMain, TextFieldPerfil } from "../components/Layout.styles";
+import { BotonSubirConv, ContainerMain, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome } from '../components/Layout.styles';
 
 const SubirConv = () => {
   return (
     <ContainerMain>
       <div>
-        <h4>Explicación sobre el título de la conversación.</h4>
-        <TextFieldPerfil></TextFieldPerfil>
+        <TituloConvHome>Explicación sobre el título de la conversación.</TituloConvHome>
+        <TextFieldContainer>
+          <TextFieldSubirConv></TextFieldSubirConv>
+        </TextFieldContainer>
       </div>
       <div>
-        <h4>Explicación sobre el título resumido.</h4>
-        <TextFieldPerfil></TextFieldPerfil>
+        <TituloConvHome>Explicación sobre el título resumido.</TituloConvHome>
+        <TextFieldContainer>
+          <TextFieldSubirConvGrande></TextFieldSubirConvGrande>
+        </TextFieldContainer>
       </div>
       <div>
-        <h4>Explicación sobre el desarrollo del tema de la conversación.</h4>
-        <TextFieldPerfil></TextFieldPerfil>
+        <TituloConvHome>Explicación sobre el desarrollo del tema de la conversación.</TituloConvHome>
+        <TextFieldContainer>
+          <TextFieldSubirConvGrande></TextFieldSubirConvGrande>
+        </TextFieldContainer>
       </div>
-      <div>
-        <ImUpload></ImUpload>
-        <BotonConv>Añadir filtros</BotonConv>
-      </div>
+
+      <BotonesSubirConv>
+        <div><ImUpload></ImUpload> Subir imagen</div>
+        <BotonSubirConv>Añadir filtros</BotonSubirConv>
+      </BotonesSubirConv>
     </ContainerMain>
   );
 };

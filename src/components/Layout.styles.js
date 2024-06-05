@@ -394,6 +394,9 @@ export const TextFieldContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  p {
+    margin: 0 10px 0 0;
+  }
 `;
 
 ///TextField
@@ -700,4 +703,50 @@ export const ContainerSwitches = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
+`;
+
+
+//PÁGINA 6. SUBIR CONVERSACION
+export const TextFieldSubirConv = styled.textarea`
+ padding: 5px 12px;
+  border-radius: 100px;
+  background-color: white;
+  color: #4d4c4d;
+  font-weight: normal;
+  font-size: 16px;
+  height: 20px;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 15px 0 10px 0;
+`;
+
+export const TextFieldSubirConvGrande = styled.textarea`
+ padding: 5px 12px;
+  border-radius: 20px;
+  background-color: white;
+  color: #4d4c4d;
+  font-weight: normal;
+  font-size: 16px;
+  height: 100px;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 15px 0 10px 0;
+`;
+
+export const BotonesSubirConv = styled.div`
+display: flex;
+flex-direction: column;
+margin: 10px 0;
+`;
+
+export const BotonSubirConv = styled.button`
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 10px 0;
+  width: 120px;
+  background-color: #9689b3;
+  border-radius: 25px;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
 `;
