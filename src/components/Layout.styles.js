@@ -308,14 +308,174 @@ export const Tag = styled.span`
 //2.1 CONVERSACIÓN ESPECÍFICA
 
 //(Aún no creado)
-export const Autor = styled.h2`
-  padding: 0px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 17px;
+
+///Container "Tarjeta" de usuario
+export const ContainerConverEsp = styled.div`
+display: flex;
+flex-direction: row;
+ justify-content: space-between; 
+width: 100%;
+margin: 0px;
 `;
 
+///Container de izq + der (padre)
+export const UserIzq = styled.div`
+display: flex;
+ align-items: center;
+`;
+
+///Container izq con el Avatar
+export const DatosUserIzq = styled.div`
+  img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+`;
+
+///Container izq con el nombre y la hora
+export const DatosUserIzq2 = styled.div`
+display: flex;
+  flex-direction: column;
+`;
+
+///Username/nombre
+export const DatoUserName = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+    color: #373737;
+`;
+
+///Time/hora
+export const DatoUserTime = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+    color: #373737;
+    line-height: 1.1;
+    margin-top: 6px;
+`;
+
+export const TagConver = styled.span`
+  padding: 3px 8px;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #ab9cce;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  max-width: 55px;
+  margin: 10px 0 10px 0;
+`;
+
+export const TituloConvEsp = styled.div`
+  padding: 5px 0px 0px 0px;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 540;
+  line-height: 1.2;
+  color: #373737;
+`;
+
+export const DescripcionConvEsp = styled.div`
+  padding: 5px 0px 0px 0px;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  font-weight: 540;
+  line-height: 1.2;
+  color: #737273;
+`;
+
+///--------------
+///Container TextField
+export const TextFieldContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+///TextField
+export const TextFieldConver = styled.textarea`
+ padding: 5px 12px;
+  border-radius: 100px;
+  background-color: white;
+  color: #4d4c4d;
+  font-weight: normal;
+  font-size: 16px;
+  height: 20px;
+  width: 95%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+`;
+
+
+///COMENTARIOS
+///
+
+///Container "Tarjeta" de usuario (COMENTARIO)
+export const ContainerComentarioA = styled.div`
+display: flex;
+flex-direction: row;
+ justify-content: space-between; 
+width: 100%;
+margin: 10px 0 0 0;
+`;
+
+///Container de izq + der (padre) (COMENTARIO)
+export const ComentIzqA = styled.div`
+display: flex;
+ align-items: center;
+`;
+
+///Container izq con el Avatar (COMENTARIO)
+export const DatosComentIzqA1 = styled.div`
+  img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+`;
+
+///Container izq con el nombre y la hora (COMENTARIO)
+export const DatosComentIzqA2 = styled.div`
+display: flex;
+  flex-direction: column;
+`;
+
+///Username/nombre (COMENTARIO)
+export const DatoComentNameA = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  color: #373737;
+`;
+
+///Time/hora (COMENTARIO)
+export const DatoComentTimeA = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+    color: #373737;
+    line-height: 1.1;
+    margin-top: 4px;
+`;
+
+///Texto Comentario (COMENTARIO)
+export const DescripcionComentarioA = styled.div`
+  padding: 5px 0px 0px 0px;
+  margin: 0 0 10px 20%;
+  font-size: 15px;
+  font-weight: 540;
+  line-height: 1.2;
+  color: #373737;
+`;
+
+
 ///Fin estilos Conversaciones
+
+
+
+
 
 // PÁGINA 03. HERRAMIENTAS
 
