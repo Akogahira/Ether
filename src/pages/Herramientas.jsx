@@ -1,4 +1,5 @@
 import { ContainerMain, BotonConv, Divider, ContainerHerrFiltro, ContainerHerr, CardHerr, CardHerrInfo, IntroPageHerr } from '../components/Layout.styles';
+import { Link } from 'react-router-dom';
 
 const Herramientas = () => (
   <div>
@@ -14,10 +15,12 @@ const Herramientas = () => (
       </ContainerHerrFiltro>
       <ContainerHerr>
         <CardHerr>
-          <CardHerrInfo>
-            <img src="src\assets\images\Herramienta1.png" alt="" />
-            <p>Neurohacking</p>
-          </CardHerrInfo>
+          <Link to="/HerramientaEsp" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <CardHerrInfo>
+              <img src="src\assets\images\Herramienta1.png" alt="" />
+              <p>Neurohacking</p>
+            </CardHerrInfo>
+          </Link>
         </CardHerr>
         <CardHerr>
           <CardHerrInfo>
@@ -72,7 +75,7 @@ const Herramientas = () => (
 
 
     </ContainerMain>
-  </div>
+  </div >
 
 
 )

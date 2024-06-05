@@ -536,6 +536,34 @@ export const CardHerrInfo = styled.div`
   }
 `;
 
+///3.1 HERRAMIENTA ESPECÍFICA
+
+export const CardHerramientaEsp = styled.div`
+  background-image: url('src/assets/images/Herramienta1.png');
+  background-size: 130%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #dad1ef;
+  border-radius:18px;
+  padding: 20px;
+  margin-bottom: 10px;
+  height: 150px;
+`;
+
+export const TituloHerramientaEsp = styled.h1`
+font-size: 32px;
+font-weight: 600;
+  margin: 100px 0 0 0;
+  color: whitesmoke;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+`;
+
+///Texto Secciones
+export const TextoSecciones = styled.div`
+margin: 20px 5px 0 0;
+text-align: justify;
+`;
+
 
 // PÁGINA 04. CHATS
 
