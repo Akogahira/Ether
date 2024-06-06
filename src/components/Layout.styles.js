@@ -127,6 +127,13 @@ export const Nav = styled.nav`
 //PÁGINAS:
 //PÁGINA 01. HOME
 
+export const TituloHomeGenerico = styled.div`
+h2 {
+font-size: 19px;
+font-weight: normal;
+}
+`;
+
 ///Cards padre
 export const CardContainer = styled.div`
   overflow-x: auto;
@@ -580,6 +587,11 @@ flex-direction: row;
  justify-content: space-between; 
 width: 100%;
 margin: 0px;
+  img {
+    width: 42px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
 `;
 
 ///Container 1: Datos izquierda (avatar, nombre y mensaje)
@@ -591,11 +603,6 @@ display: flex;
 
 ///Container 1.1: Avatar
 export const DatosIzq1 = styled.div`
-  img {
-    width: 42px; // Ajusta el tamaño según sea necesario
-    border-radius: 50%;
-    margin-right: 20px; // Añade espacio entre el avatar y los otros elementos
-  }
 `;
 
 ///Container 1.2: Nombre y mensaje
@@ -640,6 +647,102 @@ export const ContainerDivider = styled.div`
 display: flex;
 flex-direction: column;
 `;
+
+
+////CHAT ESPECÍFICO
+
+export const NombreUserChat = styled.h3`
+font-size: 19px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: normal;
+`;
+
+export const ChatEspFecha = styled.div`
+  font-size: 13px;
+    color: #737273;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+`;
+
+export const User1Container = styled.div`
+display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+  justify-content: space-around;
+  width: 100%;
+`;
+
+export const User1Img = styled.div`
+   img {
+    width: 45px;
+    border-radius: 50%;
+   }
+`;
+
+export const User1Contenido = styled.div`
+display: flex;
+flex-direction: column;
+margin-right: 10px;
+`;
+
+export const User1Msg = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+    color: #373737;
+    line-height: 1.1;
+    max-width: 260px;
+`;
+
+export const User1Time = styled.div`
+  font-size: 13px;
+    color: #737273;
+    margin-top: 5px;
+`;
+
+//User 2
+export const User2Container = styled.div`
+display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+ justify-content: space-around;
+`;
+
+
+export const User2Img = styled.div`
+   img {
+    width: 45px;
+    border-radius: 50%;
+   }
+`;
+
+export const User2Contenido = styled.div`
+display: flex;
+flex-direction: column;
+text-align: right;
+margin-left: 10px;
+`;
+
+export const User2Msg = styled.div`
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+    color: #373737;
+    line-height: 1.1;
+    max-width: 260px;
+`;
+
+export const User2Time = styled.div`
+  font-size: 13px;
+    color: #737273;
+    margin-top: 5px;
+`;
+
+///Barra escribir
 
 
 // PÁGINA 05. PERFIL

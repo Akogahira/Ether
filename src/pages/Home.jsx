@@ -1,4 +1,4 @@
-import { ContainerMain, CardHome, CardHomeImg, TagHome, TituloConvHome, AutorHome, CardContainer, CardHomeInfo, InfoHome, TituloHerrHome, BotonHome } from '../components/Layout.styles';
+import { ContainerMain, CardHome, CardHomeImg, TagHome, TituloConvHome, AutorHome, CardContainer, CardHomeInfo, InfoHome, TituloHerrHome, BotonHome, BotonConv, TituloHomeGenerico } from '../components/Layout.styles';
 import { Link } from 'react-router-dom';
 import { Conver } from "../data/Conversaciones";
 import { PiChatCircle } from 'react-icons/pi';
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <ContainerMain>
-        <h2>Únete a estas conversaciones</h2>
+        <TituloHomeGenerico><h2>Únete a estas conversaciones</h2></TituloHomeGenerico>
         <CardContainer>
           {Conver.map(convh => (
             <CardHome key={convh}>
@@ -27,7 +27,7 @@ const Home = () => {
         <BotonHome><Link to="/Conversaciones" style={{ textDecoration: 'none', color: 'inherit' }}>Ver más</Link ></BotonHome>
 
 
-        <h2>¿Conoces estas herramientas?</h2>
+        <TituloHomeGenerico><h2>¿Conoces estas herramientas?</h2></TituloHomeGenerico>
 
         <CardContainer>
           <CardHome>
@@ -63,6 +63,17 @@ const Home = () => {
         </CardContainer>
 
         <BotonHome><Link to="/Herramientas" style={{ textDecoration: 'none', color: 'inherit' }}>Ver más</Link ></BotonHome>
+
+        <TituloHomeGenerico><h2>¿Quieres compartir algo?</h2></TituloHomeGenerico>
+        <Link to="/SubirConv" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <BotonConv style={{ margin: '0px' }}>Empieza una conversación</BotonConv>
+        </Link>
+
+        <TituloHomeGenerico><h2>¿Conoces alguna herramienta que te ayude?</h2></TituloHomeGenerico>
+        <Link to="/SubirHerr" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <BotonConv style={{ margin: '0px' }}>Publica una herramienta</BotonConv>
+        </Link>
+
       </ContainerMain>
     </div >
   );

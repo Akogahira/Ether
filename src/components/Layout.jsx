@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { RxAvatar } from "react-icons/rx";
+import { HiOutlineUserCircle, HiUserCircle } from "react-icons/hi2";
 import { GoSearch } from "react-icons/go";
 import { IoHome, IoHomeOutline } from "react-icons/io5";
 import { MdForum, MdOutlineForum } from "react-icons/md";
@@ -15,6 +15,11 @@ const Layout = ({ children }) => {
   const isHerrPage = location.pathname === '/Herramientas';
   const isChatPage = location.pathname === '/Chat';
   const isPerfilPage = location.pathname === '/Perfil';
+  const isChatEspPage = location.pathname === '/ChatEsp';
+  const isSubirHerrPage = location.pathname === '/SubirHerr';
+  const isSubirConvPage = location.pathname === '/SubirConv';
+  const isConvEspPage = location.pathname === '/ConversacionEsp';
+  const isHerrEspPage = location.pathname === '/HerramientaEsp';
 
   const getPageName = () => {
     switch (true) {
@@ -28,6 +33,16 @@ const Layout = ({ children }) => {
         return "Chat";
       case isPerfilPage:
         return "Perfil";
+      case isChatEspPage:
+        return "Username";
+      case isHerrEspPage:
+        return "Herramienta";
+      case isConvEspPage:
+        return "Conversación";
+      case isSubirConvPage:
+        return "Subir conversación";
+      case isSubirHerrPage:
+        return "Publicar herramienta";
       default:
         return "Página";
     }
@@ -37,7 +52,9 @@ const Layout = ({ children }) => {
     <Container>
       <Footer2>
         <Nav2>
-          <Link to="/Perfil"><RxAvatar /></Link>
+          <Link to="/Perfil">
+            {isPerfilPage ? <HiUserCircle /> : <HiOutlineUserCircle />}
+          </Link>
           <h2>{getPageName()}</h2>
           <Link to="/"><GoSearch /></Link>
         </Nav2>
