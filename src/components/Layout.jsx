@@ -70,13 +70,13 @@ const Layout = ({ children }) => {
               {isHomePage ? <IoHome /> : <IoHomeOutline />}
             </Link>
             <Link to="/Conversaciones">
-              {isConvPage ? <MdForum /> : <MdOutlineForum />}
+              {(isConvPage || isConvEspPage || isSubirConvPage) ? <MdForum /> : <MdOutlineForum />}
             </Link>
             <Link to="/Herramientas">
-              {isHerrPage ? <IoBookSharp /> : <IoBookOutline />}
+              {(isHerrPage || isHerrEspPage || isSubirHerrPage) ? <IoBookSharp /> : <IoBookOutline />}
             </Link>
             <Link to="/Chat">
-              {isChatPage ? <PiChatCircleFill /> : <PiChatCircle />}
+              {(isChatPage || isChatEspPage) ? <PiChatCircleFill /> : <PiChatCircle />}
             </Link>
           </div>
         </Nav>

@@ -7,6 +7,84 @@ import styled from 'styled-components';
 // --icon - color: #beb1dc;
 // --main - background: #fffeef;
 
+//Página Inicio
+
+export const MainInicio = styled.div`
+font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+ width: 100%;
+ min-height: 660px;
+`;
+
+export const ContainerInicio = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`;
+
+export const ContainerInicioSesion = styled.div`
+margin-bottom: 20px;
+`;
+
+export const TextFieldInicioSesion = styled.textarea`
+ padding: 5px 12px;
+  border-radius: 100px;
+  background-color: white;
+  color: #737273;
+  font-weight: normal;
+  font-size: 14px;
+  height: 20px;
+  width: 230px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 10px 0 10px 0;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const TextFieldContainerInicio = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  p {
+    margin: 5px 0 0 0;
+  }
+`;
+
+export const PassRestart = styled.p`
+text-align: right;
+font-size: 13px;
+margin-top: 0px;
+color: #737273;
+`;
+
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  label {
+    font-size: 12px;
+    color: #737273;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+    border: 1px solid #737273; /* Bordes transparentes */
+    border-radius: 3px; /* Bordes redondeados */
+    width: 11px;
+    height: 11px;
+    appearance:none;
+  }
+
+  //CAMBIAR: ver cómo cambiar la apariencia de esto
+  input[type="checkbox"]:checked {
+    border: 1px solid #737273;
+    border-radius: 3px;
+    background-color: #dad1ef;
+  }
+`;
+
 // 00. Estilos generales (botones, MainContainer, divider...)
 
 export const ContainerMain = styled.div`
@@ -853,3 +931,6 @@ export const BotonSubirConv = styled.button`
   font-size: 16px;
   color: white;
 `;
+
+
+///MODALES
