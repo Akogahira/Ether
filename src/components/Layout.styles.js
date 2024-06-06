@@ -262,7 +262,7 @@ export const AutorHome = styled.span`
 export const TituloConvHome = styled.h4`
   padding: 0px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   font-size: 15px;
   font-weight: 540;
   line-height: 1.3;
@@ -898,7 +898,7 @@ export const TextFieldSubirConv = styled.textarea`
   height: 20px;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  margin: 15px 0 10px 0;
+  margin: 10px 0 10px 0;
 `;
 
 export const TextFieldSubirConvGrande = styled.textarea`
