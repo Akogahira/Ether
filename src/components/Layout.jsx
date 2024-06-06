@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { HiOutlineUserCircle, HiUserCircle } from "react-icons/hi2";
-import { GoSearch } from "react-icons/go";
+import { BiSearchAlt2, BiSolidSearchAlt2 } from "react-icons/bi";
 import { IoHome, IoHomeOutline } from "react-icons/io5";
 import { MdForum, MdOutlineForum } from "react-icons/md";
 import { IoBookSharp, IoBookOutline } from "react-icons/io5";
@@ -20,6 +20,7 @@ const Layout = ({ children }) => {
   const isSubirConvPage = location.pathname === '/SubirConv';
   const isConvEspPage = location.pathname === '/ConversacionEsp';
   const isHerrEspPage = location.pathname === '/HerramientaEsp';
+  const isBuscarPage = location.pathname === '/Busqueda';
 
   const getPageName = () => {
     switch (true) {
@@ -43,6 +44,8 @@ const Layout = ({ children }) => {
         return "Subir conversación";
       case isSubirHerrPage:
         return "Publicar herramienta";
+      case isBuscarPage:
+        return "Búsqueda";
       default:
         return "Página";
     }
@@ -56,7 +59,10 @@ const Layout = ({ children }) => {
             {isPerfilPage ? <HiUserCircle /> : <HiOutlineUserCircle />}
           </Link>
           <h2>{getPageName()}</h2>
-          <Link to="/"><GoSearch /></Link>
+          <Link to="/Busqueda">
+            {isBuscarPage ? <BiSolidSearchAlt2 /> :
+              <BiSearchAlt2 />}
+          </Link>
         </Nav2>
       </Footer2>
 

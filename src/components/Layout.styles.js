@@ -935,3 +935,24 @@ export const BotonSubirConv = styled.button`
 
 
 ///MODALES
+
+
+///BUSQUEDA
+export const BusquedaHerramientas = styled.div`
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+`;
+
+export const ResultHerr = styled.div`
+display: flex;
+  padding: 6px 10px;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #ab9cce;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  max-width: 90px;
+  margin: 10px 5px 10px 0;
+`;

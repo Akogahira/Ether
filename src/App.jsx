@@ -13,6 +13,7 @@ import SubirHerr from './pages/SubirHerr';
 import ChatEsp from './pages/ChatEsp';
 import InicioSesion from './pages/InicioSesion';
 import InicioRegistro from './pages/InicioRegistro';
+import Busqueda from './pages/Busqueda';
 
 const App = () => (
   <Router>
@@ -31,6 +32,7 @@ const App = () => (
         <Route path="/ChatEsp" element={<ChatEsp />} />
         <Route path="/InicioSesion" element={<InicioSesion />} />
         <Route path="/InicioRegistro" element={<InicioRegistro />} />
+        <Route path="/Busqueda" element={<Busqueda />} />
       </Routes>
     </Layout>
 
