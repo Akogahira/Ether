@@ -3,10 +3,10 @@ import { ContainerMain, BotonSubirConv, TextFieldContainer, TextFieldSubirConv, 
 import { ImPlus } from 'react-icons/im';
 
 const SubirHerr = () => {
-  const [seccionCount, setSeccionCount] = useState(1); // Estado para el contador de secciones
+  const [seccionCount, setSeccionCount] = useState(1);
 
   const agregarSeccion = () => {
-    setSeccionCount(seccionCount + 1); // Incrementar el contador de secciones
+    setSeccionCount(seccionCount + 1);
   };
 
   return (
@@ -18,7 +18,7 @@ const SubirHerr = () => {
         </TextFieldContainer>
       </div>
 
-      <TituloConvHome>Explicación sobre el desarrollo de la herramienta.</TituloConvHome>
+      <TituloConvHome>Desarrolla y explica tu herramienta.</TituloConvHome>
       {[...Array(seccionCount)].map((_, index) => (
         <div key={index}>
           <TextFieldContainer>
@@ -34,7 +34,13 @@ const SubirHerr = () => {
         <div onClick={agregarSeccion}><ImPlus></ImPlus> Añadir sección</div>
         <BotonSubirConv>Añadir filtros</BotonSubirConv>
       </BotonesSubirConv>
+
+      <BotonesSubirConv style={{ display: 'flex', alignItems: 'flex-end' }}>
+        <BotonSubirConv>Enviar</BotonSubirConv>
+      </BotonesSubirConv>
+
     </ContainerMain>
+
   );
 };
 

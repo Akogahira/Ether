@@ -27,6 +27,10 @@ const SubirConv = () => {
         <div><ImUpload></ImUpload> Subir imagen</div>
         <BotonSubirConv>Añadir filtros</BotonSubirConv>
       </BotonesSubirConv>
+
+      <BotonesSubirConv style={{ display: 'flex', alignItems: 'flex-end' }}>
+        <BotonSubirConv>Enviar</BotonSubirConv>
+      </BotonesSubirConv>
     </ContainerMain>
   );
 };

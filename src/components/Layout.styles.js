@@ -206,6 +206,7 @@ export const Nav = styled.nav`
 //PÁGINA 01. HOME
 
 export const TituloHomeGenerico = styled.div`
+max-width: 310px;
 h2 {
 font-size: 19px;
 font-weight: normal;
