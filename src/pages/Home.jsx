@@ -44,7 +44,7 @@ const Home = () => {
 
         <BotonHome>
           <Link
-            to="/Conversaciones"
+            to="/conversaciones"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             Ver más
@@ -105,7 +105,7 @@ const Home = () => {
 
         <BotonHome>
           <Link
-            to="/Herramientas"
+            to="/herramientas"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             Ver más
@@ -116,7 +116,7 @@ const Home = () => {
           <h2>¿Quieres compartir algo?</h2>
         </TituloHomeGenerico>
         <Link
-          to="/SubirConv"
+          to="/subirconversacion"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv style={{ margin: "0px" }}>
@@ -128,7 +128,7 @@ const Home = () => {
           <h2>¿Conoces alguna herramienta que te ayude?</h2>
         </TituloHomeGenerico>
         <Link
-          to="/SubirHerr"
+          to="/subirherramienta"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv style={{ margin: "0px" }}>

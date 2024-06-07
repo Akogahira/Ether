@@ -19,16 +19,16 @@ import {
 const Layout = ({ children }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-  const isConvPage = location.pathname === "/Conversaciones";
-  const isHerrPage = location.pathname === "/Herramientas";
-  const isChatPage = location.pathname === "/Chat";
-  const isPerfilPage = location.pathname === "/Perfil";
-  const isChatEspPage = location.pathname === "/ChatEsp";
-  const isSubirHerrPage = location.pathname === "/SubirHerr";
-  const isSubirConvPage = location.pathname === "/SubirConv";
-  const isConvEspPage = location.pathname === "/ConversacionEsp";
-  const isHerrEspPage = location.pathname === "/HerramientaEsp";
-  const isBuscarPage = location.pathname === "/Busqueda";
+  const isConvPage = location.pathname === "/conversaciones";
+  const isHerrPage = location.pathname === "/herramientas";
+  const isChatPage = location.pathname === "/chat";
+  const isPerfilPage = location.pathname === "/perfil";
+  const isChatEspPage = location.pathname === "/chatpriv";
+  const isSubirHerrPage = location.pathname === "/subirherramienta";
+  const isSubirConvPage = location.pathname === "/subirconversacion";
+  const isConvEspPage = location.pathname === "/conversacionesp";
+  const isHerrEspPage = location.pathname === "/herramientaesp";
+  const isBuscarPage = location.pathname === "/buscador";
 
   const getPageName = () => {
     switch (true) {
@@ -63,11 +63,11 @@ const Layout = ({ children }) => {
     <Container>
       <Footer2>
         <Nav2>
-          <Link to="/Perfil">
+          <Link to="/perfil">
             {isPerfilPage ? <HiUserCircle /> : <HiOutlineUserCircle />}
           </Link>
           <h2>{getPageName()}</h2>
-          <Link to="/Busqueda">
+          <Link to="/buscador">
             {isBuscarPage ? <BiSolidSearchAlt2 /> : <BiSearchAlt2 />}
           </Link>
         </Nav2>
@@ -80,21 +80,21 @@ const Layout = ({ children }) => {
         <Nav>
           <div>
             <Link to="/">{isHomePage ? <IoHome /> : <IoHomeOutline />}</Link>
-            <Link to="/Conversaciones">
+            <Link to="/conversaciones">
               {isConvPage || isConvEspPage || isSubirConvPage ? (
                 <MdForum />
               ) : (
                 <MdOutlineForum />
               )}
             </Link>
-            <Link to="/Herramientas">
+            <Link to="/herramientas">
               {isHerrPage || isHerrEspPage || isSubirHerrPage ? (
                 <IoBookSharp />
               ) : (
                 <IoBookOutline />
               )}
             </Link>
-            <Link to="/Chat">
+            <Link to="/chat">
               {isChatPage || isChatEspPage ? (
                 <PiChatCircleFill />
               ) : (

@@ -18,7 +18,7 @@ const Conversaciones = () => (
     <ContainerMain>
       <BotonConv>Filtros</BotonConv>
       <Link
-        to="/SubirConv"
+        to="/subirconversacion"
         style={{ textDecoration: "none", color: "inherit" }}
       >
         <BotonConv>Empieza una conversación</BotonConv>
@@ -28,7 +28,7 @@ const Conversaciones = () => (
           <div key={conv}>
             <Divider style={{ margin: "10px 0" }} />
             <Tag>{conv.tag}</Tag>
-            <Link to="/ConversacionEsp" style={{ textDecoration: "none" }}>
+            <Link to="/conversacionesp" style={{ textDecoration: "none" }}>
               <TituloConv>{conv.title}</TituloConv>
             </Link>
             <ContainerCollapseConv>

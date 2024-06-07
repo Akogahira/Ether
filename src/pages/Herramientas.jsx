@@ -24,7 +24,7 @@ const Herramientas = () => {
           ¿Conoces alguna herramienta que no encuetras aquí? ¡Compártela!
         </IntroPageHerr>
         <Link
-          to="/SubirHerr"
+          to="/herramientaesp"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv>Publica una herramienta</BotonConv>
@@ -63,7 +63,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "oficiales" && filtro !== "comunidad")
+                  (filtro === "oficiales" && filtro !== "comunidad")
                   ? "block"
                   : "none",
             }}
@@ -77,7 +77,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "oficiales" && filtro !== "comunidad")
+                  (filtro === "oficiales" && filtro !== "comunidad")
                   ? "block"
                   : "none",
             }}
@@ -91,7 +91,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "oficiales" && filtro !== "comunidad")
+                  (filtro === "oficiales" && filtro !== "comunidad")
                   ? "block"
                   : "none",
             }}
@@ -105,7 +105,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "comunidad" && filtro !== "oficiales")
+                  (filtro === "comunidad" && filtro !== "oficiales")
                   ? "block"
                   : "none",
             }}
@@ -119,7 +119,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "oficiales" && filtro !== "comunidad")
+                  (filtro === "oficiales" && filtro !== "comunidad")
                   ? "block"
                   : "none",
             }}
@@ -133,7 +133,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "comunidad" && filtro !== "oficiales")
+                  (filtro === "comunidad" && filtro !== "oficiales")
                   ? "block"
                   : "none",
             }}
@@ -147,7 +147,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "oficiales" && filtro !== "comunidad")
+                  (filtro === "oficiales" && filtro !== "comunidad")
                   ? "block"
                   : "none",
             }}
@@ -161,7 +161,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "oficiales" && filtro !== "comunidad")
+                  (filtro === "oficiales" && filtro !== "comunidad")
                   ? "block"
                   : "none",
             }}
@@ -175,7 +175,7 @@ const Herramientas = () => {
             style={{
               display:
                 filtro === "todas" ||
-                (filtro === "comunidad" && filtro !== "oficiales")
+                  (filtro === "comunidad" && filtro !== "oficiales")
                   ? "block"
                   : "none",
             }}

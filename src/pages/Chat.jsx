@@ -30,7 +30,7 @@ const Chat = () => (
       {ChatsPriv.map((xat, index) => (
         <ContainerDivider key={`${xat.user}-${xat.fecha}-${index}`}>
           <Link
-            to="/ChatEsp"
+            to="/chatpriv"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <ContainerChats>

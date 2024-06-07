@@ -11,7 +11,7 @@ import {
   ResultHerr,
 } from "../components/Layout.styles";
 
-const SubirHerr = () => {
+const Buscador = () => {
   return (
     <ContainerMain>
       <TextFieldContainer>
@@ -63,4 +63,4 @@ const SubirHerr = () => {
   );
 };
 
-export default SubirHerr;
+export default Buscador;

@@ -11,7 +11,7 @@ const Inicio = () => {
       <ContainerInicio>
         <h2>¿Ya nos conocemos?</h2>
         <Link
-          to="/InicioSesion"
+          to="/iniciosesion"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv>Iniciar sesión</BotonConv>
@@ -19,7 +19,7 @@ const Inicio = () => {
 
         <h2>¿Todavía no?</h2>
         <Link
-          to="/InicioRegistro"
+          to="/inicioregistro"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv>Registrarse</BotonConv>
