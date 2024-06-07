@@ -35,7 +35,6 @@ const App = () => (
         <Route path="/Busqueda" element={<Busqueda />} />
       </Routes>
     </Layout>
-
   </Router >
 );
 

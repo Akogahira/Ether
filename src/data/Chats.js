@@ -11,6 +11,4 @@ export const ChatsPriv = [
 
   { img: 'src/assets/images/Avatar6.png', user: 'EBOLA765', fecha: '09/05', hora: '16:40', msg: 'Estoy hasta los cojones de ser malo al valorant' },
 
-
-
 ]

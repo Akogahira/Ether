@@ -934,9 +934,6 @@ export const BotonSubirConv = styled.button`
 `;
 
 
-///MODALES
-
-
 ///BUSQUEDA
 export const BusquedaHerramientas = styled.div`
 display: flex;
