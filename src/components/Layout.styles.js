@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 // --main-black: #373737;
 // --main - semiblack: #737273;
@@ -10,24 +10,24 @@ import styled from 'styled-components';
 //Página Inicio
 
 export const MainInicio = styled.div`
-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
- width: 100%;
- min-height: 660px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100%;
+  min-height: 660px;
 `;
 
 export const ContainerInicio = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ContainerInicioSesion = styled.div`
-margin-bottom: 20px;
+  margin-bottom: 20px;
 `;
 
 export const TextFieldInicioSesion = styled.textarea`
- padding: 5px 12px;
+  padding: 5px 12px;
   border-radius: 100px;
   background-color: white;
   color: #737273;
@@ -52,12 +52,11 @@ export const TextFieldContainerInicio = styled.div`
 `;
 
 export const PassRestart = styled.p`
-text-align: right;
-font-size: 13px;
-margin-top: 0px;
-color: #737273;
+  text-align: right;
+  font-size: 13px;
+  margin-top: 0px;
+  color: #737273;
 `;
-
 
 export const CheckboxContainer = styled.div`
   display: flex;
@@ -74,7 +73,7 @@ export const CheckboxContainer = styled.div`
     border-radius: 3px; /* Bordes redondeados */
     width: 11px;
     height: 11px;
-    appearance:none;
+    appearance: none;
   }
 
   //CAMBIAR: ver cómo cambiar la apariencia de esto
@@ -90,11 +89,11 @@ export const CheckboxContainer = styled.div`
 export const ContainerMain = styled.div`
   margin: 0 auto;
   width: 95%;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    h2 {
-      font-weight: normal;
-      font-size: 21px;
-    }
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  h2 {
+    font-weight: normal;
+    font-size: 21px;
+  }
 `;
 
 export const Main = styled.div`
@@ -161,7 +160,7 @@ export const Nav2 = styled.nav`
   }
 `;
 
-/// Abajo 
+/// Abajo
 export const Footer = styled.footer`
   display: flex;
   justify-content: center;
@@ -206,11 +205,11 @@ export const Nav = styled.nav`
 //PÁGINA 01. HOME
 
 export const TituloHomeGenerico = styled.div`
-max-width: 310px;
-h2 {
-font-size: 19px;
-font-weight: normal;
-}
+  max-width: 310px;
+  h2 {
+    font-size: 19px;
+    font-weight: normal;
+  }
 `;
 
 ///Cards padre
@@ -241,7 +240,6 @@ export const CardHomeInfo = styled.div`
   flex-direction: column;
   align-items: left;
   margin: 10px;
-
 `;
 
 ///CONVERSACIONES - Indicador de N comentarios
@@ -256,7 +254,7 @@ export const AutorHome = styled.span`
   margin: 0;
   font-weight: normal;
   font-size: 12px;
-    color: #737273;
+  color: #737273;
 `;
 
 ///CONVERSACIONES - Titulo conversación
@@ -292,7 +290,7 @@ export const CardHomeImg = styled.div`
   img {
     max-width: 90%;
   }
-    p {
+  p {
     text-align: left;
     font-size: 15px;
     line-height: 1.1;
@@ -311,8 +309,8 @@ export const TituloHerrHome = styled.h4`
 
 ///Botón Ver más
 export const BotonHome = styled.button`
-justify-content: right;
-text-align: right;
+  justify-content: right;
+  text-align: right;
   padding: 5px 10px;
   margin: 5px 2px;
   background-color: inherit;
@@ -340,7 +338,6 @@ export const BotonConv = styled.button`
   color: white;
 `;
 
-
 ///Container hijo de cada conversación (el padre es ContainerMain)
 export const ContainerConver = styled.div`
   display: flex;
@@ -359,16 +356,16 @@ export const TituloConv = styled.h4`
 `;
 
 export const ContainerCollapseConv = styled.div`
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 3px;
 `;
 
 export const Collapse = styled.span`
-display: inline-block;
-font-size: 13px;
-color: #737273;
+  display: inline-block;
+  font-size: 13px;
+  color: #737273;
 `;
 
 ///Indicador N Comentarios
@@ -390,24 +387,23 @@ export const Tag = styled.span`
   color: white;
 `;
 
-
 //2.1 CONVERSACIÓN ESPECÍFICA
 
 //(Aún no creado)
 
 ///Container "Tarjeta" de usuario
 export const ContainerConverEsp = styled.div`
-display: flex;
-flex-direction: row;
- justify-content: space-between; 
-width: 100%;
-margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0px;
 `;
 
 ///Container de izq + der (padre)
 export const UserIzq = styled.div`
-display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 ///Container izq con el Avatar
@@ -421,7 +417,7 @@ export const DatosUserIzq = styled.div`
 
 ///Container izq con el nombre y la hora
 export const DatosUserIzq2 = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
 `;
 
@@ -430,7 +426,7 @@ export const DatoUserName = styled.div`
   margin: 0;
   font-weight: 500;
   font-size: 15px;
-    color: #373737;
+  color: #373737;
 `;
 
 ///Time/hora
@@ -438,9 +434,9 @@ export const DatoUserTime = styled.div`
   margin: 0;
   font-weight: 500;
   font-size: 15px;
-    color: #373737;
-    line-height: 1.1;
-    margin-top: 6px;
+  color: #373737;
+  line-height: 1.1;
+  margin-top: 6px;
 `;
 
 //Filtros
@@ -487,7 +483,7 @@ export const TextFieldContainer = styled.div`
 
 ///TextField
 export const TextFieldConver = styled.textarea`
- padding: 5px 12px;
+  padding: 5px 12px;
   border-radius: 100px;
   background-color: white;
   color: #4d4c4d;
@@ -498,23 +494,22 @@ export const TextFieldConver = styled.textarea`
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
 
-
 ///COMENTARIOS
 ///
 
 ///Container "Tarjeta" de usuario (COMENTARIO)
 export const ContainerComentarioA = styled.div`
-display: flex;
-flex-direction: row;
- justify-content: space-between; 
-width: 100%;
-margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 0 0 0;
 `;
 
 ///Container de izq + der (padre) (COMENTARIO)
 export const ComentIzqA = styled.div`
-display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 ///Container izq con el Avatar (COMENTARIO)
@@ -528,7 +523,7 @@ export const DatosComentIzqA1 = styled.div`
 
 ///Container izq con el nombre y la hora (COMENTARIO)
 export const DatosComentIzqA2 = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
 `;
 
@@ -545,9 +540,9 @@ export const DatoComentTimeA = styled.div`
   margin: 0;
   font-weight: 500;
   font-size: 14px;
-    color: #373737;
-    line-height: 1.1;
-    margin-top: 4px;
+  color: #373737;
+  line-height: 1.1;
+  margin-top: 4px;
 `;
 
 ///Texto Comentario (COMENTARIO)
@@ -560,22 +555,17 @@ export const DescripcionComentarioA = styled.div`
   color: #373737;
 `;
 
-
 ///Fin estilos Conversaciones
-
-
-
-
 
 // PÁGINA 03. HERRAMIENTAS
 
 ///Intro
 export const IntroPageHerr = styled.h4`
-text-align: left;
-font-size: 17px;
-font-weight: 540;
-line-height: 1.1;
-margin: 10px 0px 10px 0px;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 540;
+  line-height: 1.1;
+  margin: 10px 0px 10px 0px;
 `;
 
 ///Container filtros (Todas - Oficiales - Comunidad)
@@ -619,7 +609,7 @@ export const CardHerrInfo = styled.div`
   img {
     max-width: 99%;
   }
-    p {
+  p {
     text-align: left;
     font-size: 15px;
     line-height: 1.1;
@@ -629,20 +619,20 @@ export const CardHerrInfo = styled.div`
 ///3.1 HERRAMIENTA ESPECÍFICA
 
 export const CardHerramientaEsp = styled.div`
-  background-image: url('src/assets/images/Herramienta1.png');
+  background-image: url("src/assets/images/Herramienta1.png");
   background-size: 130%;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #dad1ef;
-  border-radius:18px;
+  border-radius: 18px;
   padding: 20px;
   margin-bottom: 15px;
   height: 150px;
 `;
 
 export const TituloHerramientaEsp = styled.h1`
-font-size: 32px;
-font-weight: 600;
+  font-size: 32px;
+  font-weight: 600;
   margin: 100px 0 0 0;
   color: whitesmoke;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
@@ -650,22 +640,21 @@ font-weight: 600;
 
 ///Texto Secciones
 export const TextoSecciones = styled.div`
-margin: 20px 5px 0 0;
-text-align: justify;
+  margin: 20px 5px 0 0;
+  text-align: justify;
 `;
 
 //Sección de comentarios cogida de ConversacionEsp
-
 
 // PÁGINA 04. CHATS
 
 ///Container general
 export const ContainerChats = styled.div`
-display: flex;
-flex-direction: row;
- justify-content: space-between; 
-width: 100%;
-margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0px;
   img {
     width: 42px;
     border-radius: 50%;
@@ -675,18 +664,16 @@ margin: 0px;
 
 ///Container 1: Datos izquierda (avatar, nombre y mensaje)
 export const ChatsIzq = styled.div`
-display: flex;
- align-items: center;
-
+  display: flex;
+  align-items: center;
 `;
 
 ///Container 1.1: Avatar
-export const DatosIzq1 = styled.div`
-`;
+export const DatosIzq1 = styled.div``;
 
 ///Container 1.2: Nombre y mensaje
 export const DatosIzq2 = styled.div`
-display: flex;
+  display: flex;
   flex-direction: column;
 `;
 
@@ -694,148 +681,145 @@ export const ChatUser = styled.div`
   margin: 0;
   font-weight: 500;
   font-size: 12px;
-    color: #373737;
+  color: #373737;
 `;
 
 export const ChatMsg = styled.div`
   margin: 0;
   font-weight: 500;
   font-size: 16px;
-    color: #373737;
-    line-height: 1.1;
-    margin-top: 6px;
+  color: #373737;
+  line-height: 1.1;
+  margin-top: 6px;
 `;
 
 ///Container 2: Datos derecha (fecha y hora)
 export const ChatsDer = styled.div`
-text-align: right;
-margin-left: auto;
+  text-align: right;
+  margin-left: auto;
 `;
 
 export const ChatFecha = styled.div`
   font-size: 13px;
-    color: #737273;
+  color: #737273;
 `;
 
 export const ChatHora = styled.div`
   font-size: 13px;
-    color: #737273;
+  color: #737273;
 `;
 
 export const ContainerDivider = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
-
 
 ////CHAT ESPECÍFICO
 
 export const NombreUserChat = styled.h3`
-font-size: 19px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: normal;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
 `;
 
 export const ChatEspFecha = styled.div`
   font-size: 13px;
-    color: #737273;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+  color: #737273;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 `;
 
 export const User1Container = styled.div`
-display: flex;
- align-items: center;
- margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   justify-content: space-around;
   width: 100%;
 `;
 
 export const User1Img = styled.div`
-   img {
+  img {
     width: 45px;
     border-radius: 50%;
-   }
+  }
 `;
 
 export const User1Contenido = styled.div`
-display: flex;
-flex-direction: column;
-margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 `;
 
 export const User1Msg = styled.div`
   margin: 0;
   font-weight: 500;
   font-size: 16px;
-    color: #373737;
-    line-height: 1.1;
-    max-width: 260px;
+  color: #373737;
+  line-height: 1.1;
+  max-width: 260px;
 `;
 
 export const User1Time = styled.div`
   font-size: 13px;
-    color: #737273;
-    margin-top: 5px;
+  color: #737273;
+  margin-top: 5px;
 `;
 
 //User 2
 export const User2Container = styled.div`
-display: flex;
- align-items: center;
- margin-bottom: 20px;
- justify-content: space-around;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-around;
 `;
 
-
 export const User2Img = styled.div`
-   img {
+  img {
     width: 45px;
     border-radius: 50%;
-   }
+  }
 `;
 
 export const User2Contenido = styled.div`
-display: flex;
-flex-direction: column;
-text-align: right;
-margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-left: 10px;
 `;
 
 export const User2Msg = styled.div`
   margin: 0;
   font-weight: 500;
   font-size: 16px;
-    color: #373737;
-    line-height: 1.1;
-    max-width: 260px;
+  color: #373737;
+  line-height: 1.1;
+  max-width: 260px;
 `;
 
 export const User2Time = styled.div`
   font-size: 13px;
-    color: #737273;
-    margin-top: 5px;
+  color: #737273;
+  margin-top: 5px;
 `;
 
 ///Barra escribir
-
 
 // PÁGINA 05. PERFIL
 
 ///Container de avatar
 export const Avatar = styled.div`
-img {
+  img {
     width: 60%;
     border-radius: 90%;
     margin: 0 auto;
     display: flex;
     margin-bottom: 20px;
     border: 1px solid darkslategray;
-}
+  }
 `;
 
 ///Container de botón de Editar avatar
@@ -847,7 +831,7 @@ export const BotonPerfil = styled.button`
   font-weight: normal;
   font-size: 17px;
   color: white;
-   display: flex;
+  display: flex;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
@@ -855,7 +839,7 @@ export const BotonPerfil = styled.button`
 
 ///TextField o TextArea del nombre de usuario
 export const TextFieldPerfil = styled.textarea`
- padding: 5px 12px;
+  padding: 5px 12px;
   border-radius: 100px;
   background-color: white;
   color: #4d4c4d;
@@ -864,33 +848,31 @@ export const TextFieldPerfil = styled.textarea`
   height: 20px;
   width: 120px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  
 `;
 
 ///Titulos H2 y H4 de los ajustes de perfil
 export const AjustesPerfil = styled.div`
-h2 {
-  margin: 20px 0 10px 0;
-}
-h4 {
-  font-size: 16px;
-  font-weight:normal;
-  margin: 5px 0;
-  color: #4d4c4d;
-}
+  h2 {
+    margin: 20px 0 10px 0;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 5px 0;
+    color: #4d4c4d;
+  }
 `;
 
 ///Container de los H4 + Switches
 export const ContainerSwitches = styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
-
 
 //PÁGINA 6. SUBIR CONVERSACION
 export const TextFieldSubirConv = styled.textarea`
- padding: 5px 12px;
+  padding: 5px 12px;
   border-radius: 100px;
   background-color: white;
   color: #4d4c4d;
@@ -903,7 +885,7 @@ export const TextFieldSubirConv = styled.textarea`
 `;
 
 export const TextFieldSubirConvGrande = styled.textarea`
- padding: 5px 12px;
+  padding: 5px 12px;
   border-radius: 20px;
   background-color: white;
   color: #4d4c4d;
@@ -916,9 +898,9 @@ export const TextFieldSubirConvGrande = styled.textarea`
 `;
 
 export const BotonesSubirConv = styled.div`
-display: flex;
-flex-direction: column;
-margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
 `;
 
 export const BotonSubirConv = styled.button`
@@ -933,16 +915,15 @@ export const BotonSubirConv = styled.button`
   color: white;
 `;
 
-
 ///BUSQUEDA
 export const BusquedaHerramientas = styled.div`
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 `;
 
 export const ResultHerr = styled.div`
-display: flex;
+  display: flex;
   padding: 6px 10px;
   font-weight: normal;
   font-size: 14px;

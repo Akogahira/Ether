@@ -1,5 +1,27 @@
-import { ContainerMain, ContainerConverEsp, Divider, ContainerDivider, TagConver, TituloConvEsp, TextFieldConver, UserIzq, DatosUserIzq, DatosUserIzq2, DatoUserName, DatoUserTime, DescripcionConvEsp, TextFieldContainer, ContainerComentarioA, DatosComentIzqA1, DatosComentIzqA2, DatoComentNameA, ComentIzqA, DatoComentTimeA, DescripcionComentarioA } from '../components/Layout.styles';
-import { Conver } from '../data/Conversaciones';
+import {
+  ContainerMain,
+  ContainerConverEsp,
+  Divider,
+  ContainerDivider,
+  TagConver,
+  TituloConvEsp,
+  TextFieldConver,
+  UserIzq,
+  DatosUserIzq,
+  DatosUserIzq2,
+  DatoUserName,
+  DatoUserTime,
+  DescripcionConvEsp,
+  TextFieldContainer,
+  ContainerComentarioA,
+  DatosComentIzqA1,
+  DatosComentIzqA2,
+  DatoComentNameA,
+  ComentIzqA,
+  DatoComentTimeA,
+  DescripcionComentarioA,
+} from "../components/Layout.styles";
+import { Conver } from "../data/Conversaciones";
 
 const ConversacionEsp = () => (
   <div>
@@ -11,12 +33,8 @@ const ConversacionEsp = () => (
               <img src={Conver[0].img} alt="Icon" />
             </DatosUserIzq>
             <DatosUserIzq2>
-              <DatoUserName>
-                {Conver[0].autor}
-              </DatoUserName>
-              <DatoUserTime>
-                {Conver[0].time}
-              </DatoUserTime>
+              <DatoUserName>{Conver[0].autor}</DatoUserName>
+              <DatoUserTime>{Conver[0].time}</DatoUserTime>
             </DatosUserIzq2>
           </UserIzq>
         </ContainerConverEsp>
@@ -33,29 +51,19 @@ const ConversacionEsp = () => (
         <TextFieldConver></TextFieldConver>
       </TextFieldContainer>
 
-
       <ContainerComentarioA>
         <ComentIzqA>
-
           <DatosComentIzqA1>
             <img src="src/assets/images/Avatar2.png" alt="Icon" />
           </DatosComentIzqA1>
 
           <DatosComentIzqA2>
+            <DatoComentNameA>AlguienUnLol</DatoComentNameA>
 
-            <DatoComentNameA>
-              AlguienUnLol
-            </DatoComentNameA>
-
-            <DatoComentTimeA>
-              6h
-            </DatoComentTimeA>
-
+            <DatoComentTimeA>6h</DatoComentTimeA>
           </DatosComentIzqA2>
-
         </ComentIzqA>
       </ContainerComentarioA>
-
 
       <DescripcionComentarioA>
         A mi me parece una gilipollez porque blablablablablablabla
@@ -65,31 +73,19 @@ const ConversacionEsp = () => (
 
       <ContainerComentarioA>
         <ComentIzqA>
-
           <DatosComentIzqA1>
             <img src="src/assets/images/Avatar5.png" alt="Icon" />
           </DatosComentIzqA1>
 
           <DatosComentIzqA2>
+            <DatoComentNameA>AlguienUnLol2</DatoComentNameA>
 
-            <DatoComentNameA>
-              AlguienUnLol2
-            </DatoComentNameA>
-
-            <DatoComentTimeA>
-              4h
-            </DatoComentTimeA>
-
+            <DatoComentTimeA>4h</DatoComentTimeA>
           </DatosComentIzqA2>
-
         </ComentIzqA>
       </ContainerComentarioA>
 
-
-      <DescripcionComentarioA>
-        AAAAAAAAaa aaaaaaaaaa aa
-      </DescripcionComentarioA>
-
+      <DescripcionComentarioA>AAAAAAAAaa aaaaaaaaaa aa</DescripcionComentarioA>
     </ContainerMain>
   </div>
 );

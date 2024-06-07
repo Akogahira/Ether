@@ -1,19 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Conversaciones from './pages/Conversaciones';
-import Herramientas from './pages/Herramientas';
-import Chat from './pages/Chat';
-import Perfil from './pages/Perfil';
-import Home from './pages/Home';
-import Inicio from './pages/Inicio';
-import HerramientaEsp from './pages/HerramientaEsp';
-import ConversacionEsp from './pages/ConversacionEsp';
-import SubirConv from './pages/SubirConv';
-import SubirHerr from './pages/SubirHerr';
-import ChatEsp from './pages/ChatEsp';
-import InicioSesion from './pages/InicioSesion';
-import InicioRegistro from './pages/InicioRegistro';
-import Busqueda from './pages/Busqueda';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Conversaciones from "./pages/Conversaciones";
+import Herramientas from "./pages/Herramientas";
+import Chat from "./pages/Chat";
+import Perfil from "./pages/Perfil";
+import Home from "./pages/Home";
+import Inicio from "./pages/Inicio";
+import HerramientaEsp from "./pages/HerramientaEsp";
+import ConversacionEsp from "./pages/ConversacionEsp";
+import SubirConv from "./pages/SubirConv";
+import SubirHerr from "./pages/SubirHerr";
+import ChatEsp from "./pages/ChatEsp";
+import InicioSesion from "./pages/InicioSesion";
+import InicioRegistro from "./pages/InicioRegistro";
+import Busqueda from "./pages/Busqueda";
 
 const App = () => (
   <Router>
@@ -35,7 +35,7 @@ const App = () => (
         <Route path="/Busqueda" element={<Busqueda />} />
       </Routes>
     </Layout>
-  </Router >
+  </Router>
 );
 
 export default App;

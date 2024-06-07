@@ -1,13 +1,23 @@
 import {
-  ContainerMain, ChatEspFecha, User1Contenido, User1Img, User1Msg, User1Time, User1Container, User2Container, User2Img, User2Msg, User2Contenido, User2Time,
-} from '../components/Layout.styles';
+  ContainerMain,
+  ChatEspFecha,
+  User1Contenido,
+  User1Img,
+  User1Msg,
+  User1Time,
+  User1Container,
+  User2Container,
+  User2Img,
+  User2Msg,
+  User2Contenido,
+  User2Time,
+} from "../components/Layout.styles";
 
 /* Añadir <NombreUserChat>BPDJASJKK</NombreUserChat> si no se va a "automatizar" el nombre que aparece*/
 
 const ChatEsp = () => (
   <div>
     <ContainerMain>
-
       <ChatEspFecha>30/05</ChatEspFecha>
 
       <User1Container>
@@ -29,9 +39,7 @@ const ChatEsp = () => (
           <img src="src/assets/images/Avatar2.png" alt="Icon" />
         </User2Img>
       </User2Container>
-
     </ContainerMain>
-
   </div>
 );
 
