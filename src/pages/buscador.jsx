@@ -1,7 +1,9 @@
+import { useState, useEffect, useCallback } from "react";
+import { Conver } from "../data/Conversaciones";
+import { Tools } from "../data/Herramientas";
 import {
   ContainerMain,
   Divider,
-  Tag,
   TagConver,
   TextFieldContainer,
   TextFieldConver,
@@ -12,53 +14,82 @@ import {
 } from "../components/Layout.styles";
 
 const Buscador = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  const performSearch = useCallback(() => {
+    // Filtrar conversaciones que coincidan con el término de búsqueda
+    const conversacionesResults = Conver.filter((conv) =>
+      conv.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    // Filtrar herramientas que coincidan con el término de búsqueda
+    const herramientasResults = Tools.filter((tool) =>
+      tool.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    // Actualizar los resultados de búsqueda solo si se ha ingresado un término de búsqueda
+    setSearchResults(
+      searchTerm
+        ? [...conversacionesResults, ...herramientasResults]
+        : []
+    );
+  }, [searchTerm]);
+
+  useEffect(() => {
+    performSearch();
+  }, [searchTerm, performSearch]);
+
   return (
     <ContainerMain>
       <TextFieldContainer>
-        <TextFieldConver></TextFieldConver>
+        <TextFieldConver
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </TextFieldContainer>
 
-      <TituloHomeGenerico>
-        <h2>Resultado de conversaciones</h2>
-      </TituloHomeGenerico>
+      {searchResults.length > 0 && (
+        <>
+          <TituloHomeGenerico>
+            <h2>Resultado de conversaciones</h2>
+          </TituloHomeGenerico>
 
-      <div>
-        <div>
-          <TagConver style={{ marginRight: "6px" }}>Filtro 1</TagConver>
-          <Tag>Filtro 2</Tag>
-        </div>
-        <div>
-          <TituloConvEsp style={{ marginTop: "6px" }}>
-            ¿Opinión del journaling como herramienta?
-          </TituloConvEsp>
-        </div>
-      </div>
+          {searchResults
+            .filter((result) => "title" in result)
+            .map((result) => (
+              <div key={result.id}>
+                <Divider />
+                <div>
+                  <div>
+                    <TagConver style={{ marginRight: "6px" }}>
+                      {result.tag}
+                    </TagConver>
+                  </div>
+                  <div>
+                    <TituloConvEsp style={{ marginTop: "6px" }}>
+                      {result.title}
+                    </TituloConvEsp>
+                  </div>
+                </div>
+              </div>
+            ))}
 
-      <Divider></Divider>
-      <div>
-        <div>
-          <TagConver style={{ marginRight: "6px" }}>Filtro 1</TagConver>
-          <Tag>Filtro 2</Tag>
-        </div>
-        <div>
-          <TituloConvEsp style={{ marginTop: "6px" }}>
-            ¿Opinión del League of Legends como herramienta?
-          </TituloConvEsp>
-        </div>
-      </div>
+          <Divider />
 
-      <Divider></Divider>
+          <TituloHomeGenerico>
+            <h2>Resultado de herramientas</h2>
+          </TituloHomeGenerico>
 
-      <TituloHomeGenerico>
-        <h2>Resultado de herramientas</h2>
-      </TituloHomeGenerico>
-
-      <BusquedaHerramientas>
-        <ResultHerr>Herramienta 1</ResultHerr>
-        <ResultHerr>Herramienta 2</ResultHerr>
-        <ResultHerr>Herramienta 3</ResultHerr>
-        <ResultHerr>Herramienta 4</ResultHerr>
-      </BusquedaHerramientas>
+          <BusquedaHerramientas>
+            {searchResults
+              .filter((result) => "nombre" in result)
+              .map((result) => (
+                <ResultHerr key={result.nombre}>{result.nombre}</ResultHerr>
+              ))}
+          </BusquedaHerramientas>
+        </>
+      )}
     </ContainerMain>
   );
 };

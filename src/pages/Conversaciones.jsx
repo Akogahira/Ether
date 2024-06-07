@@ -43,9 +43,6 @@ const Conversaciones = () => {
                   )}
                 </Collapse>
 
-
-
-
                 <InfoConv>
                   <span style={{ padding: "10px" }}>{conv.time}</span>
                   <span style={{ margin: "10px 1px 0px 2px" }}>
