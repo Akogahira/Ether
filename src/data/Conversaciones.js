@@ -7,7 +7,7 @@ export const Conver = [
     title:
       "¿Qué opinais del journaling como herramienta para tratar la salud mental?",
     descripcion:
-      "Esta es una descripción más larga sobre la conversación que se ha subido.",
+      "Esta es una descripción más larga sobre la conversación número 1.",
     comments: "2",
     img: "src/assets/images/Avatar1.png",
   },
@@ -20,7 +20,7 @@ export const Conver = [
     title:
       "¿Qué opinais de la meditación como herramienta para tratar la salud mental?",
     descripcion:
-      "Esta es una descripción más larga sobre la conversación que se ha subido.",
+      "Esta es una descripción más larga sobre la conversación número 2.",
     comments: "4",
     img: "src/assets/images/Avatar2.png",
   },
@@ -33,7 +33,7 @@ export const Conver = [
     title:
       "¿Qué opinais del hoponopono como herramienta para tratar la salud mental?",
     descripcion:
-      "Esta es una descripción más larga sobre la conversación que se ha subido.",
+      "Esta es una descripción más larga sobre la conversación número 3.",
     comments: "7",
     img: "src/assets/images/Avatar3.png",
   },
@@ -46,7 +46,7 @@ export const Conver = [
     title:
       "¿Qué opinais de jugar al League of Legends como herramienta para tratar la salud mental?",
     descripcion:
-      "Esta es una descripción más larga sobre la conversación que se ha subido.",
+      "Esta es una descripción más larga sobre la conversación número 4.",
     comments: "1",
     img: "src/assets/images/Avatar4.png",
   },
@@ -59,7 +59,7 @@ export const Conver = [
     title:
       "¿Qué opinais de insultar a gente por Reddit como herramienta para tratar la salud mental?",
     descripcion:
-      "Esta es una descripción más larga sobre la conversación que se ha subido.",
+      "Esta es una descripción más larga sobre la conversación número 5.",
     comments: "10",
     img: "src/assets/images/Avatar5.png",
   },
@@ -72,7 +72,7 @@ export const Conver = [
     title:
       "¿Son las peras las frutas más inútiles que existen después de los limones?",
     descripcion:
-      "Sé que el limón no es una fruta, solo me apetecía insultarlo también.",
+      "Sé que el limón no es una fruta, solo me apetecía número 6.",
     comments: "10",
     img: "src/assets/images/Avatar6.png",
   },

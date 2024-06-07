@@ -1,9 +1,8 @@
 import { Link, useLocation, Outlet } from "react-router-dom";
-import { HiOutlineUserCircle, HiUserCircle } from "react-icons/hi2";
-import { BiSearchAlt2, BiSolidSearchAlt2 } from "react-icons/bi";
 import { IoHome, IoHomeOutline } from "react-icons/io5";
 import { MdForum, MdOutlineForum } from "react-icons/md";
 import { IoBookSharp, IoBookOutline } from "react-icons/io5";
+import { GoArrowLeft } from "react-icons/go";
 import { PiChatCircle, PiChatCircleFill } from "react-icons/pi";
 import {
   Container,
@@ -11,65 +10,34 @@ import {
   Footer2,
   Footer,
   Main,
-  Nav2,
+  Nav3,
   Divider,
 } from "./Layout.styles";
 
-const Layout = () => {
+const LayoutExtra = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isConvPage = location.pathname === "/conversaciones";
   const isHerrPage = location.pathname === "/herramientas";
   const isChatPage = location.pathname === "/chat";
-  const isPerfilPage = location.pathname === "/perfil";
   const isChatEspPage = location.pathname === "/chatpriv";
   const isSubirHerrPage = location.pathname === "/subirherramienta";
   const isSubirConvPage = location.pathname === "/subirconversacion";
   const isConvEspPage = location.pathname === "/conversacionesp";
   const isHerrEspPage = location.pathname === "/herramientaesp";
-  const isBuscarPage = location.pathname === "/buscador";
 
-  const getPageName = () => {
-    switch (true) {
-      case isHomePage:
-        return "Inicio";
-      case isConvPage:
-        return "Conversaciones";
-      case isHerrPage:
-        return "Herramientas";
-      case isChatPage:
-        return "Chat";
-      case isPerfilPage:
-        return "Perfil";
-      case isChatEspPage:
-        return "Username";
-      case isHerrEspPage:
-        return "Herramienta";
-      case isConvEspPage:
-        return "Conversación";
-      case isSubirConvPage:
-        return "Subir conversación";
-      case isSubirHerrPage:
-        return "Publicar herramienta";
-      case isBuscarPage:
-        return "Búsqueda";
-      default:
-        return "Página";
-    }
+  const goBack = () => {
+    window.history.back();
   };
 
   return (
     <Container>
       <Footer2>
-        <Nav2>
-          <Link to="/perfil">
-            {isPerfilPage ? <HiUserCircle /> : <HiOutlineUserCircle />}
+        <Nav3>
+          <Link to="#" onClick={goBack}>
+            <GoArrowLeft />
           </Link>
-          <h2>{getPageName()}</h2>
-          <Link to="/buscador">
-            {isBuscarPage ? <BiSolidSearchAlt2 /> : <BiSearchAlt2 />}
-          </Link>
-        </Nav2>
+        </Nav3>
       </Footer2>
 
       <Main>
@@ -109,4 +77,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default LayoutExtra;

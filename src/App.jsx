@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import LayoutInicio from "./components/LayoutInicio";
+import LayoutExtra from "./components/LayoutExtra";
 import {
   Conversaciones,
   Herramientas,
@@ -19,25 +21,31 @@ import {
 
 const App = () => (
   <Router>
-    <Layout>
-      <Routes>
+    <Routes>
+      <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/inicioapp" element={<Inicio />} />
         <Route path="/conversaciones" element={<Conversaciones />} />
         <Route path="/herramientas" element={<Herramientas />} />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/perfil" element={<Perfil />} />
-        <Route path="/conversacionesp" element={<ConversacionEsp />} />
-        <Route path="/herramientaesp" element={<HerramientaEsp />} />
+      </Route>
+
+      <Route element={<LayoutExtra />}>
         <Route path="/subirconversacion" element={<SubirConv />} />
         <Route path="/subirherramienta" element={<SubirHerr />} />
         <Route path="/chatpriv" element={<ChatEsp />} />
+        <Route path="/buscador" element={<Busqueda />} />
+        <Route path="/conversacionesp" element={<ConversacionEsp />} />
+        <Route path="/herramientaesp" element={<HerramientaEsp />} />
+        <Route path="/perfil" element={<Perfil />} />
+      </Route>
+
+      <Route element={<LayoutInicio />}>
+        <Route path="/inicioapp" element={<Inicio />} />
         <Route path="/iniciosesion" element={<InicioSesion />} />
         <Route path="/inicioregistro" element={<InicioRegistro />} />
-        <Route path="/buscador" element={<Busqueda />} />
-      </Routes>
-    </Layout>
+      </Route>
+    </Routes>
   </Router>
 );
 

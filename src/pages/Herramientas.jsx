@@ -24,7 +24,7 @@ const Herramientas = () => {
           ¿Conoces alguna herramienta que no encuetras aquí? ¡Compártela!
         </IntroPageHerr>
         <Link
-          to="/herramientaesp"
+          to="/subirherramienta"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv>Publica una herramienta</BotonConv>

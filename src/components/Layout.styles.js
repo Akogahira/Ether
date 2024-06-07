@@ -7,12 +7,28 @@ import styled from "styled-components";
 // --icon - color: #beb1dc;
 // --main - background: #fffeef;
 
+//360px x 760px
+
+//Layout inicio
+
+export const Main1 = styled.div`
+  padding: 20px;
+  margin: 0 auto;
+  width: 320px;
+  min-height: 720px;
+  max-height: 760px;
+  background-color: #dad1ef;
+`;
+
 //Página Inicio
 
 export const MainInicio = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  width: 100%;
-  min-height: 660px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
 `;
 
 export const ContainerInicio = styled.div`
@@ -20,6 +36,9 @@ export const ContainerInicio = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  h2, p {
+    color: #4d4c4d;
+  }
 `;
 
 export const ContainerInicioSesion = styled.div`
@@ -44,7 +63,7 @@ export const TextFieldInicioSesion = styled.textarea`
 export const TextFieldContainerInicio = styled.div`
   display: flex;
   justify-content: center;
-  align-items: left;
+  text-align: left;
   flex-direction: column;
   p {
     margin: 5px 0 0 0;
@@ -98,8 +117,9 @@ export const ContainerMain = styled.div`
 
 export const Main = styled.div`
   margin: 0 auto;
-  width: 360px;
-  min-height: 660px;
+  width: 340px;
+  min-height: 650px;
+  min-height: 650px;
   color: #4d4c4d;
   padding-bottom: 50px;
 `;
@@ -107,7 +127,7 @@ export const Main = styled.div`
 export const Container = styled.div`
   padding: 10px;
   margin: 0 auto;
-  width: 360px;
+  width: 340px;
   background-color: #fffeef;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
@@ -152,6 +172,25 @@ export const Nav2 = styled.nav`
     padding: 0.5rem;
     display: flex;
     align-items: center;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+`;
+
+export const Nav3 = styled.nav`
+  display: flex;
+  width: 100%;
+  height: 60px;
+      align-items: left;
+    justify-content: left;
+  a {
+    text-decoration: none;
+    color: #beb1dc;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0 0 0;
 
     svg {
       width: 2rem;
@@ -214,12 +253,14 @@ export const TituloHomeGenerico = styled.div`
 
 ///Cards padre
 export const CardContainer = styled.div`
-  overflow-x: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
   display: flex;
   flex-wrap: nowrap;
   width: 105%;
   position: relative;
   box-sizing: border-box;
+  scroll-snap-type: x mandatory;
 `;
 
 ///Cards hijo
@@ -232,6 +273,7 @@ export const CardHome = styled.div`
   min-width: 120px;
   max-width: 120px;
   margin: 0 10px 30px 0;
+  scroll-snap-align: start;
 `;
 
 ///CONVERSACIONES - Cards info interior
