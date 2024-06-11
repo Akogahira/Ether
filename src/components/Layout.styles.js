@@ -501,7 +501,7 @@ export const TagConver = styled.span`
   border-radius: 15px;
   text-align: center;
   color: white;
-  max-width: 55px;
+  max-width: 100px;
   margin: 10px 0 10px 0;
 `;
 
@@ -1029,4 +1029,36 @@ export const ResultHerr = styled.div`
   color: white;
   max-width: 90px;
   margin: 2px 5px 10px 0;
+`;
+
+
+//OLE
+
+// Estilos para el pop-up de filtros
+export const PopupContainer = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffeff;
+  padding: 20px;
+  border: 1px solid #737273;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  width: 70%;
+  h2 {
+    margin-top: 2px;
+  }
+`;
+
+export const BotonCerrar = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #737273;
 `;
