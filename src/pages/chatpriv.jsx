@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   ContainerMain,
   ChatEspFecha,
@@ -11,36 +12,86 @@ import {
   User2Msg,
   User2Contenido,
   User2Time,
+  ChatInputContainer,
+  ChatInputTextarea,
+  SendButton,
 } from "../components/Layout.styles";
 
-/* Añadir <NombreUserChat>BPDJASJKK</NombreUserChat> si no se va a "automatizar" el nombre que aparece*/
+const ChatEsp = () => {
+  const [messages, setMessages] = useState([
+    {
+      user: "user1",
+      content: "Las putas ruffles qué caras están",
+      time: "17:30",
+    },
+    {
+      user: "user2",
+      content: "Pues el maxibon flipas 3 euros ayer en el chino",
+      time: "18:13",
+    },
+  ]);
+  const [newMessage, setNewMessage] = useState("");
 
-const ChatEsp = () => (
-  <div>
-    <ContainerMain>
-      <ChatEspFecha>30/05</ChatEspFecha>
+  const handleSendMessage = () => {
+    if (newMessage.trim() !== "") {
+      const newMessages = [
+        ...messages,
+        {
+          user: "user1",
+          content: newMessage,
+          time: new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+        },
+      ];
+      setMessages(newMessages);
+      setNewMessage("");
+    }
+  };
 
-      <User1Container>
-        <User1Img>
-          <img src="src/assets/images/Avatar4.png" alt="Icon" />
-        </User1Img>
-        <User1Contenido>
-          <User1Msg>Las putas ruffles qué caras están</User1Msg>
-          <User1Time>17:30</User1Time>
-        </User1Contenido>
-      </User1Container>
+  return (
+    <div>
+      <ContainerMain>
+        <ChatEspFecha>30/05</ChatEspFecha>
 
-      <User2Container>
-        <User2Contenido>
-          <User2Msg>Pues el maxibon flipas 3 euros ayer en el chino</User2Msg>
-          <User2Time>18:13</User2Time>
-        </User2Contenido>
-        <User2Img>
-          <img src="src/assets/images/Avatar2.png" alt="Icon" />
-        </User2Img>
-      </User2Container>
-    </ContainerMain>
-  </div>
-);
+        {messages.map((message, index) => (
+          <React.Fragment key={index}>
+            {message.user === "user2" ? (
+              <User1Container>
+                <User1Img>
+                  <img src="src/assets/images/Avatar4.png" alt="Icon" />
+                </User1Img>
+                <User1Contenido>
+                  <User1Msg>{message.content}</User1Msg>
+                  <User1Time>{message.time}</User1Time>
+                </User1Contenido>
+              </User1Container>
+            ) : (
+              <User2Container>
+                <User2Contenido>
+                  <User2Msg>{message.content}</User2Msg>
+                  <User2Time>{message.time}</User2Time>
+                </User2Contenido>
+                <User2Img>
+                  <img src="src/assets/images/Avatar2.png" alt="Icon" />
+                </User2Img>
+              </User2Container>
+            )}
+          </React.Fragment>
+        ))}
+
+        <ChatInputContainer>
+          <ChatInputTextarea
+            value={newMessage}
+            onChange={(e) => setNewMessage(e.target.value)}
+            placeholder="Escribe tu mensaje aquí..."
+          />
+          <SendButton onClick={handleSendMessage}>Enviar</SendButton>
+        </ChatInputContainer>
+      </ContainerMain>
+    </div>
+  );
+};
 
 export default ChatEsp;

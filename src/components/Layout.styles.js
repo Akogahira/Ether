@@ -272,7 +272,7 @@ export const CardHome = styled.div`
   max-height: 220px;
   min-width: 120px;
   max-width: 120px;
-  margin: 0 10px 30px 0;
+  margin: 0 10px 20px 0;
   scroll-snap-align: start;
 `;
 
@@ -312,12 +312,12 @@ export const TituloConvHome = styled.h4`
 ///CONVERSACIONES - Tag filtro
 export const TagHome = styled.span`
   padding: 2px 5px;
-  margin: 2px 0 2px 0;
+  margin: 5px 0 5px 0;
   font-weight: normal;
   font-size: 12px;
   background-color: white;
   border-radius: 15px;
-  width: 40px;
+  max-width: 75px;
   text-align: center;
   color: #737273;
 `;
@@ -789,8 +789,8 @@ export const ChatEspFecha = styled.div`
 export const User1Container = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  justify-content: space-around;
+  margin-bottom: 10px;
+  justify-content: flex-start;
   width: 100%;
 `;
 
@@ -798,6 +798,7 @@ export const User1Img = styled.div`
   img {
     width: 45px;
     border-radius: 50%;
+    margin-right: 10px;
   }
 `;
 
@@ -826,14 +827,15 @@ export const User1Time = styled.div`
 export const User2Container = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  justify-content: space-around;
+  margin-bottom: 10px;
+  justify-content: flex-end;
 `;
 
 export const User2Img = styled.div`
   img {
     width: 45px;
     border-radius: 50%;
+    margin-left: 10px;
   }
 `;
 
@@ -860,6 +862,47 @@ export const User2Time = styled.div`
 `;
 
 ///Barra escribir
+
+export const ChatInputContainer = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: none;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  bottom: 70px;
+  left: 0px;
+`;
+
+export const ChatInputTextarea = styled.textarea`
+  flex: 1;
+  resize: none;
+  margin-right: 10px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background-color: white;
+  color: #4d4c4d;
+  font-weight: normal;
+  font-size: 16px;
+  height: 20px;
+  width: 120px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+`;
+
+export const SendButton = styled.button`
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px 2px;
+  border-radius: 25px;
+  font-weight: normal;
+  font-size: 16px;
+  border: none;
+  background-color: #beb1dc;
+  color: white;
+`;
 
 // PÁGINA 05. PERFIL
 
