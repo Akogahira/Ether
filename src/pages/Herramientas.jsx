@@ -19,11 +19,6 @@ const Herramientas = () => {
     setFiltro(filtroSeleccionado);
   };
 
-  const filteredTools = Tools.filter((tool) => {
-    if (filtro === "todas") return true;
-    return tool.tipo.toLowerCase() === filtro.toLowerCase();
-  });
-
   return (
     <div>
       <ContainerMain>
@@ -39,16 +34,34 @@ const Herramientas = () => {
         <Divider />
 
         <ContainerHerrFiltro>
-          <BotonConv onClick={() => handleFiltroChange("todas")}>Todas</BotonConv>
-          <BotonConv onClick={() => handleFiltroChange("oficial")}>Oficiales</BotonConv>
-          <BotonConv onClick={() => handleFiltroChange("comunidad")}>Comunidad</BotonConv>
+          <BotonConv
+            isActive={filtro === "todas"}
+            onClick={() => handleFiltroChange("todas")}
+          >
+            Todas
+          </BotonConv>
+          <BotonConv
+            isActive={filtro === "oficial"}
+            onClick={() => handleFiltroChange("oficial")}
+          >
+            Oficiales
+          </BotonConv>
+          <BotonConv
+            isActive={filtro === "comunidad"}
+            onClick={() => handleFiltroChange("comunidad")}
+          >
+            Comunidad
+          </BotonConv>
         </ContainerHerrFiltro>
 
         <ContainerHerr>
-          {filteredTools.map((tool, index) => (
+          {Tools.filter((tool) => {
+            if (filtro === "todas") return true;
+            return tool.tipo.toLowerCase() === filtro.toLowerCase();
+          }).map((tool, index) => (
             <CardHerr key={index}>
               <Link
-                to={`/herramienta/${tool.nombre}`}
+                to={`/herramientaesp`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <CardHerrInfo>

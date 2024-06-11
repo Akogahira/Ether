@@ -601,7 +601,7 @@ export const DatoComentTimeA = styled.div`
 ///Texto Comentario (COMENTARIO)
 export const DescripcionComentarioA = styled.div`
   padding: 5px 0px 0px 0px;
-  margin: 0 0 10px 20%;
+  margin: 0 0 10px 21%;
   font-size: 15px;
   font-weight: 540;
   line-height: 1.2;
@@ -1062,4 +1062,14 @@ export const BotonCerrar = styled.button`
   cursor: pointer;
   font-size: 20px;
   color: #737273;
+`;
+
+//
+export const ConverInputContainer = styled.div`
+  width: 100%;
+  background-color: none;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 `;

@@ -1,7 +1,64 @@
-import { ContainerMain, ContainerConverEsp, Divider, ContainerDivider, TagConver, TituloConvEsp, TextFieldConver, UserIzq, DatosUserIzq, DatosUserIzq2, DatoUserName, DatoUserTime, DescripcionConvEsp, TextFieldContainer, ContainerComentarioA, DatosComentIzqA1, DatosComentIzqA2, DatoComentNameA, ComentIzqA, DatoComentTimeA, DescripcionComentarioA } from '../components/Layout.styles';
+import { useState } from "react";
+import {
+  ContainerMain,
+  ContainerConverEsp,
+  Divider,
+  ContainerDivider,
+  TagConver,
+  TituloConvEsp,
+  UserIzq,
+  DatosUserIzq,
+  DatosUserIzq2,
+  DatoUserName,
+  DatoUserTime,
+  DescripcionConvEsp,
+  ContainerComentarioA,
+  DatosComentIzqA1,
+  DatosComentIzqA2,
+  DatoComentNameA,
+  ComentIzqA,
+  DatoComentTimeA,
+  DescripcionComentarioA,
+  ChatInputTextarea,
+  SendButton,
+  ConverInputContainer,
+} from "../components/Layout.styles";
 import { Conver } from "../data/Conversaciones";
 
 const ConversacionEsp = () => {
+  const [mensaje, setMensaje] = useState("");
+  const [comentarios, setComentarios] = useState([
+    { autor: "AlguienUnLol", time: "6h", mensaje: "Primer comentario de prueba", avatar: "src/assets/images/Avatar4.png" },
+    { autor: "AlguienUnLol2", time: "4h", mensaje: "Segundo comentario de prueba", avatar: "src/assets/images/Avatar5.png" },
+  ]);
+
+  const getTimeDifference = (date) => {
+    const now = new Date();
+    const messageDate = new Date(date);
+    const diff = now - messageDate;
+
+    const minutes = Math.floor(diff / 60000);
+    const hours = Math.floor(minutes / 60);
+
+    if (hours > 0) {
+      return `hace ${hours} hora${hours > 1 ? "s" : ""}`;
+    } else {
+      return `hace ${minutes} minuto${minutes > 1 ? "s" : ""}`;
+    }
+  };
+
+  const handleSendMessage = () => {
+    if (mensaje.trim() !== "") {
+      const newComment = {
+        autor: "Tu",
+        time: new Date().toISOString(),
+        mensaje: mensaje,
+        avatar: "src/assets/images/Avatar2.png", // Cambia AvatarTu.png por la imagen que desees para el avatar del usuario actual
+      };
+      setComentarios([...comentarios, newComment]);
+      setMensaje("");
+    }
+  };
 
   return (
     <div>
@@ -27,47 +84,35 @@ const ConversacionEsp = () => {
           <Divider />
         </ContainerDivider>
 
-        <TextFieldContainer>
-          <TextFieldConver></TextFieldConver>
-        </TextFieldContainer>
+        <ConverInputContainer>
+          <ChatInputTextarea
+            placeholder="Escribe tu mensaje aquí..."
+            value={mensaje}
+            onChange={(e) => setMensaje(e.target.value)}
+          />
+          <SendButton onClick={handleSendMessage}>Enviar</SendButton>
+        </ConverInputContainer>
 
-        <ContainerComentarioA>
-          <ComentIzqA>
-            <DatosComentIzqA1>
-              <img src="src/assets/images/Avatar2.png" alt="Icon" />
-            </DatosComentIzqA1>
-
-            <DatosComentIzqA2>
-              <DatoComentNameA>AlguienUnLol</DatoComentNameA>
-
-              <DatoComentTimeA>6h</DatoComentTimeA>
-            </DatosComentIzqA2>
-          </ComentIzqA>
-        </ContainerComentarioA>
-
-        <DescripcionComentarioA>
-          A mi me parece una gilipollez porque blablablablablablabla
-        </DescripcionComentarioA>
-
-        <Divider />
-
-        <ContainerComentarioA>
-          <ComentIzqA>
-            <DatosComentIzqA1>
-              <img src="src/assets/images/Avatar5.png" alt="Icon" />
-            </DatosComentIzqA1>
-
-            <DatosComentIzqA2>
-              <DatoComentNameA>AlguienUnLol2</DatoComentNameA>
-
-              <DatoComentTimeA>4h</DatoComentTimeA>
-            </DatosComentIzqA2>
-          </ComentIzqA>
-        </ContainerComentarioA>
-
-        <DescripcionComentarioA>AAAAAAAAaa aaaaaaaaaa aa</DescripcionComentarioA>
+        {comentarios.map((comentario, index) => (
+          <div key={index}>
+            <ContainerComentarioA>
+              <ComentIzqA>
+                <DatosComentIzqA1>
+                  <img src={comentario.avatar} alt="Icon" />
+                </DatosComentIzqA1>
+                <DatosComentIzqA2>
+                  <DatoComentNameA>{comentario.autor}</DatoComentNameA>
+                  <DatoComentTimeA>{comentario.autor === "Tu" ? getTimeDifference(comentario.time) : comentario.time}</DatoComentTimeA>
+                </DatosComentIzqA2>
+              </ComentIzqA>
+            </ContainerComentarioA>
+            <DescripcionComentarioA>{comentario.mensaje}</DescripcionComentarioA>
+            <Divider />
+          </div>
+        ))}
       </ContainerMain>
     </div>
   );
 };
+
 export default ConversacionEsp;
