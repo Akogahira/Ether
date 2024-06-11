@@ -634,8 +634,9 @@ export const ContainerHerrFiltro = styled.div`
 export const ContainerHerr = styled.div`
   margin-top: 10px;
   display: flex;
+  gap: 6px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 `;
 
 ///Hijo Cards
