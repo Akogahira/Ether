@@ -373,11 +373,22 @@ export const BotonConv = styled.button`
   display: inline-block;
   padding: 5px 10px;
   margin: 5px 2px;
-  background-color: #9689b3;
   border-radius: 25px;
   font-weight: normal;
   font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: ${(props) => (props.isActive ? '#beb1dc' : '#9689b3')};
   color: white;
+
+  &:hover {
+    background-color: ${(props) => (props.isActive ? '#a798c4' : '#beb1dc')};
+  }
+`;
+
+//Container filtros (desplegable)
+export const ContainerFiltros = styled.div`
+
 `;
 
 ///Container hijo de cada conversación (el padre es ContainerMain)
@@ -974,5 +985,5 @@ export const ResultHerr = styled.div`
   text-align: center;
   color: white;
   max-width: 90px;
-  margin: 10px 5px 10px 0;
+  margin: 2px 5px 10px 0;
 `;

@@ -2,7 +2,7 @@ export const Conver = [
   {
     autor: "EBOLA765",
     time: "11h",
-    tag: "Filtro 1",
+    tag: "Salud mental",
     shortitle: "¿Opinión del journaling como herramienta?",
     title:
       "¿Qué opinais del journaling como herramienta para tratar la salud mental?",
@@ -15,8 +15,8 @@ export const Conver = [
   {
     autor: "I_hate_brocoli",
     time: "9h",
-    tag: "Filtro 2",
-    shortitle: "¿Opinión de la meditación como herramienta?",
+    tag: "Salud física",
+    shortitle: "¿Opinión de ir al gimnasio de jóven?",
     title:
       "¿Qué opinais de la meditación como herramienta para tratar la salud mental?",
     descripcion:
@@ -28,7 +28,7 @@ export const Conver = [
   {
     autor: "tENGO17AÑOS",
     time: "1d",
-    tag: "Filtro 3",
+    tag: "Herramientas",
     shortitle: "¿Opinión del hoponopono como herramienta?",
     title:
       "¿Qué opinais del hoponopono como herramienta para tratar la salud mental?",
@@ -41,7 +41,7 @@ export const Conver = [
   {
     autor: "Nombre837423",
     time: "6h",
-    tag: "Filtro 4",
+    tag: "Videojuegos",
     shortitle: "¿Opinión del Lol como herramienta?",
     title:
       "¿Qué opinais de jugar al League of Legends como herramienta para tratar la salud mental?",
@@ -54,7 +54,7 @@ export const Conver = [
   {
     autor: "AdictoAlLol5",
     time: "2d",
-    tag: "Filtro 5",
+    tag: "Día a día",
     shortitle: "¿Opinión de cagarme en tu madre como herramienta?",
     title:
       "¿Qué opinais de insultar a gente por Reddit como herramienta para tratar la salud mental?",
@@ -67,7 +67,7 @@ export const Conver = [
   {
     autor: "PeraHater",
     time: "7h",
-    tag: "Filtro 6",
+    tag: "Opinión",
     shortitle: "¿Son las peras las frutas más inútiles que existen?",
     title:
       "¿Son las peras las frutas más inútiles que existen después de los limones?",
