@@ -1,5 +1,6 @@
-import { ContainerMain } from "../components/Layout.styles";
+import { useState } from "react";
 import {
+  ContainerMain,
   Tag,
   CardHerramientaEsp,
   TituloHerramientaEsp,
@@ -14,12 +15,17 @@ import {
   ComentIzqA,
   DatoComentTimeA,
   DescripcionComentarioA,
+  SendButton
 } from "../components/Layout.styles";
-import { useState } from "react";
 
 const HerramientaEsp = () => {
   const [seccion1Visible, setSeccion1Visible] = useState(true);
   const [seccion2Visible, setSeccion2Visible] = useState(true);
+  const [mensaje, setMensaje] = useState("");
+  const [comentarios, setComentarios] = useState([
+    { autor: "AlguienUnLol", time: "6h", mensaje: "Primer comentario de prueba", avatar: "src/assets/images/Avatar4.png" },
+    { autor: "AlguienUnLol2", time: "4h", mensaje: "Segundo comentario de prueba", avatar: "src/assets/images/Avatar5.png" },
+  ]);
 
   const toggleSeccion1 = () => {
     setSeccion1Visible(!seccion1Visible);
@@ -27,6 +33,34 @@ const HerramientaEsp = () => {
 
   const toggleSeccion2 = () => {
     setSeccion2Visible(!seccion2Visible);
+  };
+
+  const getTimeDifference = (date) => {
+    const now = new Date();
+    const messageDate = new Date(date);
+    const diff = now - messageDate;
+
+    const minutes = Math.floor(diff / 60000);
+    const hours = Math.floor(minutes / 60);
+
+    if (hours > 0) {
+      return `hace ${hours} hora${hours > 1 ? "s" : ""}`;
+    } else {
+      return `hace ${minutes} minuto${minutes > 1 ? "s" : ""}`;
+    }
+  };
+
+  const handleSendMessage = () => {
+    if (mensaje.trim() !== "") {
+      const newComment = {
+        autor: "Tu",
+        time: new Date().getTime(), // Marcamos el tiempo actual en milisegundos
+        mensaje: mensaje,
+        avatar: "src/assets/images/Avatar2.png", // Cambia AvatarTu.png por la imagen que desees para el avatar del usuario actual
+      };
+      setComentarios([...comentarios, newComment]);
+      setMensaje("");
+    }
   };
 
   return (
@@ -103,46 +137,34 @@ const HerramientaEsp = () => {
 
       <Divider />
       <TextFieldContainer>
-        <TextFieldConver></TextFieldConver>
+        <TextFieldConver
+          placeholder="Escribe tu comentario aquí..."
+          value={mensaje}
+          onChange={(e) => setMensaje(e.target.value)}
+        />
+        <SendButton onClick={handleSendMessage}>Enviar</SendButton>
       </TextFieldContainer>
 
-      <ContainerComentarioA>
-        <ComentIzqA>
-          <DatosComentIzqA1>
-            <img src="src/assets/images/Avatar2.png" alt="Icon" />
-          </DatosComentIzqA1>
-
-          <DatosComentIzqA2>
-            <DatoComentNameA>AlguienUnLol</DatoComentNameA>
-
-            <DatoComentTimeA>6h</DatoComentTimeA>
-          </DatosComentIzqA2>
-        </ComentIzqA>
-      </ContainerComentarioA>
-
-      <DescripcionComentarioA>
-        A mi me parece una gilipollez porque blablablablablablabla
-      </DescripcionComentarioA>
-
-      <Divider />
-
-      <ContainerComentarioA>
-        <ComentIzqA>
-          <DatosComentIzqA1>
-            <img src="src/assets/images/Avatar5.png" alt="Icon" />
-          </DatosComentIzqA1>
-
-          <DatosComentIzqA2>
-            <DatoComentNameA>AlguienUnLol2</DatoComentNameA>
-
-            <DatoComentTimeA>4h</DatoComentTimeA>
-          </DatosComentIzqA2>
-        </ComentIzqA>
-      </ContainerComentarioA>
-
-      <DescripcionComentarioA>AAAAAAAAaa aaaaaaaaaa aa</DescripcionComentarioA>
+      {comentarios.map((comentario, index) => (
+        <div key={index}>
+          <ContainerComentarioA>
+            <ComentIzqA>
+              <DatosComentIzqA1>
+                <img src={comentario.avatar} alt="Icon" />
+              </DatosComentIzqA1>
+              <DatosComentIzqA2>
+                <DatoComentNameA>{comentario.autor}</DatoComentNameA>
+                <DatoComentTimeA>{comentario.autor === "Tu" ? getTimeDifference(comentario.time) : comentario.time}</DatoComentTimeA>
+              </DatosComentIzqA2>
+            </ComentIzqA>
+          </ContainerComentarioA>
+          <DescripcionComentarioA>{comentario.mensaje}</DescripcionComentarioA>
+          <Divider />
+        </div>
+      ))}
     </ContainerMain>
   );
 };
 
 export default HerramientaEsp;
+
