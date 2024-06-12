@@ -16,6 +16,7 @@ import {
 import { Link } from "react-router-dom";
 import { Conver } from "../data/Conversaciones";
 import { PiChatCircle } from "react-icons/pi";
+import { Tools } from "../data/Herramientas";
 
 const Home = () => {
   return (
@@ -27,17 +28,20 @@ const Home = () => {
         <CardContainer>
           {Conver.map((convh, index) => (
             <CardHome key={`${convh.autor}-${index}`}>
-              <CardHomeInfo>
-                <AutorHome>{convh.autor}</AutorHome>
-                <TituloConvHome>{convh.shortitle}</TituloConvHome>
-                <TagHome>{convh.tag}</TagHome>
-                <InfoHome>
-                  <span style={{ padding: "2px" }}>
-                    <PiChatCircle size={10} />
-                  </span>
-                  {convh.comments}
-                </InfoHome>
-              </CardHomeInfo>
+              <Link to={`/conversacionesp`}
+                style={{ textDecoration: "none", color: "inherit" }}>
+                <CardHomeInfo>
+                  <AutorHome>{convh.autor}</AutorHome>
+                  <TituloConvHome>{convh.shortitle}</TituloConvHome>
+                  <TagHome>{convh.tag}</TagHome>
+                  <InfoHome>
+                    <span style={{ padding: "2px" }}>
+                      <PiChatCircle size={10} />
+                    </span>
+                    {convh.comments}
+                  </InfoHome>
+                </CardHomeInfo>
+              </Link>
             </CardHome>
           ))}
         </CardContainer>
@@ -54,53 +58,20 @@ const Home = () => {
         <TituloHomeGenerico>
           <h2>¿Conoces estas herramientas?</h2>
         </TituloHomeGenerico>
-
         <CardContainer>
-          <CardHome>
-            <CardHomeImg>
-              <img
-                src="src/assets/images/Herramienta1.png"
-                alt="Herramienta 1"
-              />
-              <TituloHerrHome>Neurohacking</TituloHerrHome>
-            </CardHomeImg>
-          </CardHome>
-          <CardHome>
-            <CardHomeImg>
-              <img
-                src="src/assets/images/Herramienta2.png"
-                alt="Herramienta 2"
-              />
-              <TituloHerrHome>Técnicas de respiración</TituloHerrHome>
-            </CardHomeImg>
-          </CardHome>
-          <CardHome>
-            <CardHomeImg>
-              <img
-                src="src/assets/images/Herramienta3.png"
-                alt="Herramienta 3"
-              />
-              <TituloHerrHome>Música</TituloHerrHome>
-            </CardHomeImg>
-          </CardHome>
-          <CardHome>
-            <CardHomeImg>
-              <img
-                src="src/assets/images/Herramienta4.png"
-                alt="Herramienta 4"
-              />
-              <TituloHerrHome>Journaling</TituloHerrHome>
-            </CardHomeImg>
-          </CardHome>
-          <CardHome>
-            <CardHomeImg>
-              <img
-                src="src/assets/images/Herramienta6.png"
-                alt="Herramienta 5"
-              />
-              <TituloHerrHome>Terapia Cognitivo Conductual</TituloHerrHome>
-            </CardHomeImg>
-          </CardHome>
+          {Tools.map((tool, index) => (
+            <CardHome key={`${tool.nombre}-${index}`}>
+              <Link
+                to={`/herramientaesp`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <CardHomeImg>
+                  <img src={tool.foto} alt={tool.nombre} />
+                  <TituloHerrHome>{tool.nombre}</TituloHerrHome>
+                </CardHomeImg>
+              </Link>
+            </CardHome>
+          ))}
         </CardContainer>
 
         <BotonHome>

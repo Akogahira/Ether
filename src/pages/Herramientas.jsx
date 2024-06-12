@@ -29,25 +29,25 @@ const Herramientas = () => {
           to="/subirherramienta"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <BotonConv $isactive="false">Publica una herramienta</BotonConv>
+          <BotonConv>Publica una herramienta</BotonConv>
         </Link>
         <Divider />
 
         <ContainerHerrFiltro>
           <BotonConv
-            $isactive={filtro === "todas" ? "true" : "false"}
+            isactive={filtro === "todas" ? "true" : "false"}
             onClick={() => handleFiltroChange("todas")}
           >
             Todas
           </BotonConv>
           <BotonConv
-            $isactive={filtro === "oficial" ? "true" : "false"}
+            isactive={filtro === "oficial" ? "true" : "false"}
             onClick={() => handleFiltroChange("oficial")}
           >
             Oficiales
           </BotonConv>
           <BotonConv
-            $isactive={filtro === "comunidad" ? "true" : "false"}
+            isactive={filtro === "comunidad" ? "true" : "false"}
             onClick={() => handleFiltroChange("comunidad")}
           >
             Comunidad
@@ -61,7 +61,7 @@ const Herramientas = () => {
           }).map((tool, index) => (
             <CardHerr key={index}>
               <Link
-                to={`/herramienta/${tool.nombre}`}
+                to={`/herramientaesp`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <CardHerrInfo>
