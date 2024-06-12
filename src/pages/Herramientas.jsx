@@ -61,7 +61,7 @@ const Herramientas = () => {
           }).map((tool, index) => (
             <CardHerr key={index}>
               <Link
-                to={`/herramientaesp`}
+                to={`/herramienta/${tool.nombre}`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <CardHerrInfo>

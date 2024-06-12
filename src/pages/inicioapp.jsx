@@ -12,7 +12,6 @@ const Inicio = () => {
         <h2>¿Ya nos conocemos?</h2>
         <Link
           to="/iniciosesion"
-          style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv>Iniciar sesión</BotonConv>
         </Link>
@@ -20,7 +19,6 @@ const Inicio = () => {
         <h2>¿Todavía no?</h2>
         <Link
           to="/inicioregistro"
-          style={{ textDecoration: "none", color: "inherit" }}
         >
           <BotonConv>Registrarse</BotonConv>
         </Link>

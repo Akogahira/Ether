@@ -27,7 +27,7 @@ export const MainInicio = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 76vh;
   text-align: center;
 `;
 
@@ -80,6 +80,7 @@ export const PassRestart = styled.p`
 export const CheckboxContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 
   label {
     font-size: 12px;
@@ -101,6 +102,12 @@ export const CheckboxContainer = styled.div`
     border-radius: 3px;
     background-color: #dad1ef;
   }
+`;
+
+
+export const ErrorMessage = styled.p`
+  font-size: 14px;
+  margin-top: 10px;
 `;
 
 // 00. Estilos generales (botones, MainContainer, divider...)

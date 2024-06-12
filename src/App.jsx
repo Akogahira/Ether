@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import LayoutInicio from "./components/LayoutInicio";
 import LayoutExtra from "./components/LayoutExtra";
+import LayoutInicioSesion from "./components/LayoutInicioSesion";
 import {
   Conversaciones,
   Herramientas,
@@ -42,6 +43,8 @@ const App = () => (
 
       <Route element={<LayoutInicio />}>
         <Route path="/inicioapp" element={<Inicio />} />
+      </Route>
+      <Route element={<LayoutInicioSesion />}>
         <Route path="/iniciosesion" element={<InicioSesion />} />
         <Route path="/inicioregistro" element={<InicioRegistro />} />
       </Route>
