@@ -35,19 +35,19 @@ const Herramientas = () => {
 
         <ContainerHerrFiltro>
           <BotonConv
-            isactive={filtro === "todas" ? "true" : "false"}
+            isActive={filtro === "todas"}
             onClick={() => handleFiltroChange("todas")}
           >
             Todas
           </BotonConv>
           <BotonConv
-            isactive={filtro === "oficial" ? "true" : "false"}
+            isActive={filtro === "oficial"}
             onClick={() => handleFiltroChange("oficial")}
           >
             Oficiales
           </BotonConv>
           <BotonConv
-            isactive={filtro === "comunidad" ? "true" : "false"}
+            isActive={filtro === "comunidad"}
             onClick={() => handleFiltroChange("comunidad")}
           >
             Comunidad

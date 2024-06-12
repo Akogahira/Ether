@@ -921,8 +921,6 @@ export const SendButton = styled.button`
 
 // PÁGINA 05. PERFIL
 
-///Container de avatar
-// PÁGINA 05. PERFIL
 
 ///Container de avatar
 export const Avatar = styled.div`
