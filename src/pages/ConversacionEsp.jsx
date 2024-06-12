@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   ContainerMain,
   ContainerConverEsp,
@@ -26,11 +27,11 @@ import {
 import { Conver } from "../data/Conversaciones";
 
 const ConversacionEsp = () => {
+  const { id } = useParams();
+  const conversation = Conver.find(conv => conv.id === parseInt(id));
+
   const [mensaje, setMensaje] = useState("");
-  const [comentarios, setComentarios] = useState([
-    { autor: "AlguienUnLol", time: "6h", mensaje: "Primer comentario de prueba", avatar: "src/assets/images/Avatar4.png" },
-    { autor: "AlguienUnLol2", time: "4h", mensaje: "Segundo comentario de prueba", avatar: "src/assets/images/Avatar5.png" },
-  ]);
+  const [comentarios, setComentarios] = useState([]);
 
   const getTimeDifference = (date) => {
     const now = new Date();
@@ -53,65 +54,66 @@ const ConversacionEsp = () => {
         autor: "Tu",
         time: new Date().toISOString(),
         mensaje: mensaje,
-        avatar: "src/assets/images/Avatar2.png", // Cambia AvatarTu.png por la imagen que desees para el avatar del usuario actual
+        avatar: "/src/assets/images/Avatar2.png",
       };
       setComentarios([...comentarios, newComment]);
       setMensaje("");
     }
   };
 
+  if (!conversation) {
+    return <div>Conversación no encontrada</div>;
+  }
+
   return (
-    <div>
-      <ContainerMain>
-        <ContainerDivider key={`${Conver[0].autor}-${Conver[0].time}-0`}>
-          <ContainerConverEsp>
-            <UserIzq>
-              <DatosUserIzq>
-                <img src={Conver[0].img} alt="Icon" />
-              </DatosUserIzq>
-              <DatosUserIzq2>
-                <DatoUserName>{Conver[0].autor}</DatoUserName>
-                <DatoUserTime>{Conver[0].time}</DatoUserTime>
-              </DatosUserIzq2>
-            </UserIzq>
-          </ContainerConverEsp>
+    <ContainerMain>
+      <ContainerDivider key={`${conversation.autor}-${conversation.time}-0`}>
+        <ContainerConverEsp>
+          <UserIzq>
+            <DatosUserIzq>
+              <img src={conversation.img} alt="Icon" />
+            </DatosUserIzq>
+            <DatosUserIzq2>
+              <DatoUserName>{conversation.autor}</DatoUserName>
+              <DatoUserTime>{conversation.time}</DatoUserTime>
+            </DatosUserIzq2>
+          </UserIzq>
+        </ContainerConverEsp>
 
-          <TagConver>{Conver[0].tag}</TagConver>
+        <TagConver>{conversation.tag}</TagConver>
 
-          <TituloConvEsp>{Conver[0].title}</TituloConvEsp>
-          <DescripcionConvEsp>{Conver[0].descripcion}</DescripcionConvEsp>
+        <TituloConvEsp>{conversation.title}</TituloConvEsp>
+        <DescripcionConvEsp>{conversation.descripcion}</DescripcionConvEsp>
 
-          <Divider />
-        </ContainerDivider>
+        <Divider />
+      </ContainerDivider>
 
-        <ConverInputContainer>
-          <ChatInputTextarea
-            placeholder="Escribe tu mensaje aquí..."
-            value={mensaje}
-            onChange={(e) => setMensaje(e.target.value)}
-          />
-          <SendButton onClick={handleSendMessage}>Enviar</SendButton>
-        </ConverInputContainer>
+      <ConverInputContainer>
+        <ChatInputTextarea
+          placeholder="Escribe tu mensaje aquí..."
+          value={mensaje}
+          onChange={(e) => setMensaje(e.target.value)}
+        />
+        <SendButton onClick={handleSendMessage}>Enviar</SendButton>
+      </ConverInputContainer>
 
-        {comentarios.map((comentario, index) => (
-          <div key={index}>
-            <ContainerComentarioA>
-              <ComentIzqA>
-                <DatosComentIzqA1>
-                  <img src={comentario.avatar} alt="Icon" />
-                </DatosComentIzqA1>
-                <DatosComentIzqA2>
-                  <DatoComentNameA>{comentario.autor}</DatoComentNameA>
-                  <DatoComentTimeA>{comentario.autor === "Tu" ? getTimeDifference(comentario.time) : comentario.time}</DatoComentTimeA>
-                </DatosComentIzqA2>
-              </ComentIzqA>
-            </ContainerComentarioA>
-            <DescripcionComentarioA>{comentario.mensaje}</DescripcionComentarioA>
-            <Divider />
-          </div>
-        ))}
-      </ContainerMain>
-    </div>
+      {comentarios.map((comentario, index) => (
+        <div key={index}>
+          <ContainerComentarioA>
+            <ComentIzqA>
+              <DatosComentIzqA1>
+                <img src={comentario.avatar} alt="Icon" />
+              </DatosComentIzqA1>
+              <DatosComentIzqA2>
+                <DatoComentNameA>{comentario.autor}</DatoComentNameA>
+                <DatoComentTimeA>{comentario.autor === "Tu" ? getTimeDifference(comentario.time) : comentario.time}</DatoComentTimeA>
+              </DatosComentIzqA2>
+            </ComentIzqA>
+          </ContainerComentarioA>
+          <DescripcionComentarioA>{comentario.mensaje}</DescripcionComentarioA>
+        </div>
+      ))}
+    </ContainerMain>
   );
 };
 

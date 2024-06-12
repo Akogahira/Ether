@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import LayoutInicio from "./components/LayoutInicio";
-import LayoutExtra from "./components/LayoutExtra";
-import LayoutInicioSesion from "./components/LayoutInicioSesion";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import LayoutInicio from './components/LayoutInicio';
+import LayoutExtra from './components/LayoutExtra';
+import LayoutInicioSesion from './components/LayoutInicioSesion';
 import {
   Conversaciones,
   Herramientas,
@@ -18,7 +18,7 @@ import {
   InicioSesion,
   InicioRegistro,
   Busqueda,
-} from "./pages";
+} from './pages';
 
 const App = () => (
   <Router>
@@ -36,7 +36,8 @@ const App = () => (
         <Route path="/subirherramienta" element={<SubirHerr />} />
         <Route path="/chatpriv" element={<ChatEsp />} />
         <Route path="/buscador" element={<Busqueda />} />
-        <Route path="/conversacionesp" element={<ConversacionEsp />} />
+        {/* Ruta dinámica para conversaciones específicas */}
+        <Route path="/conversacionesp/:id" element={<ConversacionEsp />} />
         <Route path="/herramientaesp" element={<HerramientaEsp />} />
         <Route path="/perfil" element={<Perfil />} />
       </Route>

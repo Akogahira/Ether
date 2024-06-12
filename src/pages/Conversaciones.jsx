@@ -59,10 +59,10 @@ const Conversaciones = () => {
 
         <ContainerConver>
           {filteredConversations.map((conv, index) => (
-            <div key={conv.shortitle}>
+            <div key={conv.id}>
               <Divider style={{ margin: "10px 0" }} />
               <Tag>{conv.tag}</Tag>
-              <Link to="/conversacionesp" style={{ textDecoration: "none" }}>
+              <Link to={`/conversacionesp/${conv.id}`} style={{ textDecoration: "none" }}>
                 <TituloConv>{conv.title}</TituloConv>
                 {showDescriptions[index] && <DescripcionConvEsp>{conv.descripcion}</DescripcionConvEsp>}
               </Link>
