@@ -155,7 +155,7 @@ const SubirHerr = () => {
         <BotonSubirConv onClick={handleSubmit}>Enviar</BotonSubirConv>
       </BotonesSubirConv>
 
-      {formSubmitted && <SuccessMessage>Conversación enviada, nuestro equipo la moderará en breve.</SuccessMessage>}
+      {formSubmitted && <SuccessMessage>Herramienta enviada, nuestro equipo la moderará en breve.</SuccessMessage>}
     </ContainerMain>
   );
 };

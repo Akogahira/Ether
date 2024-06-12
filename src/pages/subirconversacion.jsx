@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BotonSubirConv, ContainerMain, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome, PopupContainer, BotonConv, BotonCerrar, ErrorMessage } from '../components/Layout.styles';
+import { BotonSubirConv, ContainerMain, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome, PopupContainer, BotonConv, BotonCerrar, ErrorMessage, SuccessMessage } from '../components/Layout.styles';
 import { ImUpload } from "react-icons/im";
 
 const SubirConv = () => {
@@ -11,6 +11,7 @@ const SubirConv = () => {
   const [tituloError, setTituloError] = useState('');
   const [resumenError, setResumenError] = useState('');
   const [desarrolloError, setDesarrolloError] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const toggleFilters = () => {
     setShowFilters(!showFilters);
@@ -48,7 +49,7 @@ const SubirConv = () => {
 
     // Si todos los campos son válidos, enviar el formulario
     if (isValid) {
-      console.log('Formulario enviado');
+      setFormSubmitted(true);
     }
   };
 
@@ -148,6 +149,9 @@ const SubirConv = () => {
           </BotonConv>
         </PopupContainer>
       )}
+
+      {formSubmitted && <SuccessMessage>Conversación enviada, nuestro equipo la moderará en breve.</SuccessMessage>}
+
     </ContainerMain>
   );
 };
