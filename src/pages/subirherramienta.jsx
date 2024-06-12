@@ -1,22 +1,16 @@
 import { useState } from "react";
-import {
-  ContainerMain,
-  BotonSubirConv,
-  TextFieldContainer,
-  TextFieldSubirConv,
-  TextFieldSubirConvGrande,
-  BotonesSubirConv,
-  TituloConvHome,
-  PopupContainer,
-  BotonConv,
-  BotonCerrar,
-} from "../components/Layout.styles";
+import { ContainerMain, BotonSubirConv, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome, PopupContainer, BotonConv, BotonCerrar, ErrorMessage, SuccessMessage } from '../components/Layout.styles';
 import { ImPlus } from "react-icons/im";
 
 const SubirHerr = () => {
+  const [titulo, setTitulo] = useState('');
   const [seccionCount, setSeccionCount] = useState(1);
   const [showFilters, setShowFilters] = useState(false);
   const [activeFilters, setActiveFilters] = useState([]);
+  const [tituloError, setTituloError] = useState('');
+  const [seccionError, setSeccionError] = useState('');
+  const [descripcionError, setDescripcionError] = useState('');
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const agregarSeccion = () => {
     setSeccionCount(seccionCount + 1);
@@ -34,13 +28,59 @@ const SubirHerr = () => {
     }
   };
 
+  const handleSubmit = () => {
+    // Validar los campos antes de enviar el formulario
+    let isValid = true;
+    if (titulo.length < 20 || titulo.length > 45) {
+      setTituloError('El título debe tener entre 20 y 45 caracteres.');
+      isValid = false;
+    } else {
+      setTituloError('');
+    }
+
+    // Validar cada título de sección
+    for (let i = 1; i <= seccionCount; i++) {
+      const seccionTitle = document.getElementById(`seccion${i}Titulo`).value;
+      if (seccionTitle.length < 20 || seccionTitle.length > 45) {
+        setSeccionError(`El título de la sección debe tener entre 20 y 45 caracteres.`);
+        isValid = false;
+        break;
+      } else {
+        setSeccionError('');
+      }
+    }
+
+
+    // Validar cada descripción de sección
+    for (let i = 1; i <= seccionCount; i++) {
+      const seccionDescription = document.getElementById(`seccion${i}Descripcion`).value;
+      if (seccionDescription.length < 40 || seccionDescription.length > 200) {
+        setDescripcionError(`La descripción de la sección debe tener entre 40 y 200 caracteres.`);
+        isValid = false;
+        break;
+      } else {
+        setDescripcionError('');
+      }
+    }
+
+    if (isValid) {
+      setFormSubmitted(true);
+    }
+  };
+
   return (
     <ContainerMain>
       <div>
         <TituloConvHome>Escribe el título de la herramienta.</TituloConvHome>
         <TextFieldContainer>
-          <TextFieldSubirConv></TextFieldSubirConv>
+          <TextFieldSubirConv
+            type="text"
+            value={titulo}
+            onChange={(e) => setTitulo(e.target.value)}
+            placeholder="Título de la herramienta"
+          />
         </TextFieldContainer>
+        {tituloError && <ErrorMessage>{tituloError}</ErrorMessage>}
       </div>
 
       <TituloConvHome>Desarrolla y explica tu herramienta.</TituloConvHome>
@@ -48,11 +88,21 @@ const SubirHerr = () => {
         <div key={index}>
           <TextFieldContainer>
             <p>{index + 1}.</p>
-            <TextFieldSubirConv></TextFieldSubirConv>
+            <TextFieldSubirConv
+              type="text"
+              id={`seccion${index + 1}Titulo`}
+              placeholder={`Título de la sección ${index + 1}`}
+            />
           </TextFieldContainer>
+          {seccionError && <ErrorMessage>{seccionError}</ErrorMessage>}
           <TextFieldContainer>
-            <TextFieldSubirConvGrande></TextFieldSubirConvGrande>
+            <TextFieldSubirConvGrande
+              type="text"
+              id={`seccion${index + 1}Descripcion`}
+              placeholder={`Descripción de la sección ${index + 1}`}
+            />
           </TextFieldContainer>
+          {descripcionError && <ErrorMessage>{descripcionError}</ErrorMessage>}
         </div>
       ))}
 
@@ -98,13 +148,14 @@ const SubirHerr = () => {
           >
             Filtro 5
           </BotonConv>
-          {/* Agrega aquí más botones de filtros según sea necesario */}
         </PopupContainer>
       )}
 
       <BotonesSubirConv style={{ display: "flex", alignItems: "flex-end" }}>
-        <BotonSubirConv>Enviar</BotonSubirConv>
+        <BotonSubirConv onClick={handleSubmit}>Enviar</BotonSubirConv>
       </BotonesSubirConv>
+
+      {formSubmitted && <SuccessMessage>Conversación enviada, nuestro equipo la moderará en breve.</SuccessMessage>}
     </ContainerMain>
   );
 };

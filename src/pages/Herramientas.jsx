@@ -29,25 +29,25 @@ const Herramientas = () => {
           to="/subirherramienta"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <BotonConv>Publica una herramienta</BotonConv>
+          <BotonConv $isactive="false">Publica una herramienta</BotonConv>
         </Link>
         <Divider />
 
         <ContainerHerrFiltro>
           <BotonConv
-            isActive={filtro === "todas"}
+            $isactive={filtro === "todas" ? "true" : "false"}
             onClick={() => handleFiltroChange("todas")}
           >
             Todas
           </BotonConv>
           <BotonConv
-            isActive={filtro === "oficial"}
+            $isactive={filtro === "oficial" ? "true" : "false"}
             onClick={() => handleFiltroChange("oficial")}
           >
             Oficiales
           </BotonConv>
           <BotonConv
-            isActive={filtro === "comunidad"}
+            $isactive={filtro === "comunidad" ? "true" : "false"}
             onClick={() => handleFiltroChange("comunidad")}
           >
             Comunidad

@@ -25,8 +25,8 @@ const Home = () => {
           <h2>Únete a estas conversaciones</h2>
         </TituloHomeGenerico>
         <CardContainer>
-          {Conver.map((convh) => (
-            <CardHome key={convh}>
+          {Conver.map((convh, index) => (
+            <CardHome key={`${convh.autor}-${index}`}>
               <CardHomeInfo>
                 <AutorHome>{convh.autor}</AutorHome>
                 <TituloConvHome>{convh.shortitle}</TituloConvHome>

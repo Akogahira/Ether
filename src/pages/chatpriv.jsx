@@ -56,7 +56,7 @@ const ChatEsp = () => {
         <ChatEspFecha>30/05</ChatEspFecha>
 
         {messages.map((message, index) => (
-          <React.Fragment key={index}>
+          <React.Fragment key={`${message.user}-${index}`}>
             {message.user === "user2" ? (
               <User1Container>
                 <User1Img>

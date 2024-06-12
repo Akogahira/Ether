@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../services/authService';
 import {
   BotonConv,
   MainInicio,
@@ -25,15 +24,14 @@ const Inicio = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await login(username, password);
-      console.log('Login exitoso', response);
+    if (username === 'user' && password === 'pass') {
+      console.log('Inicio de sesión exitoso');
       navigate('/');
-    } catch (err) {
-      setError(err.message || 'Credenciales incorrectas');
-      console.error('Error de login', err);
+    } else {
+      setError('Credenciales incorrectas');
+      console.error('Error de login');
     }
   };
 

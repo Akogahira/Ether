@@ -1,18 +1,36 @@
+import { useState } from "react";
 import {
   ContainerMain,
   Avatar,
   BotonPerfil,
   TextFieldPerfil,
   AjustesPerfil,
-  ContainerSwitches,
+  FlechaAnterior,
+  FlechaSiguiente,
+  ContainerSwitches
 } from "../components/Layout.styles";
 import Switch from "react-ios-switch";
-import { useState } from "react";
 
 const Perfil = () => {
   const [checkedEsconderPerfil, setCheckedEsconderPerfil] = useState(false);
   const [checkedMensajesPrivados, setCheckedMensajesPrivados] = useState(false);
   const [checkedNotificaciones, setCheckedNotificaciones] = useState(false);
+  const [avatarIndex, setAvatarIndex] = useState(0);
+  const [mostrarFlechas, setMostrarFlechas] = useState(false);
+  const [editandoPerfil, setEditandoPerfil] = useState(false);
+
+  const avatares = [
+    "src/assets/images/Avatar1.png",
+    "src/assets/images/Avatar2.png",
+    "src/assets/images/Avatar3.png",
+    "src/assets/images/Avatar4.png",
+    "src/assets/images/Avatar5.png",
+    "src/assets/images/Avatar6.png",
+    "src/assets/images/Avatar7.png",
+    "src/assets/images/Avatar8.png",
+    "src/assets/images/Avatar9.png",
+    "src/assets/images/Avatar10.png",
+  ];
 
   const handleChangeEsconderPerfil = (nextChecked) => {
     setCheckedEsconderPerfil(nextChecked);
@@ -26,17 +44,40 @@ const Perfil = () => {
     setCheckedNotificaciones(nextChecked);
   };
 
+  const handleCambiarAvatarSiguiente = () => {
+    const newIndex = (avatarIndex + 1) % avatares.length;
+    setAvatarIndex(newIndex);
+  };
+
+  const handleCambiarAvatarAnterior = () => {
+    const newIndex = (avatarIndex - 1 + avatares.length) % avatares.length;
+    setAvatarIndex(newIndex);
+  };
+
+  const handleEditarPerfil = () => {
+    setEditandoPerfil(!editandoPerfil);
+    setMostrarFlechas(!editandoPerfil); // Mostrar flechas cuando no se está editando el perfil
+  };
+
   return (
     <div>
       <ContainerMain>
         <Avatar>
-          <img src="src\assets\images\Avatar2.png"></img>
-          <BotonPerfil> Editar avatar </BotonPerfil>
+          {mostrarFlechas && (
+            <FlechaAnterior onClick={handleCambiarAvatarAnterior}>&lt;</FlechaAnterior>
+          )}
+          <img src={avatares[avatarIndex]} alt="Avatar" />
+          {mostrarFlechas && (
+            <FlechaSiguiente onClick={handleCambiarAvatarSiguiente}>&gt;</FlechaSiguiente>
+          )}
+          <BotonPerfil onClick={handleEditarPerfil}>
+            {editandoPerfil ? "Guardar" : "Cambiar avatar"}
+          </BotonPerfil>
         </Avatar>
 
         <AjustesPerfil>
           <h2>Nombre de usuario</h2>
-          <TextFieldPerfil defaultValue={"Akogahira"}></TextFieldPerfil>
+          <TextFieldPerfil defaultValue={"Akogahira"} />
 
           <h2>Privacidad</h2>
           <ContainerSwitches>

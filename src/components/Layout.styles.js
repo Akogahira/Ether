@@ -107,7 +107,14 @@ export const CheckboxContainer = styled.div`
 
 export const ErrorMessage = styled.p`
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 5px;
+  color: red;
+`;
+
+export const SuccessMessage = styled.p`
+  font-size: 14px;
+  margin-top: 5px;
+  color: green;
 `;
 
 // 00. Estilos generales (botones, MainContainer, divider...)
@@ -915,16 +922,51 @@ export const SendButton = styled.button`
 // PÁGINA 05. PERFIL
 
 ///Container de avatar
+// PÁGINA 05. PERFIL
+
+///Container de avatar
 export const Avatar = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img {
     width: 60%;
-    border-radius: 90%;
-    margin: 0 auto;
-    display: flex;
-    margin-bottom: 20px;
+    border-radius: 50%;
     border: 1px solid darkslategray;
+    margin-bottom: 20px;
   }
 `;
+
+// Componente para la flecha anterior
+export const FlechaAnterior = styled.button`
+  font-size: 13px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1;
+`;
+
+// Componente para la flecha siguiente
+export const FlechaSiguiente = styled.button`
+  font-size: 13px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+    transform: translateY(-50%);
+  z-index: 1;
+`;
+
+
 
 ///Container de botón de Editar avatar
 export const BotonPerfil = styled.button`
@@ -998,7 +1040,7 @@ export const TextFieldSubirConvGrande = styled.textarea`
   height: 100px;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  margin: 15px 0 10px 0;
+  margin: 10px 0 10px 0;
 `;
 
 export const BotonesSubirConv = styled.div`
