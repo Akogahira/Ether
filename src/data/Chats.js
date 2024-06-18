@@ -1,5 +1,6 @@
 export const ChatsPriv = [
   {
+    id: 1,
     img: "src/assets/images/Avatar1.png",
     user: "EBOLA765",
     fecha: "Hoy",

@@ -1,4 +1,7 @@
+// HerramientaEsp.js
+
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   ContainerMain,
   Tag,
@@ -15,17 +18,19 @@ import {
   ComentIzqA,
   DatoComentTimeA,
   DescripcionComentarioA,
-  SendButton
+  SendButton,
 } from "../components/Layout.styles";
+import { Tools } from "../data/Herramientas"; // Asegúrate de importar los datos de herramientas
 
 const HerramientaEsp = () => {
+  const { id } = useParams();
+  const toolId = parseInt(id);
+  const herramienta = Tools.find((tool) => tool.id === toolId);
+
   const [seccion1Visible, setSeccion1Visible] = useState(true);
   const [seccion2Visible, setSeccion2Visible] = useState(true);
   const [mensaje, setMensaje] = useState("");
-  const [comentarios, setComentarios] = useState([
-    { autor: "AlguienUnLol", time: "6h", mensaje: "Primer comentario de prueba", avatar: "src/assets/images/Avatar4.png" },
-    { autor: "AlguienUnLol2", time: "4h", mensaje: "Segundo comentario de prueba", avatar: "src/assets/images/Avatar5.png" },
-  ]);
+  const [comentarios, setComentarios] = useState([]);
 
   const toggleSeccion1 = () => {
     setSeccion1Visible(!seccion1Visible);
@@ -54,24 +59,27 @@ const HerramientaEsp = () => {
     if (mensaje.trim() !== "") {
       const newComment = {
         autor: "Tu",
-        time: new Date().getTime(), // Marcamos el tiempo actual en milisegundos
+        time: new Date().toISOString(),
         mensaje: mensaje,
-        avatar: "src/assets/images/Avatar2.png", // Cambia AvatarTu.png por la imagen que desees para el avatar del usuario actual
+        avatar: "/src/assets/images/Avatar2.png",
       };
       setComentarios([...comentarios, newComment]);
       setMensaje("");
     }
   };
 
+  if (!herramienta) {
+    return <div>Herramienta no encontrada</div>;
+  }
+
   return (
     <ContainerMain>
-      <CardHerramientaEsp>
-        <TituloHerramientaEsp>Neurohacking</TituloHerramientaEsp>
+      <CardHerramientaEsp style={{ backgroundImage: `url(${herramienta.foto})` }}>
+        <TituloHerramientaEsp>{herramienta.nombre}</TituloHerramientaEsp>
       </CardHerramientaEsp>
 
-      <Tag style={{ margin: "0 10px 0 0", fontSize: "15px" }}>Filtro 1</Tag>
-      <Tag style={{ margin: "0 10px 0 0", fontSize: "15px" }}>Filtro 2</Tag>
-      <Tag style={{ margin: "0 10px 0 0", fontSize: "15px" }}>Filtro 3</Tag>
+      <Tag style={{ margin: "0 10px 0 0", fontSize: "15px" }}>{herramienta.tags}</Tag>
+      <Tag style={{ margin: "0 10px 0 0", fontSize: "15px" }}>{herramienta.tipo}</Tag>
 
       <TextoSecciones>
         <div
@@ -167,4 +175,3 @@ const HerramientaEsp = () => {
 };
 
 export default HerramientaEsp;
-

@@ -687,8 +687,7 @@ export const CardHerrInfo = styled.div`
 ///3.1 HERRAMIENTA ESPECÍFICA
 
 export const CardHerramientaEsp = styled.div`
-  background-image: url("src/assets/images/Herramienta1.png");
-  background-size: 130%;
+  background-size: 140%;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #dad1ef;
@@ -696,14 +695,15 @@ export const CardHerramientaEsp = styled.div`
   padding: 20px;
   margin-bottom: 15px;
   height: 150px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
 `;
 
 export const TituloHerramientaEsp = styled.h1`
   font-size: 32px;
   font-weight: 600;
-  margin: 100px 0 0 0;
+  margin: 80px 0 0 0;
   color: whitesmoke;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 `;
 
 ///Texto Secciones
