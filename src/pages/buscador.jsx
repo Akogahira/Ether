@@ -12,6 +12,7 @@ import {
   BusquedaHerramientas,
   ResultHerr,
 } from "../components/Layout.styles";
+import { Link } from "react-router-dom";
 
 const Buscador = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -67,9 +68,12 @@ const Buscador = () => {
                     </TagConver>
                   </div>
                   <div>
-                    <TituloConvEsp style={{ marginTop: "6px" }}>
-                      {result.title}
-                    </TituloConvEsp>
+                    {/* Enlace a la página de la conversación */}
+                    <Link to={`/conversacionesp/${result.id}`}>
+                      <TituloConvEsp style={{ marginTop: "6px" }}>
+                        {result.title}
+                      </TituloConvEsp>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -85,7 +89,9 @@ const Buscador = () => {
             {searchResults
               .filter((result) => "nombre" in result)
               .map((result) => (
-                <ResultHerr key={result.nombre}>{result.nombre}</ResultHerr>
+                <Link key={result.id} to={`/herramientaesp/${result.id}`}>
+                  <ResultHerr>{result.nombre}</ResultHerr>
+                </Link>
               ))}
           </BusquedaHerramientas>
         </>

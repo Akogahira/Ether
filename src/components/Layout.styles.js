@@ -15,8 +15,7 @@ export const Main1 = styled.div`
   padding: 20px;
   margin: 0 auto;
   width: 320px;
-  min-height: 720px;
-  max-height: 760px;
+  height: 760px;
   background-color: #dad1ef;
 `;
 
@@ -135,7 +134,7 @@ export const Main = styled.div`
   min-height: 650px;
   min-height: 650px;
   color: #4d4c4d;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 `;
 
 export const Container = styled.div`
@@ -222,7 +221,7 @@ export const Footer = styled.footer`
   bottom: 0;
   left: 0;
   width: calc(100% - 20px);
-  max-width: 360px;
+  max-width: 340px;
   height: 70px;
   background-color: white;
   padding: 0 10px;
@@ -319,7 +318,7 @@ export const TituloConvHome = styled.h4`
   margin-top: 5px;
   margin-bottom: 2px;
   font-size: 15px;
-  font-weight: 540;
+  font-weight: normal;
   line-height: 1.3;
 `;
 
@@ -359,7 +358,7 @@ export const TituloHerrHome = styled.h4`
   margin-top: 20px;
   margin-bottom: 5px;
   font-size: 15px;
-  font-weight: 540;
+  font-weight: normal;
   line-height: 1.1;
 `;
 
@@ -415,9 +414,18 @@ export const ContainerConver = styled.div`
 ///Titulo conversaciones
 export const TituloConv = styled.h4`
   padding: 5px 0px 0px 0px;
-  margin: 10px 0;
+  margin: 7px 0;
   font-size: 16px;
-  font-weight: 540;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #4d4c4d;
+`;
+
+export const DescripcionConvGeneral = styled.div`
+  padding: 5px 0px 0px 0px;
+  margin: 0 0 15px 0;
+  font-size: 15px;
+  font-weight: normal;
   line-height: 1.2;
   color: #4d4c4d;
 `;
@@ -522,18 +530,18 @@ export const TagConver = styled.span`
 export const TituloConvEsp = styled.div`
   padding: 5px 0px 0px 0px;
   margin: 0 0 10px 0;
-  font-size: 16px;
-  font-weight: 540;
-  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.3;
   color: #373737;
 `;
 
 export const DescripcionConvEsp = styled.div`
   padding: 5px 0px 0px 0px;
   margin: 0 0 15px 0;
-  font-size: 15px;
-  font-weight: 540;
-  line-height: 1.1;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.3;
   color: #373737;
 `;
 
@@ -597,7 +605,7 @@ export const DatosComentIzqA2 = styled.div`
 ///Username/nombre (COMENTARIO)
 export const DatoComentNameA = styled.div`
   margin: 0;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 14px;
   color: #373737;
 `;
@@ -605,7 +613,7 @@ export const DatoComentNameA = styled.div`
 ///Time/hora (COMENTARIO)
 export const DatoComentTimeA = styled.div`
   margin: 0;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 14px;
   color: #373737;
   line-height: 1.1;
@@ -617,7 +625,7 @@ export const DescripcionComentarioA = styled.div`
   padding: 5px 0px 0px 0px;
   margin: 0 0 10px 21%;
   font-size: 15px;
-  font-weight: 540;
+  font-weight: normal;
   line-height: 1.2;
   color: #373737;
 `;
@@ -630,7 +638,7 @@ export const DescripcionComentarioA = styled.div`
 export const IntroPageHerr = styled.h4`
   text-align: left;
   font-size: 17px;
-  font-weight: 540;
+  font-weight: normal;
   line-height: 1.1;
   margin: 10px 0px 10px 0px;
 `;
@@ -758,7 +766,7 @@ export const ChatUser = styled.div`
 
 export const ChatMsg = styled.div`
   margin: 0;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 16px;
   color: #373737;
   line-height: 1.1;
@@ -829,7 +837,7 @@ export const User1Contenido = styled.div`
 
 export const User1Msg = styled.div`
   margin: 0;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 16px;
   color: #373737;
   line-height: 1.1;
@@ -867,7 +875,7 @@ export const User2Contenido = styled.div`
 
 export const User2Msg = styled.div`
   margin: 0;
-  font-weight: 500;
+  font-weight: normal;
   font-size: 16px;
   color: #373737;
   line-height: 1.1;

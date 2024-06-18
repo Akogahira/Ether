@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ContainerMain, ContainerConver, Tag, TituloConv, Divider, BotonConv, InfoConv, ContainerCollapseConv, Collapse, DescripcionConvEsp, ContainerFiltros } from '../components/Layout.styles';
+import { ContainerMain, ContainerConver, Tag, TituloConv, Divider, BotonConv, InfoConv, ContainerCollapseConv, Collapse, ContainerFiltros, DescripcionConvGeneral } from '../components/Layout.styles';
 import { Conver } from "../data/Conversaciones";
 import { PiChatCircle } from "react-icons/pi";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5"; // Importamos las flechas
@@ -64,7 +64,11 @@ const Conversaciones = () => {
               <Tag>{conv.tag}</Tag>
               <Link to={`/conversacionesp/${conv.id}`} style={{ textDecoration: "none" }}>
                 <TituloConv>{conv.title}</TituloConv>
-                {showDescriptions[index] && <DescripcionConvEsp>{conv.descripcion}</DescripcionConvEsp>}
+                {showDescriptions[index] && (
+                  <DescripcionConvGeneral>
+                    {conv.descripcion.length > 100 ? `${conv.descripcion.substring(0, 100)}...` : conv.descripcion}
+                  </DescripcionConvGeneral>
+                )}
               </Link>
               <ContainerCollapseConv>
                 <Collapse onClick={() => toggleDescription(index)} style={{ display: "flex", alignItems: "center", marginTop: "2px" }}>

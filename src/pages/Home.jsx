@@ -28,8 +28,10 @@ const Home = () => {
         <CardContainer>
           {Conver.map((convh, index) => (
             <CardHome key={`${convh.autor}-${index}`}>
-              <Link to={`/conversacionesp`}
-                style={{ textDecoration: "none", color: "inherit" }}>
+              <Link
+                to={`/conversacionesp/${convh.id}`} // Enlace dinámico con el ID de la conversación
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
                 <CardHomeInfo>
                   <AutorHome>{convh.autor}</AutorHome>
                   <TituloConvHome>{convh.shortitle}</TituloConvHome>
@@ -62,7 +64,7 @@ const Home = () => {
           {Tools.map((tool, index) => (
             <CardHome key={`${tool.nombre}-${index}`}>
               <Link
-                to={`/herramientaesp`}
+                to={`/herramientaesp/${tool.id}`} // Enlace dinámico con el ID de la herramienta
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <CardHomeImg>
