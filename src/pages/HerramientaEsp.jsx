@@ -1,5 +1,3 @@
-// HerramientaEsp.js
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import {
@@ -27,18 +25,16 @@ const HerramientaEsp = () => {
   const toolId = parseInt(id);
   const herramienta = Tools.find((tool) => tool.id === toolId);
 
-  const [seccion1Visible, setSeccion1Visible] = useState(true);
-  const [seccion2Visible, setSeccion2Visible] = useState(true);
+  const [secciones, setSecciones] = useState(herramienta ? herramienta.secciones : []);
+
+  const toggleSeccion = (index) => {
+    const updatedSecciones = [...secciones];
+    updatedSecciones[index].visible = !updatedSecciones[index].visible;
+    setSecciones(updatedSecciones);
+  };
+
   const [mensaje, setMensaje] = useState("");
   const [comentarios, setComentarios] = useState([]);
-
-  const toggleSeccion1 = () => {
-    setSeccion1Visible(!seccion1Visible);
-  };
-
-  const toggleSeccion2 = () => {
-    setSeccion2Visible(!seccion2Visible);
-  };
 
   const getTimeDifference = (date) => {
     const now = new Date();
@@ -82,65 +78,35 @@ const HerramientaEsp = () => {
       <Tag style={{ margin: "0 10px 0 0", fontSize: "15px" }}>{herramienta.tipo}</Tag>
 
       <TextoSecciones>
-        <div
-          onClick={toggleSeccion1}
-          style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
-        >
-          <span>Sección 1</span>
-          <svg
-            width="26"
-            height="26"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{
-              marginLeft: "5px",
-              transition: "transform 0.3s ease",
-              transform: seccion1Visible ? "rotate(180deg)" : "rotate(0deg)",
-            }}
-          >
-            <path d="M7 10L12 15L17 10H7Z" fill="currentColor" />
-          </svg>
-        </div>
-        {seccion1Visible && (
-          <p>
-            Explicación de la herramienta sección 1. Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Nemo facilis ex incidunt amet cum
-            temporibus debitis, minus tempora suscipit, animi inventore
-            quibusdam ut aliquam porro? Quos aspernatur veritatis quibusdam
-            aperiam?
-          </p>
-        )}
-
-        <div
-          onClick={toggleSeccion2}
-          style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
-        >
-          <span>Sección 2</span>
-          <svg
-            width="26"
-            height="26"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{
-              marginLeft: "5px",
-              transition: "transform 0.3s ease",
-              transform: seccion2Visible ? "rotate(180deg)" : "rotate(0deg)",
-            }}
-          >
-            <path d="M7 10L12 15L17 10H7Z" fill="currentColor" />
-          </svg>
-        </div>
-        {seccion2Visible && (
-          <p>
-            Explicación de la herramienta sección 2. Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Nemo facilis ex incidunt amet cum
-            temporibus debitis, minus tempora suscipit, animi inventore
-            quibusdam ut aliquam porro? Quos aspernatur veritatis quibusdam
-            aperiam?
-          </p>
-        )}
+        {secciones.map((seccion, index) => (
+          <div key={index}>
+            <div
+              onClick={() => toggleSeccion(index)}
+              style={{ cursor: "pointer", display: "flex", alignItems: "center" }}
+            >
+              <h3>{seccion.titulo}</h3>
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{
+                  marginLeft: "5px",
+                  transition: "transform 0.3s ease",
+                  transform: seccion.visible ? "rotate(180deg)" : "rotate(0deg)",
+                }}
+              >
+                <path d="M7 10L12 15L17 10H7Z" fill="currentColor" />
+              </svg>
+            </div>
+            {seccion.visible && (
+              <p key={index}>
+                {seccion.contenido}
+              </p>
+            )}
+          </div>
+        ))}
       </TextoSecciones>
 
       <Divider />

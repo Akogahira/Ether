@@ -699,7 +699,7 @@ export const CardHerramientaEsp = styled.div`
 `;
 
 export const TituloHerramientaEsp = styled.h1`
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 600;
   margin: 80px 0 0 0;
   color: whitesmoke;
@@ -709,7 +709,11 @@ export const TituloHerramientaEsp = styled.h1`
 ///Texto Secciones
 export const TextoSecciones = styled.div`
   margin: 20px 5px 0 0;
-  text-align: justify;
+  h3 {
+    font-weight: normal;
+    font-size: 18px;
+    margin: 5px 0px 5px 0px;
+  }
 `;
 
 //Sección de comentarios cogida de ConversacionEsp
