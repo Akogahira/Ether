@@ -19,17 +19,14 @@ const Buscador = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   const performSearch = useCallback(() => {
-    // Filtrar conversaciones que coincidan con el término de búsqueda
     const conversacionesResults = Conver.filter((conv) =>
       conv.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Filtrar herramientas que coincidan con el término de búsqueda
     const herramientasResults = Tools.filter((tool) =>
       tool.nombre.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Actualizar los resultados de búsqueda solo si se ha ingresado un término de búsqueda
     setSearchResults(
       searchTerm
         ? [...conversacionesResults, ...herramientasResults]
@@ -68,7 +65,6 @@ const Buscador = () => {
                     </TagConver>
                   </div>
                   <div>
-                    {/* Enlace a la página de la conversación */}
                     <Link to={`/conversacionesp/${result.id}`}>
                       <TituloConvEsp style={{ marginTop: "6px" }}>
                         {result.title}

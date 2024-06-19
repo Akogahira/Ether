@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ContainerMain, ContainerConver, Tag, TituloConv, Divider, BotonConv, InfoConv, ContainerCollapseConv, Collapse, ContainerFiltros, DescripcionConvGeneral } from '../components/Layout.styles';
 import { Conver } from "../data/Conversaciones";
 import { PiChatCircle } from "react-icons/pi";
-import { IoChevronDown, IoChevronUp } from "react-icons/io5"; // Importamos las flechas
+import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
 const Conversaciones = () => {
   const [showDescriptions, setShowDescriptions] = useState(Array(Conver.length).fill(false));
@@ -49,7 +49,7 @@ const Conversaciones = () => {
               <BotonConv
                 key={filter}
                 onClick={() => handleFilterClick(filter)}
-                isActive={selectedFilters.includes(filter)}
+                className={selectedFilters.includes(filter) ? 'active' : ''}
               >
                 {filter}
               </BotonConv>

@@ -41,7 +41,7 @@ const LayoutExtra = () => {
       </Footer2>
 
       <Main>
-        <Outlet /> {/* Aquí se renderizarán las rutas hijas */}
+        <Outlet />
       </Main>
 
       <Divider />

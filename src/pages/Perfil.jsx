@@ -56,7 +56,7 @@ const Perfil = () => {
 
   const handleEditarPerfil = () => {
     setEditandoPerfil(!editandoPerfil);
-    setMostrarFlechas(!editandoPerfil); // Mostrar flechas cuando no se está editando el perfil
+    setMostrarFlechas(!editandoPerfil);
   };
 
   return (

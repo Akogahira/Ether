@@ -29,7 +29,7 @@ const Home = () => {
           {Conver.map((convh, index) => (
             <CardHome key={`${convh.autor}-${index}`}>
               <Link
-                to={`/conversacionesp/${convh.id}`} // Enlace dinámico con el ID de la conversación
+                to={`/conversacionesp/${convh.id}`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <CardHomeInfo>
@@ -64,7 +64,7 @@ const Home = () => {
           {Tools.map((tool, index) => (
             <CardHome key={`${tool.nombre}-${index}`}>
               <Link
-                to={`/herramientaesp/${tool.id}`} // Enlace dinámico con el ID de la herramienta
+                to={`/herramientaesp/${tool.id}`}
                 style={{ textDecoration: "none", color: "inherit" }}
               >
                 <CardHomeImg>
@@ -92,9 +92,7 @@ const Home = () => {
           to="/subirconversacion"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <BotonConv style={{ margin: "0px" }}>
-            Empieza una conversación
-          </BotonConv>
+          <BotonConv>Empieza una conversación</BotonConv>
         </Link>
 
         <TituloHomeGenerico>
@@ -104,9 +102,7 @@ const Home = () => {
           to="/subirherramienta"
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <BotonConv style={{ margin: "0px" }}>
-            Publica una herramienta
-          </BotonConv>
+          <BotonConv>Publica una herramienta</BotonConv>
         </Link>
       </ContainerMain>
     </div>

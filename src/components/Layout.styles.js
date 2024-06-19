@@ -119,6 +119,7 @@ export const SuccessMessage = styled.p`
 // 00. Estilos generales (botones, MainContainer, divider...)
 
 export const ContainerMain = styled.div`
+position: relative;
   margin: 0 auto;
   width: 95%;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -382,6 +383,7 @@ export const BotonHome = styled.button`
 //Estilos específicos:
 //PÁGINA 02. CONVERSACIONES
 
+
 export const BotonConv = styled.button`
   display: inline-block;
   padding: 5px 10px;
@@ -391,13 +393,14 @@ export const BotonConv = styled.button`
   font-size: 16px;
   border: none;
   cursor: pointer;
-  background-color: ${(props) => (props.isActive ? '#beb1dc' : '#9689b3')};
+  background-color: #9689b3;
   color: white;
-
-  &:hover {
-    background-color: ${(props) => (props.isActive ? '#a798c4' : '#beb1dc')};
+  &.active {
+    background-color: #beb1dc;
   }
 `;
+
+
 
 //Container filtros (desplegable)
 export const ContainerFiltros = styled.div`
@@ -893,7 +896,7 @@ export const User2Time = styled.div`
 export const ChatInputContainer = styled.div`
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 360px;
   background-color: none;
   padding: 10px;
   box-sizing: border-box;
@@ -1095,23 +1098,33 @@ export const ResultHerr = styled.div`
 //OLE
 
 // Estilos para el pop-up de filtros
-export const PopupContainer = styled.div`
+export const Overlay = styled.div`
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+`;
+
+// Estilos para el pop-up de filtros
+export const PopupContainer = styled.div`
+  position: absolute;
   top: 50%;
   left: 50%;
+  width: 250px;
   transform: translate(-50%, -50%);
   background-color: #fffeff;
   padding: 20px;
   border: 1px solid #737273;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-  width: 70%;
+  z-index: 2;
   h2 {
     margin-top: 2px;
   }
 `;
-
 export const BotonCerrar = styled.button`
   position: absolute;
   top: 10px;

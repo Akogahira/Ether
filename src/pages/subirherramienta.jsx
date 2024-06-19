@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ContainerMain, BotonSubirConv, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome, PopupContainer, BotonConv, BotonCerrar, ErrorMessage, SuccessMessage } from '../components/Layout.styles';
+import { ContainerMain, BotonSubirConv, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome, PopupContainer, BotonConv, BotonCerrar, ErrorMessage, SuccessMessage, Overlay } from '../components/Layout.styles';
 import { ImPlus } from "react-icons/im";
 
 const SubirHerr = () => {
@@ -29,7 +29,6 @@ const SubirHerr = () => {
   };
 
   const handleSubmit = () => {
-    // Validar los campos antes de enviar el formulario
     let isValid = true;
     if (titulo.length < 20 || titulo.length > 45) {
       setTituloError('El título debe tener entre 20 y 45 caracteres.');
@@ -38,7 +37,6 @@ const SubirHerr = () => {
       setTituloError('');
     }
 
-    // Validar cada título de sección
     for (let i = 1; i <= seccionCount; i++) {
       const seccionTitle = document.getElementById(`seccion${i}Titulo`).value;
       if (seccionTitle.length < 20 || seccionTitle.length > 45) {
@@ -50,8 +48,6 @@ const SubirHerr = () => {
       }
     }
 
-
-    // Validar cada descripción de sección
     for (let i = 1; i <= seccionCount; i++) {
       const seccionDescription = document.getElementById(`seccion${i}Descripcion`).value;
       if (seccionDescription.length < 40 || seccionDescription.length > 200) {
@@ -113,42 +109,23 @@ const SubirHerr = () => {
         <BotonSubirConv onClick={toggleFilters}>Añadir filtros</BotonSubirConv>
       </BotonesSubirConv>
 
-      {/* Pop-up de filtros */}
       {showFilters && (
-        <PopupContainer>
-          <BotonCerrar onClick={toggleFilters}>X</BotonCerrar>
-          <h2>Selecciona filtros</h2>
-          <BotonConv
-            isActive={activeFilters.includes("Filtro 1")}
-            onClick={() => handleFilterClick("Filtro 1")}
-          >
-            Filtro 1
-          </BotonConv>
-          <BotonConv
-            isActive={activeFilters.includes("Filtro 2")}
-            onClick={() => handleFilterClick("Filtro 2")}
-          >
-            Filtro 2
-          </BotonConv>
-          <BotonConv
-            isActive={activeFilters.includes("Filtro 3")}
-            onClick={() => handleFilterClick("Filtro 3")}
-          >
-            Filtro 3
-          </BotonConv>
-          <BotonConv
-            isActive={activeFilters.includes("Filtro 4")}
-            onClick={() => handleFilterClick("Filtro 4")}
-          >
-            Filtro 4
-          </BotonConv>
-          <BotonConv
-            isActive={activeFilters.includes("Filtro 5")}
-            onClick={() => handleFilterClick("Filtro 5")}
-          >
-            Filtro 5
-          </BotonConv>
-        </PopupContainer>
+        <>
+          <Overlay onClick={toggleFilters} />
+          <PopupContainer>
+            <BotonCerrar onClick={toggleFilters}>X</BotonCerrar>
+            <h2>Selecciona filtros</h2>
+            {["Terapia guiada", "Autodirigida", "Técnica mixta"].map((filter, index) => (
+              <BotonConv
+                key={index}
+                onClick={() => handleFilterClick(filter)}
+                className={activeFilters.includes(filter) ? 'active' : ''}
+              >
+                {filter}
+              </BotonConv>
+            ))}
+          </PopupContainer>
+        </>
       )}
 
       <BotonesSubirConv style={{ display: "flex", alignItems: "flex-end" }}>
