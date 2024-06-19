@@ -20,12 +20,12 @@ import {
 const ChatEsp = () => {
   const [messages, setMessages] = useState([
     {
-      user: "user1",
-      content: "Las putas ruffles qué caras están",
+      user: "user2",
+      content: "Han subido las ruffles jamón a casi 3 euros macho que es mitad aire",
       time: "17:30",
     },
     {
-      user: "user2",
+      user: "user1",
       content: "Pues el maxibon flipas 3 euros ayer en el chino",
       time: "18:13",
     },

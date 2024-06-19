@@ -1,29 +1,32 @@
-# Ether
+<div align="center">
+  <h1>Ether</h1>
+</div>
 
 Ether is a mobile app focused on mental health, designed to foster a supportive community and promote mental health awareness among young individuals. It offers a safe space where users can connect, share experiences, and access free mental health resources.
 
-## Technologies Used
+This project uses React for frontend development.
 
-Ether is built using the following technologies:
+## Table of Contents
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Contact](#contact)
 
-- **React:** A JavaScript library for building user interfaces, particularly single-page applications.
-- **Vite:** A fast build tool and development server for modern web projects.
-- **Styled-components:** A library for writing CSS in JS, allowing you to style your React components with tagged template literals.
-- **Express:** A minimal and flexible Node.js web application framework for building APIs.
-- **React Router Dom:** A library for managing navigation in React applications.
-- **React Icons:** A collection of popular icons as React components.
-- **@ngrok/ngrok:** A tool for exposing your local server to the internet.
+## Technologies
 
-## Getting Started
+### Frontend Technologies
 
-### Dependencies
+Ether's frontend is built using the following main technologies:
 
-Before installing Ether, ensure you have the following dependencies:
+* React (v18.2.0)
+* Vite (v5.2.0)
+* Styled Components (v6.1.11)
 
-* Node.js
-* npm
+### Additional Libraries
 
-### Installing
+* react-icons: For all the icons.
+* react-ios-switch: For implementing iOS-style switches in the UI (just a personal preference).
+
+## Setup
 
 To download Ether and install its dependencies, follow these steps:
 
@@ -37,7 +40,7 @@ git clone https://github.com/Akogahira/Ether.git
 npm install
 ```
 
-### Executing program
+### Executing Program
 
 To start Ether in development mode, run:
 ```
@@ -49,4 +52,5 @@ Then navigate to http://localhost:3000 in your browser to view the application.
 
 ## Contact
 
+For any inquiries or collaboration opportunities, feel free to reach out:
 Beatriz - [Linkedin](https://www.linkedin.com/in/beatriz-triviño-pérez/)
