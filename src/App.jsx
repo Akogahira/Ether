@@ -36,7 +36,6 @@ const App = () => (
         <Route path="/subirherramienta" element={<SubirHerr />} />
         <Route path="/chatpriv" element={<ChatEsp />} />
         <Route path="/buscador" element={<Busqueda />} />
-        {/* Ruta dinámica para conversaciones específicas */}
         <Route path="/conversacionesp/:id" element={<ConversacionEsp />} />
         <Route path="/herramientaesp/:id" element={<HerramientaEsp />} />
         <Route path="/perfil" element={<Perfil />} />
