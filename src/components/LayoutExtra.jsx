@@ -23,8 +23,8 @@ const LayoutExtra = () => {
   const isChatEspPage = location.pathname === "/chatpriv";
   const isSubirHerrPage = location.pathname === "/subirherramienta";
   const isSubirConvPage = location.pathname === "/subirconversacion";
-  const isConvEspPage = location.pathname === "/conversacionesp";
-  const isHerrEspPage = location.pathname === "/herramientaesp";
+  const isConvEspPage = location.pathname.startsWith("/conversacionesp/");
+  const isHerrEspPage = location.pathname.startsWith("/herramientaesp/");
 
   const goBack = () => {
     window.history.back();
@@ -48,7 +48,7 @@ const LayoutExtra = () => {
       <Footer>
         <Nav>
           <div>
-            <Link to="/">{isHomePage ? <IoHome /> : <IoHomeOutline />}</Link>
+            <Link to="/home">{isHomePage ? <IoHome /> : <IoHomeOutline />}</Link>
             <Link to="/conversaciones">
               {isConvPage || isConvEspPage || isSubirConvPage ? (
                 <MdForum />

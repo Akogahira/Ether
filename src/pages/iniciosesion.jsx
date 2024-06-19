@@ -48,6 +48,7 @@ const Inicio = () => {
                 type="text"
                 value={username}
                 onChange={handleUsernameChange}
+                autoComplete="username"
               />
             </TextFieldContainerInicio>
             <TextFieldContainerInicio>
@@ -56,6 +57,7 @@ const Inicio = () => {
                 type="password"
                 value={password}
                 onChange={handlePasswordChange}
+                autoComplete="current-password"
               />
             </TextFieldContainerInicio>
             <PassRestart>¿No recuerdas alguno de tus datos?</PassRestart>

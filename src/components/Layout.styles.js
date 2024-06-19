@@ -44,9 +44,10 @@ export const ContainerInicioSesion = styled.div`
   margin-bottom: 20px;
 `;
 
-export const TextFieldInicioSesion = styled.textarea`
+export const TextFieldInicioSesion = styled.input`
   padding: 5px 12px;
   border-radius: 100px;
+  border: 1px solid #737273;
   background-color: white;
   color: #737273;
   font-weight: normal;

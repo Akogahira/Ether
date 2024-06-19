@@ -17,7 +17,7 @@ import {
 
 const Layout = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const isHomePage = location.pathname === "/home";
   const isConvPage = location.pathname === "/conversaciones";
   const isHerrPage = location.pathname === "/herramientas";
   const isChatPage = location.pathname === "/chat";
@@ -25,8 +25,8 @@ const Layout = () => {
   const isChatEspPage = location.pathname === "/chatpriv";
   const isSubirHerrPage = location.pathname === "/subirherramienta";
   const isSubirConvPage = location.pathname === "/subirconversacion";
-  const isConvEspPage = location.pathname === "/conversacionesp";
-  const isHerrEspPage = location.pathname === "/herramientaesp";
+  const isConvEspPage = location.pathname.startsWith("/conversacionesp/");
+  const isHerrEspPage = location.pathname.startsWith("/herramientaesp/");
   const isBuscarPage = location.pathname === "/buscador";
 
   const getPageName = () => {
@@ -73,14 +73,14 @@ const Layout = () => {
       </Footer2>
 
       <Main>
-        <Outlet /> {/* Aquí se renderizarán las rutas hijas */}
+        <Outlet />
       </Main>
 
       <Divider />
       <Footer>
         <Nav>
           <div>
-            <Link to="/">{isHomePage ? <IoHome /> : <IoHomeOutline />}</Link>
+            <Link to="/home">{isHomePage ? <IoHome /> : <IoHomeOutline />}</Link>
             <Link to="/conversaciones">
               {isConvPage || isConvEspPage || isSubirConvPage ? (
                 <MdForum />

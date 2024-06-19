@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import LayoutInicio from './components/LayoutInicio';
 import LayoutExtra from './components/LayoutExtra';
@@ -20,8 +21,19 @@ import {
   Busqueda,
 } from './pages';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => (
   <Router>
+    <ScrollToTop />
     <Routes>
       <Route element={<Layout />}>
         <Route path="/home" element={<Home />} />
@@ -43,6 +55,7 @@ const App = () => (
       <Route element={<LayoutInicio />}>
         <Route path="/" element={<Inicio />} />
       </Route>
+
       <Route element={<LayoutInicioSesion />}>
         <Route path="/iniciosesion" element={<InicioSesion />} />
         <Route path="/inicioregistro" element={<InicioRegistro />} />
