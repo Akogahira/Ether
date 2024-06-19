@@ -9,6 +9,7 @@ This project uses React for frontend development.
 ## Table of Contents
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Support](#support)
 * [Contact](#contact)
 
 ## Technologies
@@ -49,8 +50,13 @@ npm run dev
 
 Then navigate to http://localhost:3000 in your browser to view the application.
 
+## Support
+
+This is my first React project, so feel free to point out any improvements!
+
 
 ## Contact
 
 For any inquiries or collaboration opportunities, feel free to reach out:
+<br>
 Beatriz - [Linkedin](https://www.linkedin.com/in/beatriz-triviño-pérez/)
