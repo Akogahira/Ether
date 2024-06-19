@@ -1,5 +1,5 @@
 <div align="center">
-<h1># Ether</h1>
+<h1>Ether</h1>
 </div>
 
 Ether is a mobile app focused on mental health, designed to foster a supportive community and promote mental health awareness among young individuals. It offers a safe space where users can connect, share experiences, and access free mental health resources.
