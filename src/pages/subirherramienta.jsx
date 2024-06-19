@@ -1,5 +1,19 @@
 import { useState } from "react";
-import { ContainerMain, BotonSubirConv, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome, PopupContainer, BotonConv, BotonCerrar, ErrorMessage, SuccessMessage, Overlay } from '../components/Layout.styles';
+import {
+  ContainerMain,
+  BotonSubirConv,
+  TextFieldContainer,
+  TextFieldSubirConv,
+  TextFieldSubirConvGrande,
+  BotonesSubirConv,
+  TituloConvHome,
+  PopupContainer,
+  BotonConv,
+  BotonCerrar,
+  ErrorMessage,
+  SuccessMessage,
+  Overlay
+} from '../components/Layout.styles';
 import { ImPlus } from "react-icons/im";
 
 const SubirHerr = () => {
@@ -30,8 +44,8 @@ const SubirHerr = () => {
 
   const handleSubmit = () => {
     let isValid = true;
-    if (titulo.length < 20 || titulo.length > 45) {
-      setTituloError('El título debe tener entre 20 y 45 caracteres.');
+    if (titulo.length < 5 || titulo.length > 25) {
+      setTituloError('El título debe tener entre 5 y 25 caracteres.');
       isValid = false;
     } else {
       setTituloError('');
@@ -67,13 +81,15 @@ const SubirHerr = () => {
   return (
     <ContainerMain>
       <div>
-        <TituloConvHome>Escribe el título de la herramienta.</TituloConvHome>
+        <TituloConvHome>Escribe el título de tu herramienta.</TituloConvHome>
         <TextFieldContainer>
           <TextFieldSubirConv
             type="text"
             value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
-            placeholder="Título de la herramienta"
+            placeholder="Título principal."
+            id="titulo"
+            name="titulo"
           />
         </TextFieldContainer>
         {tituloError && <ErrorMessage>{tituloError}</ErrorMessage>}
@@ -87,7 +103,8 @@ const SubirHerr = () => {
             <TextFieldSubirConv
               type="text"
               id={`seccion${index + 1}Titulo`}
-              placeholder={`Título de la sección ${index + 1}`}
+              name={`seccion${index + 1}Titulo`}
+              placeholder={`Título de la sección ${index + 1}.`}
             />
           </TextFieldContainer>
           {seccionError && <ErrorMessage>{seccionError}</ErrorMessage>}
@@ -95,7 +112,8 @@ const SubirHerr = () => {
             <TextFieldSubirConvGrande
               type="text"
               id={`seccion${index + 1}Descripcion`}
-              placeholder={`Descripción de la sección ${index + 1}`}
+              name={`seccion${index + 1}Descripcion`}
+              placeholder={`Descripción de la sección ${index + 1}.`}
             />
           </TextFieldContainer>
           {descripcionError && <ErrorMessage>{descripcionError}</ErrorMessage>}
@@ -132,7 +150,7 @@ const SubirHerr = () => {
         <BotonSubirConv onClick={handleSubmit}>Enviar</BotonSubirConv>
       </BotonesSubirConv>
 
-      {formSubmitted && <SuccessMessage>Herramienta enviada, nuestro equipo la moderará en breve.</SuccessMessage>}
+      {formSubmitted && <SuccessMessage> ¡Herramienta enviada! Nuestro equipo la moderará en breve y será publicada si cumple con nuestra política. Gracias por participar en la comunidad.</SuccessMessage>}
     </ContainerMain>
   );
 };

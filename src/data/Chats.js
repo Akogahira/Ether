@@ -2,18 +2,18 @@ export const ChatsPriv = [
   {
     id: 1,
     img: "src/assets/images/Avatar1.png",
-    user: "EBOLA765",
+    user: "OdioLasPeras",
     fecha: "Hoy",
     hora: "10:20",
-    msg: "¿Tú qué opinas de las peras?",
+    msg: "Tú qué opinas de las peras?",
   },
 
   {
     img: "src/assets/images/Avatar2.png",
-    user: "TuMadre69",
+    user: "FandeFaker",
     fecha: "Ayer",
     hora: "10:20",
-    msg: "Has visto las skins del Lol",
+    msg: "Has visto las skins del Lol de 500 euros?",
   },
 
   {
@@ -21,7 +21,7 @@ export const ChatsPriv = [
     user: "ola328382",
     fecha: "Ayer",
     hora: "01:20",
-    msg: "Le he cogido 3 euros a mi padre para comprarme un calipo y...",
+    msg: "Le he cogido 3 euros a mi padre para comprarme un calipo y ahora me siento mal",
   },
 
   {
@@ -29,22 +29,22 @@ export const ChatsPriv = [
     user: "BPDJSAJKK",
     fecha: "30/05",
     hora: "17:30",
-    msg: "Las putas ruffles qué caras están",
+    msg: "Han subido las ruffles jamón a casi 3 euros macho que es mitad aire",
   },
 
   {
     img: "src/assets/images/Avatar5.png",
-    user: "EBOLA765",
+    user: "FuturoHater",
     fecha: "10/05",
     hora: "16:40",
-    msg: "Maldita inflación ",
+    msg: "La inflación ha afectado hasta a las bolsas de patatas",
   },
 
   {
     img: "src/assets/images/Avatar6.png",
-    user: "EBOLA765",
+    user: "Gameru2334",
     fecha: "09/05",
     hora: "16:40",
-    msg: "Estoy hasta los cojones de ser malo al valorant",
+    msg: "Estoy harto de ser malo a los videojuegos",
   },
 ];

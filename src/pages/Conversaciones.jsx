@@ -45,7 +45,7 @@ const Conversaciones = () => {
         </Link>
         {showFilterMenu && (
           <ContainerFiltros>
-            {["Salud mental", "Salud física", "Herramientas", "Videojuegos", "Día a día", "Opinión"].map(filter => (
+            {["Salud mental", "Salud física", "Herramientas", "Videojuegos", "Día a día", "Opinión", "Hobbies"].map(filter => (
               <BotonConv
                 key={filter}
                 onClick={() => handleFilterClick(filter)}

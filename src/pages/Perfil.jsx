@@ -77,7 +77,11 @@ const Perfil = () => {
 
         <AjustesPerfil>
           <h2>Nombre de usuario</h2>
-          <TextFieldPerfil defaultValue={"Akogahira"} />
+          <TextFieldPerfil
+            defaultValue={"Akogahira"}
+            id="nombreUsuario"
+            name="nombreUsuario"
+          />
 
           <h2>Privacidad</h2>
           <ContainerSwitches>
@@ -86,6 +90,8 @@ const Perfil = () => {
               checked={checkedEsconderPerfil}
               onChange={handleChangeEsconderPerfil}
               onColor="#dad1ef"
+              id="esconderPerfil"
+              name="esconderPerfil"
             />
           </ContainerSwitches>
 
@@ -95,6 +101,8 @@ const Perfil = () => {
               checked={checkedMensajesPrivados}
               onChange={handleChangeMensajesPrivados}
               onColor="#dad1ef"
+              id="mensajesPrivados"
+              name="mensajesPrivados"
             />
           </ContainerSwitches>
 
@@ -105,6 +113,8 @@ const Perfil = () => {
               checked={checkedNotificaciones}
               onChange={handleChangeNotificaciones}
               onColor="#dad1ef"
+              id="notificaciones"
+              name="notificaciones"
             />
           </ContainerSwitches>
           <h2>Idioma</h2>
@@ -117,6 +127,8 @@ const Perfil = () => {
                 cursor: "pointer",
                 color: "black",
               }}
+              id="cambiarIdioma"
+              name="cambiarIdioma"
             >
               <svg
                 width="26"

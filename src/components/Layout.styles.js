@@ -111,9 +111,16 @@ export const ErrorMessage = styled.p`
 `;
 
 export const SuccessMessage = styled.p`
-  font-size: 14px;
-  margin-top: 5px;
-  color: green;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-top: 20px;
+  color: #9689b3;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid #9689b3;
 `;
 
 // 00. Estilos generales (botones, MainContainer, divider...)

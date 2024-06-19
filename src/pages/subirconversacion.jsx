@@ -1,5 +1,19 @@
 import { useState } from "react";
-import { BotonSubirConv, ContainerMain, TextFieldContainer, TextFieldSubirConv, TextFieldSubirConvGrande, BotonesSubirConv, TituloConvHome, PopupContainer, BotonConv, BotonCerrar, ErrorMessage, SuccessMessage, Overlay } from '../components/Layout.styles';
+import {
+  BotonSubirConv,
+  ContainerMain,
+  TextFieldContainer,
+  TextFieldSubirConv,
+  TextFieldSubirConvGrande,
+  BotonesSubirConv,
+  TituloConvHome,
+  PopupContainer,
+  BotonConv,
+  BotonCerrar,
+  ErrorMessage,
+  SuccessMessage,
+  Overlay
+} from '../components/Layout.styles';
 import { ImUpload } from "react-icons/im";
 
 const SubirConv = () => {
@@ -27,20 +41,20 @@ const SubirConv = () => {
 
   const handleSubmit = () => {
     let isValid = true;
-    if (titulo.length < 20 || titulo.length > 45) {
-      setTituloError('El título debe tener entre 20 y 45 caracteres.');
+    if (titulo.length < 20 || titulo.length > 80) {
+      setTituloError('El título debe tener entre 20 y 80 caracteres.');
       isValid = false;
     } else {
       setTituloError('');
     }
-    if (resumen.length < 40 || resumen.length > 80) {
-      setResumenError('El resumen debe tener entre 40 y 80 caracteres.');
+    if (resumen.length < 20 || resumen.length > 40) {
+      setResumenError('El título resumido debe tener entre 20 y 40 caracteres.');
       isValid = false;
     } else {
       setResumenError('');
     }
-    if (desarrollo.length < 40 || desarrollo.length > 200) {
-      setDesarrolloError('El desarrollo debe tener entre 40 y 200 caracteres.');
+    if (desarrollo.length < 20 || desarrollo.length > 400) {
+      setDesarrolloError('El desarrollo debe tener entre 20 y 400 caracteres.');
       isValid = false;
     } else {
       setDesarrolloError('');
@@ -55,40 +69,46 @@ const SubirConv = () => {
     <ContainerMain>
       <div>
         <TituloConvHome>
-          Explicación sobre el título de la conversación.
+          Escribe el título de tu conversación.
         </TituloConvHome>
         <TextFieldContainer>
           <TextFieldSubirConv
             type="text"
             value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
-            placeholder="Título de tu conversación"
+            placeholder="Título principal."
+            id="titulo"
+            name="titulo"
           />
         </TextFieldContainer>
         {tituloError && <ErrorMessage>{tituloError}</ErrorMessage>}
       </div>
       <div>
-        <TituloConvHome>Explicación sobre el título resumido.</TituloConvHome>
+        <TituloConvHome>Escribe un título resumido para la portada.</TituloConvHome>
         <TextFieldContainer>
-          <TextFieldSubirConvGrande
+          <TextFieldSubirConv
             type="text"
             value={resumen}
             onChange={(e) => setResumen(e.target.value)}
-            placeholder="Título resumido para la portada"
+            placeholder="Título resumido."
+            id="resumen"
+            name="resumen"
           />
         </TextFieldContainer>
         {resumenError && <ErrorMessage>{resumenError}</ErrorMessage>}
       </div>
       <div>
         <TituloConvHome>
-          Explicación sobre el desarrollo del tema de la conversación.
+          Explica y desarrolla tu conversación.
         </TituloConvHome>
         <TextFieldContainer>
           <TextFieldSubirConvGrande
             type="text"
             value={desarrollo}
             onChange={(e) => setDesarrollo(e.target.value)}
-            placeholder="Desarrolla tu conversación"
+            placeholder="¿Qué quieres contar?"
+            id="desarrollo"
+            name="desarrollo"
           />
         </TextFieldContainer>
         {desarrolloError && <ErrorMessage>{desarrolloError}</ErrorMessage>}
@@ -123,7 +143,7 @@ const SubirConv = () => {
         </>
       )}
 
-      {formSubmitted && <SuccessMessage>Conversación enviada, nuestro equipo la moderará en breve.</SuccessMessage>}
+      {formSubmitted && <SuccessMessage>¡Conversación enviada! Nuestro equipo la moderará en breve y será publicada si cumple con nuestra política. Gracias por participar en la comunidad.</SuccessMessage>}
 
     </ContainerMain>
   );
