@@ -18,7 +18,7 @@ import {
   DescripcionComentarioA,
   SendButton,
 } from "../components/Layout.styles";
-import { Tools } from "../data/Herramientas"; // Asegúrate de importar los datos de herramientas
+import { Tools } from "../data/Herramientas";
 
 const HerramientaEsp = () => {
   const { id } = useParams();
