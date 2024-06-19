@@ -21,7 +21,7 @@ This is a frontend development project using React.
 Ether's frontend is built using the following main technologies:
 
 * React (v18.2.0)
-* Vite (v5.2.0)
+* Vite (v5.3.1)
 * Styled Components (v6.1.11)
 
 ### Additional Libraries
