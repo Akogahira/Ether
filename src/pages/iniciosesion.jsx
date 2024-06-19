@@ -28,7 +28,7 @@ const Inicio = () => {
     e.preventDefault();
     if (username === 'user' && password === 'pass') {
       console.log('Inicio de sesión exitoso');
-      navigate('/');
+      navigate('/home');
     } else {
       setError('Credenciales incorrectas');
       console.error('Error de login');

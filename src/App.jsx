@@ -24,7 +24,6 @@ const App = () => (
   <Router>
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/conversaciones" element={<Conversaciones />} />
         <Route path="/herramientas" element={<Herramientas />} />
@@ -42,7 +41,7 @@ const App = () => (
       </Route>
 
       <Route element={<LayoutInicio />}>
-        <Route path="/inicioapp" element={<Inicio />} />
+        <Route path="/" element={<Inicio />} />
       </Route>
       <Route element={<LayoutInicioSesion />}>
         <Route path="/iniciosesion" element={<InicioSesion />} />

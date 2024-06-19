@@ -4,13 +4,15 @@
 
 Ether is a mobile app focused on mental health, designed to foster a supportive community and promote mental health awareness among young individuals. It offers a safe space where users can connect, share experiences, and access free mental health resources.
 
-This project uses React for frontend development.
+This is a frontend development project using React.
+
 
 ## Table of Contents
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Support](#support)
 * [Contact](#contact)
+
 
 ## Technologies
 
@@ -26,6 +28,7 @@ Ether's frontend is built using the following main technologies:
 
 * react-icons: For all the icons.
 * react-ios-switch: For implementing iOS-style switches in the UI (just a personal preference).
+
 
 ## Setup
 
@@ -43,12 +46,20 @@ npm install
 
 ### Executing Program
 
-To start Ether in development mode, run:
+To start Ether, run:
 ```
 npm run dev
 ```
 
 Then navigate to http://localhost:3000 in your browser to view the application.
+
+### Credentials
+
+To log in to the application you have to use the following credentials:
+
+- Username: `user`
+- Password: `pass`
+
 
 ## Support
 

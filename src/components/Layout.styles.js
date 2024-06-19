@@ -26,7 +26,7 @@ export const MainInicio = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 76vh;
+  height: 600px;
   text-align: center;
 `;
 
