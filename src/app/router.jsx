@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import Conversaciones from "../pages/Conversaciones";
-import Herramientas from "../pages/Herramientas";
-import Chat from "../pages/Chat";
+import Home from "../pages/home";
+import Conversaciones from "../pages/conversaciones";
+import Herramientas from "../pages/herramientas";
+import Chat from "../pages/chat";
 import Layout from "../components/Layout";
-import Perfil from "../pages/Perfil";
+import Perfil from "../pages/perfil";
 
 const Router = () => (
   <BrowserRouter>

@@ -7,6 +7,7 @@ import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
 const Conversaciones = () => {
   const [showDescriptions, setShowDescriptions] = useState(Array(Conver.length).fill(false));
+
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [selectedFilters, setSelectedFilters] = useState([]);
 

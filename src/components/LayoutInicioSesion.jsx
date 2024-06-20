@@ -2,7 +2,7 @@ import { Outlet, Link } from 'react-router-dom';
 import { Main1, Footer2, Nav3 } from './Layout.styles';
 import { GoArrowLeft } from 'react-icons/go';
 
-const LayoutInicio = () => {
+const LayoutInicioSesion = () => {
 
   const goBack = () => {
     window.history.back();
@@ -25,4 +25,5 @@ const LayoutInicio = () => {
   )
 };
 
-export default LayoutInicio;
+export default LayoutInicioSesion;
+

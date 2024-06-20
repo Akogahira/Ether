@@ -168,7 +168,6 @@ export const Divider2 = styled.hr`
   background: darkslategray;
   width: 100%;
 `;
-
 /// Arriba
 export const Footer2 = styled.footer`
   color: #4d4c4d;
