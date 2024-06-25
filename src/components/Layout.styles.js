@@ -1,14 +1,5 @@
 import styled from "styled-components";
 
-// --main-black: #373737;
-// --main - semiblack: #737273;
-// --page - title - color:#4d4c4d;
-// --card - color: #dad1ef;
-// --icon - color: #beb1dc;
-// --main - background: #fffeef;
-
-//360px x 760px
-
 //Layout inicio
 
 export const Main1 = styled.div`
