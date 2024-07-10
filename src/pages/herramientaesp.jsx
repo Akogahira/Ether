@@ -57,7 +57,7 @@ const HerramientaEsp = () => {
         autor: "Tu",
         time: new Date().toISOString(),
         mensaje: mensaje,
-        avatar: "/src/assets/images/Avatar2.png",
+        avatar: "/static/images/Avatar2.png",
       };
       setComentarios([...comentarios, newComment]);
       setMensaje("");

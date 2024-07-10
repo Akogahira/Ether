@@ -2,7 +2,7 @@ export const Tools = [
   {
     id: 1,
     nombre: "Neurohacking",
-    foto: "/src/assets/images/Herramienta1.png",
+    foto: "/static/images/Herramienta1.png",
     tipo: "Oficial",
     tags: "Terapia guiada",
     secciones: [
@@ -32,7 +32,7 @@ export const Tools = [
   {
     id: 2,
     nombre: "Técnicas de respiración",
-    foto: "/src/assets/images/Herramienta2.png",
+    foto: "/static/images/Herramienta2.png",
     tipo: "Oficial",
     tags: "Autodirigida",
     secciones: [
@@ -62,7 +62,7 @@ export const Tools = [
   {
     id: 3,
     nombre: "Música",
-    foto: "/src/assets/images/Herramienta3.png",
+    foto: "/static/images/Herramienta3.png",
     tipo: "Oficial",
     tags: "Autodirigida",
     secciones: [
@@ -92,7 +92,7 @@ export const Tools = [
   {
     id: 4,
     nombre: "Journaling",
-    foto: "/src/assets/images/Herramienta5.png",
+    foto: "/static/images/Herramienta5.png",
     tipo: "Comunidad",
     tags: "Autodirigida",
     secciones: [
@@ -122,7 +122,7 @@ export const Tools = [
   {
     id: 5,
     nombre: "Terapia Cognitivo Conductual",
-    foto: "/src/assets/images/Herramienta6.png",
+    foto: "/static/images/Herramienta6.png",
     tipo: "Oficial",
     tags: "Terapia guiada",
     secciones: [
@@ -152,7 +152,7 @@ export const Tools = [
   {
     id: 6,
     nombre: "Hoponopono",
-    foto: "/src/assets/images/Herramienta5.png",
+    foto: "/static/images/Herramienta5.png",
     tipo: "Comunidad",
     tags: "Técnica mixta",
     secciones: [
@@ -182,7 +182,7 @@ export const Tools = [
   {
     id: 7,
     nombre: "Diario de gratitud",
-    foto: "/src/assets/images/Herramienta5.png",
+    foto: "/static/images/Herramienta5.png",
     tipo: "Comunidad",
     tags: "Autodirigida",
     secciones: [
@@ -212,7 +212,7 @@ export const Tools = [
   {
     id: 8,
     nombre: "Descansos digitales",
-    foto: "/src/assets/images/Herramienta7.png",
+    foto: "/static/images/Herramienta7.png",
     tipo: "Oficial",
     tags: "Autodirigida",
     secciones: [
@@ -242,7 +242,7 @@ export const Tools = [
   {
     id: 9,
     nombre: "Terapia Interpersonal",
-    foto: "/src/assets/images/Herramienta8.png",
+    foto: "/static/images/Herramienta8.png",
     tipo: "Oficial",
     tags: "Terapia guiada",
     secciones: [

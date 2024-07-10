@@ -30,7 +30,7 @@
     "prettier": "3.3.1",
     "vite": "^5.3.1"
   },
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "description": "A mental health-focused social networking mobile app where young individuals connect, share experiences, and have access to mental health resources within a supportive community.",
   "main": "vite.config.js",
   "keywords": [],
   "author": "",

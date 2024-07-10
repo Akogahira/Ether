@@ -1,7 +1,7 @@
 export const ChatsPriv = [
   {
     id: 1,
-    img: "/public/static/images/Avatar1.png",
+    img: "/static/images/Avatar1.png",
     user: "Mindful123",
     fecha: "Hoy",
     hora: "10:20",
@@ -9,7 +9,7 @@ export const ChatsPriv = [
   },
 
   {
-    img: "/public/static/images/Avatar2.png",
+    img: "/static/images/Avatar2.png",
     user: "WellnessFan",
     fecha: "Ayer",
     hora: "10:20",
@@ -17,7 +17,7 @@ export const ChatsPriv = [
   },
 
   {
-    img: "/public/static/images/Avatar3.png",
+    img: "/static/images/Avatar3.png",
     user: "HealthyMind",
     fecha: "Ayer",
     hora: "01:20",
@@ -25,7 +25,7 @@ export const ChatsPriv = [
   },
 
   {
-    img: "/public/static/images/Avatar4.png",
+    img: "/static/images/Avatar4.png",
     user: "Positivity4All",
     fecha: "30/05",
     hora: "17:30",
@@ -33,7 +33,7 @@ export const ChatsPriv = [
   },
 
   {
-    img: "/public/static/images/Avatar5.png",
+    img: "/static/images/Avatar5.png",
     user: "HopefulHeart",
     fecha: "10/05",
     hora: "16:40",
@@ -41,7 +41,7 @@ export const ChatsPriv = [
   },
 
   {
-    img: "/public/static/images/Avatar6.png",
+    img: "/static/images/Avatar6.png",
     user: "CalmMind",
     fecha: "09/05",
     hora: "16:40",

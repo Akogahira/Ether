@@ -20,16 +20,16 @@ const Perfil = () => {
   const [editandoPerfil, setEditandoPerfil] = useState(false);
 
   const avatares = [
-    "src/assets/images/Avatar1.png",
-    "src/assets/images/Avatar2.png",
-    "src/assets/images/Avatar3.png",
-    "src/assets/images/Avatar4.png",
-    "src/assets/images/Avatar5.png",
-    "src/assets/images/Avatar6.png",
-    "src/assets/images/Avatar7.png",
-    "src/assets/images/Avatar8.png",
-    "src/assets/images/Avatar9.png",
-    "src/assets/images/Avatar10.png",
+    "static/images/Avatar1.png",
+    "static/images/Avatar2.png",
+    "static/images/Avatar3.png",
+    "static/images/Avatar4.png",
+    "static/images/Avatar5.png",
+    "static/images/Avatar6.png",
+    "static/images/Avatar7.png",
+    "static/images/Avatar8.png",
+    "static/images/Avatar9.png",
+    "static/images/Avatar10.png",
   ];
 
   const handleChangeEsconderPerfil = (nextChecked) => {

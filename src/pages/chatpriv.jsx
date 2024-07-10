@@ -60,7 +60,7 @@ const ChatEsp = () => {
             {message.user === "user2" ? (
               <User1Container>
                 <User1Img>
-                  <img src="src/assets/images/Avatar4.png" alt="Icon" />
+                  <img src="static/images/Avatar4.png" alt="Icon" />
                 </User1Img>
                 <User1Contenido>
                   <User1Msg>{message.content}</User1Msg>
@@ -74,7 +74,7 @@ const ChatEsp = () => {
                   <User2Time>{message.time}</User2Time>
                 </User2Contenido>
                 <User2Img>
-                  <img src="src/assets/images/Avatar2.png" alt="Icon" />
+                  <img src="static/images/Avatar2.png" alt="Icon" />
                 </User2Img>
               </User2Container>
             )}
