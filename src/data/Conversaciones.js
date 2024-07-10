@@ -10,7 +10,7 @@ export const Conver = [
     descripcion:
       "Creo que el journaling es una forma genial de poner en orden tus pensamientos. Es como hablar contigo mismo en papel, pero de una manera que realmente te ayuda a desahogarte y a reflexionar. Personalmente, me ha ayudado a entender mejor mis emociones y a mantenerme más enfocado. ¿Alguien más lo ha probado?",
     comments: "2",
-    img: "/src/assets/images/Avatar1.png",
+    img: "/static/images/Avatar1.png",
   },
 
   {
@@ -24,7 +24,7 @@ export const Conver = [
     descripcion:
       "El gimnasio puede ser intimidante al principio, pero una vez que te acostumbras es increíble y adictivo. Me da un poco de vértigo porq todavía soy jóven y tengo ansiedad social pero intento ir 3 veces por semana, ¿consejos para principiantes? ¿opinión?",
     comments: "4",
-    img: "/src/assets/images/Avatar2.png",
+    img: "/static/images/Avatar2.png",
   },
 
   {
@@ -38,7 +38,7 @@ export const Conver = [
     descripcion:
       "He escuchado hablar del hoponopono pero no sé mucho al respecto. ¿Alguien podría explicar cómo funciona o compartir su experiencia personal? Estoy probando algunas herramientas que encuentro por aquí pero esta me llama la atención especialmente.",
     comments: "7",
-    img: "/src/assets/images/Avatar3.png",
+    img: "/static/images/Avatar3.png",
   },
 
   {
@@ -52,7 +52,7 @@ export const Conver = [
     descripcion:
       "Sé que puede sonar raro, pero jugar a videojuegos competitivos como el Lol por ej para  mi es una forma de distraerme... no sé si estoy siendo evitativo con el mundo real, mis padres creen eso, pero a mi me ayuda a desconectarme después de un día malo.",
     comments: "1",
-    img: "/src/assets/images/Avatar4.png",
+    img: "/static/images/Avatar4.png",
   },
 
   {
@@ -66,7 +66,7 @@ export const Conver = [
     descripcion:
       "Enseñad fotos de vuestras mascotas! Queremos verlas! Decid sus nombres y un dato curioso sobre ellas.",
     comments: "10",
-    img: "/src/assets/images/Avatar5.png",
+    img: "/static/images/Avatar5.png",
   },
 
   {
@@ -80,7 +80,7 @@ export const Conver = [
     descripcion:
       "No conozco muchas y me vendrían bien conocer para cuando mis padres trabajan pq solo me hago sanwiches. Podemos hacer una lista entre todos.",
     comments: "10",
-    img: "/src/assets/images/Avatar6.png",
+    img: "/static/images/Avatar6.png",
   },
   {
     id: 7,
@@ -93,7 +93,7 @@ export const Conver = [
     descripcion:
       "He escuchado que la música clásica puede ayudar a concentrarse mejor durante el estudio. ¿Alguien ha probado esto y ha notado alguna diferencia? A mi me funciona más el jazz, pero por saber",
     comments: "5",
-    img: "/src/assets/images/Avatar7.png",
+    img: "/static/images/Avatar7.png",
   },
 
   {
@@ -107,7 +107,7 @@ export const Conver = [
     descripcion:
       "Estoy pensando en empezar a hacer yoga para mejorar mi flexibilidad y reducir el estrés pero me da muuuuuuucha pereza. Pero mejor eso que no hacer nada, supongo. ¿Cuánto tiempo de yoga hacéis? ¿Os ayuda para algo?",
     comments: "3",
-    img: "/src/assets/images/Avatar8.png",
+    img: "/static/images/Avatar8.png",
   },
 
   {
@@ -121,7 +121,7 @@ export const Conver = [
     descripcion:
       "Desde que juego de pequeña siempre me ha encantado, pero ahora de más mayor me sirve como una especie de escape? Estoy tranquila, tengo mi casa y mi isla, adoro a mis vecinos, es increible. ¿Queréis compartir vuestro código de isla?",
     comments: "8",
-    img: "/src/assets/images/Avatar6.png",
+    img: "/static/images/Avatar6.png",
   },
 
   {
@@ -135,7 +135,7 @@ export const Conver = [
     descripcion:
       "¿Tienes plantas de interior en casa? Comparte tus consejos y trucos para mantenerlas vivas y que crezcan. Necesito ayuda!!!!",
     comments: "6",
-    img: "/src/assets/images/Avatar7.png",
+    img: "/static/images/Avatar7.png",
   },
 
   {
@@ -149,7 +149,7 @@ export const Conver = [
     descripcion:
       "Compartir vuestro libro favorito de ciencia ficción o una saga e intentad explicar la sinopsis sin spoilers!!",
     comments: "4",
-    img: "/src/assets/images/Avatar8.png",
+    img: "/static/images/Avatar8.png",
   },
 
   {
@@ -163,7 +163,7 @@ export const Conver = [
     descripcion:
       "He visto desde siempre a mi madre hacer origami, manualidades con tarjetas de cumpleaños y todo eso y ella me dice que le ayuda mucho. ¿Serviría como herramienta aquí?",
     comments: "7",
-    img: "/src/assets/images/Avatar4.png",
+    img: "/static/images/Avatar4.png",
   },
 
   {
@@ -177,7 +177,7 @@ export const Conver = [
     descripcion:
       "A mi me parecen super aburridas todas las que veo en cartelera desde hace años y encima no deja de subir el precio del cine... estoy harto la verdad",
     comments: "8",
-    img: "/src/assets/images/Avatar13.png",
+    img: "/static/images/Avatar13.png",
   },
 
   {
@@ -191,7 +191,7 @@ export const Conver = [
     descripcion:
       "Entiendo que la moda es una forma de expresión y todo eso pero hay cada cosa que veo ahora que madre mía...",
     comments: "9",
-    img: "/src/assets/images/Avatar14.png",
+    img: "/static/images/Avatar14.png",
   },
 
 ];
