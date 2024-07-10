@@ -17,45 +17,24 @@ import {
 
 const Layout = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === "/home";
-  const isConvPage = location.pathname === "/conversaciones";
-  const isHerrPage = location.pathname === "/herramientas";
-  const isChatPage = location.pathname === "/chat";
-  const isPerfilPage = location.pathname === "/perfil";
-  const isChatEspPage = location.pathname === "/chatpriv";
-  const isSubirHerrPage = location.pathname === "/subirherramienta";
-  const isSubirConvPage = location.pathname === "/subirconversacion";
-  const isConvEspPage = location.pathname.startsWith("/conversacionesp/");
-  const isHerrEspPage = location.pathname.startsWith("/herramientaesp/");
-  const isBuscarPage = location.pathname === "/buscador";
+  const currentPath = location.pathname;
+
+  const pageNames = {
+    "/home": "Inicio",
+    "/conversaciones": "Conversaciones",
+    "/herramientas": "Herramientas",
+    "/chat": "Chat",
+    "/perfil": "Perfil",
+    "/chatpriv": "Username",
+    "/subirherramienta": "Publicar herramienta",
+    "/subirconversacion": "Subir conversación",
+    "/buscador": "Búsqueda"
+  };
 
   const getPageName = () => {
-    switch (true) {
-      case isHomePage:
-        return "Inicio";
-      case isConvPage:
-        return "Conversaciones";
-      case isHerrPage:
-        return "Herramientas";
-      case isChatPage:
-        return "Chat";
-      case isPerfilPage:
-        return "Perfil";
-      case isChatEspPage:
-        return "Username";
-      case isHerrEspPage:
-        return "Herramienta";
-      case isConvEspPage:
-        return "Conversación";
-      case isSubirConvPage:
-        return "Subir conversación";
-      case isSubirHerrPage:
-        return "Publicar herramienta";
-      case isBuscarPage:
-        return "Búsqueda";
-      default:
-        return "Página";
-    }
+    if (currentPath.startsWith("/conversacionesp/")) return "Conversación";
+    if (currentPath.startsWith("/herramientaesp/")) return "Herramienta";
+    return pageNames[currentPath] || "Página";
   };
 
   return (
@@ -63,11 +42,11 @@ const Layout = () => {
       <Footer2>
         <Nav2>
           <Link to="/perfil">
-            {isPerfilPage ? <HiUserCircle /> : <HiOutlineUserCircle />}
+            {currentPath === "/perfil" ? <HiUserCircle /> : <HiOutlineUserCircle />}
           </Link>
           <h2>{getPageName()}</h2>
           <Link to="/buscador">
-            {isBuscarPage ? <BiSolidSearchAlt2 /> : <BiSearchAlt2 />}
+            {currentPath === "/buscador" ? <BiSolidSearchAlt2 /> : <BiSearchAlt2 />}
           </Link>
         </Nav2>
       </Footer2>
@@ -80,23 +59,25 @@ const Layout = () => {
       <Footer>
         <Nav>
           <div>
-            <Link to="/home">{isHomePage ? <IoHome /> : <IoHomeOutline />}</Link>
+            <Link to="/home">
+              {currentPath === "/home" ? <IoHome /> : <IoHomeOutline />}
+            </Link>
             <Link to="/conversaciones">
-              {isConvPage || isConvEspPage || isSubirConvPage ? (
+              {currentPath === "/conversaciones" || currentPath.startsWith("/conversacionesp/") || currentPath === "/subirconversacion" ? (
                 <MdForum />
               ) : (
                 <MdOutlineForum />
               )}
             </Link>
             <Link to="/herramientas">
-              {isHerrPage || isHerrEspPage || isSubirHerrPage ? (
+              {currentPath === "/herramientas" || currentPath.startsWith("/herramientaesp/") || currentPath === "/subirherramienta" ? (
                 <IoBookSharp />
               ) : (
                 <IoBookOutline />
               )}
             </Link>
             <Link to="/chat">
-              {isChatPage || isChatEspPage ? (
+              {currentPath === "/chat" || currentPath === "/chatpriv" ? (
                 <PiChatCircleFill />
               ) : (
                 <PiChatCircle />

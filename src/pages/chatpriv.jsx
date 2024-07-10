@@ -21,12 +21,12 @@ const ChatEsp = () => {
   const [messages, setMessages] = useState([
     {
       user: "user2",
-      content: "Han subido las ruffles jamón a casi 3 euros macho que es mitad aire",
+      content: "¿Has probado la meditación para reducir el estrés?",
       time: "17:30",
     },
     {
       user: "user1",
-      content: "Pues el maxibon flipas 3 euros ayer en el chino",
+      content: "A mi no me suele funcionar, lo volveré a probar.",
       time: "18:13",
     },
   ]);
