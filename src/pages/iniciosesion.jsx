@@ -27,7 +27,6 @@ const Inicio = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username === 'user' && password === 'pass') {
-      console.log('Inicio de sesión exitoso');
       navigate('/home');
     } else {
       setError('Credenciales incorrectas');

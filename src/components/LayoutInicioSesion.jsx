@@ -10,7 +10,6 @@ const LayoutInicioSesion = () => {
 
 
   return (
-
     <Main1>
       <Footer2>
         <Nav3>

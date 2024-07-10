@@ -130,7 +130,7 @@ const SubirConv = () => {
           <PopupContainer>
             <BotonCerrar onClick={toggleFilters}>X</BotonCerrar>
             <h2>Selecciona filtros</h2>
-            {["Salud mental", "Salud física", "Herramientas", "Videojuegos", "Día a día", "Opinión"].map((filter, index) => (
+            {["Salud mental", "Salud física", "Herramientas", "Videojuegos", "Día a día", "Opinión", "Hobbies"].map((filter, index) => (
               <BotonConv
                 key={index}
                 onClick={() => handleFilterClick(filter)}
